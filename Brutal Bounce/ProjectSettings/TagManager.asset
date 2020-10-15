@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SideWall
+  - UpWall
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - 
   - Ball
   - Player
-  - SideWall
-  - UpWall
+  - Wall
+  - 
   - 
   - 
   - 

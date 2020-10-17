@@ -8,12 +8,15 @@ public class Player : MonoBehaviour
     Rigidbody2D rigidbody;
     SpriteRenderer sprite;
 
+    ScoreManager scoreManager;
+
     float horizontalInput;
     [SerializeField] float velocity = 1;
 
     private void Awake() {
         rigidbody = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     void Update(){
@@ -26,5 +29,11 @@ public class Player : MonoBehaviour
 
     void GetInput() {
         horizontalInput = Input.GetAxisRaw("Horizontal");
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("Ball")) {
+            scoreManager.AddScore();
+        }
     }
 }

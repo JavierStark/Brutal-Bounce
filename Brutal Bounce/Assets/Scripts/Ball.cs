@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering.Universal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,10 +9,13 @@ public class Ball : MonoBehaviour
     Rigidbody2D rigidbody;
     float velocity = 15;
     int noPlayerBounce = 0;
+
+    ScoreManager scoreManager;
     
 
     private void Awake() {
         rigidbody = GetComponent<Rigidbody2D>();
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     private void LateUpdate() {
@@ -31,9 +35,16 @@ public class Ball : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("GameOverCollider")) {
-            print("Change");
+        if (collision.gameObject.CompareTag("GameOverCollider")) {            
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        else if (collision.gameObject.CompareTag("Coin")) {
+            InteractionWithCoin(collision.gameObject.GetComponent<Coin>());
+        }
+    }
+
+    private void InteractionWithCoin(Coin coin) {
+        scoreManager.AddScore(coin.GetValue());
+        Destroy(coin.gameObject);
     }
 }

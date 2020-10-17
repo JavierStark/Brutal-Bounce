@@ -9,6 +9,7 @@ TagManager:
   - Ball
   - GameOver
   - GameOverCollider
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Ball
   - Player
   - Wall
-  - 
+  - Prop
   - 
   - 
   - 

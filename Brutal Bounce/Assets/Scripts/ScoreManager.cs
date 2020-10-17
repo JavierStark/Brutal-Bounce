@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    int score;
+    static int score;
 
     TMP_Text scoreText;
 

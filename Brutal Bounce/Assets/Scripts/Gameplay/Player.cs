@@ -5,34 +5,48 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
+    [SerializeField] SkinsInfo skinsInfo;
+
     Rigidbody2D rigidbody;
-    SpriteRenderer sprite;
 
     ScoreManager scoreManager;
 
     float horizontalInput;
     [SerializeField] float velocity = 1;
 
-    private void Awake() {
+    private void Awake()
+    {
         rigidbody = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
         scoreManager = FindObjectOfType<ScoreManager>();
     }
 
-    void Update(){
+    void Start()
+    {
+        if (skinsInfo.playerSkin)
+        {
+            GetComponent<SpriteRenderer>().sprite = skinsInfo.playerSkin;
+        }
+    }
+
+    void Update()
+    {
         GetInput();
     }
-    private void FixedUpdate() {
-        Vector2 rbVel = new Vector2(horizontalInput, 0)*velocity;
+    private void FixedUpdate()
+    {
+        Vector2 rbVel = new Vector2(horizontalInput, 0) * velocity;
         rigidbody.velocity = rbVel;
     }
 
-    void GetInput() {
+    void GetInput()
+    {
         horizontalInput = Input.GetAxisRaw("Horizontal");
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Ball")) {
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ball"))
+        {
             scoreManager.AddScore();
         }
     }

@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
+
+    [SerializeField] SkinsInfo skinsInfo;
+
     Rigidbody2D rigidbody;
     float velocity = 15;
     int noPlayerBounce = 0;
@@ -17,6 +20,14 @@ public class Ball : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         scoreManager = FindObjectOfType<ScoreManager>();
+    }
+
+    void Start()
+    {
+        if (skinsInfo.ballSkin)
+        {
+            GetComponent<SpriteRenderer>().sprite = skinsInfo.ballSkin;
+        }
     }
 
     private void LateUpdate()

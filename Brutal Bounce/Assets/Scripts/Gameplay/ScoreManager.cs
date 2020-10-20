@@ -9,21 +9,26 @@ public class ScoreManager : MonoBehaviour
 
     TMP_Text scoreText;
 
-    private void Awake() {
+    private void Awake()
+    {
         scoreText = GetComponent<TMP_Text>();
+        score = 0;
     }
 
-    public void AddScore() {
+    public void AddScore()
+    {
         score++;
         UpdateScoreText();
     }
 
-    public void AddScore(int n) {
+    public void AddScore(int n)
+    {
         score += n;
         UpdateScoreText();
     }
 
-    private void UpdateScoreText() {
+    private void UpdateScoreText()
+    {
         scoreText.text = score.ToString();
     }
 }

@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
-
     [SerializeField] SkinsInfo skinsInfo;
+    GameObject trail;
+
 
     Rigidbody2D rigidbody;
     float velocity = 15;
@@ -27,6 +28,10 @@ public class Ball : MonoBehaviour
         if (skinsInfo.ballSkin)
         {
             GetComponent<SpriteRenderer>().sprite = skinsInfo.ballSkin;
+        }
+        if (skinsInfo.trailSkin)
+        {
+            trail = skinsInfo.trailSkin;
         }
     }
 

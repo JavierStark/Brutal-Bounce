@@ -11,7 +11,8 @@ public class Ball : MonoBehaviour
 
 
     Rigidbody2D rigidbody;
-    float velocity = 15;
+    [SerializeField] float velocity = 15;
+    [SerializeField] float timeScale = 1;
     int noPlayerBounce = 0;
 
     ScoreManager scoreManager;
@@ -21,6 +22,10 @@ public class Ball : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         scoreManager = FindObjectOfType<ScoreManager>();
+    }
+    void Update()
+    {
+        Time.timeScale = timeScale;
     }
 
     void Start()

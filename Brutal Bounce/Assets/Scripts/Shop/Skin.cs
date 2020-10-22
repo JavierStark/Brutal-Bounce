@@ -1,12 +1,15 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Skin", menuName = "Brutal Bounce/Skin", order = 0)]
-public class Skin : ScriptableObject, IItem
+public class Skin : MonoBehaviour, IItem
 {
-    public Sprite sprite;
+    public Material sprite;
     private bool bought;
-    private int price;
+    public int price;
+
+    public Sprite shopImage;
 
     public bool Bought { get => bought; set => bought = value; }
     public int Price { get => price; set => price = value; }
+    public Sprite ShopImage { get => shopImage; set => shopImage = value; }
+
 }

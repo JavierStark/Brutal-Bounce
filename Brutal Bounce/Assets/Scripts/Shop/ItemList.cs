@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemList : MonoBehaviour
+[CreateAssetMenu(fileName = "ItemList", menuName = "Brutal Bounce/ItemList", order = 0)]
+public class ItemList : ScriptableObject
 {
-    public List<IItem> items = new List<IItem>();
+    [SerializeField] public List<GameObject> items = new List<GameObject>();
 }

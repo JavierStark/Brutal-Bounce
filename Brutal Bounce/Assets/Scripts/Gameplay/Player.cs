@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
     void GetInput()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
+        horizontalInput = SimpleInput.GetAxisRaw("Horizontal");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -8,7 +8,7 @@ public class SkinButton : MonoBehaviour
     [SerializeField] int itemIndex;
     [SerializeField] IItem skins;
 
-    [SerializeField] Image skinImage;
+    [SerializeField] Image itemImage;
     [SerializeField] GameObject notBoughtPanel;
 
     void Start()

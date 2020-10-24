@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     {
         if (skinsInfo.playerSkin)
         {
-            GetComponent<SpriteRenderer>().sprite = skinsInfo.playerSkin;
+            GetComponent<SpriteRenderer>().material = skinsInfo.playerSkin.material;
         }
     }
 

@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Rendering.Universal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
     [SerializeField] SkinsInfo skinsInfo;
-    GameObject trail;
+
+    GameObject ballInstance;
+    GameObject trailInstance;
 
 
     Rigidbody2D rigidbody;
@@ -32,11 +33,11 @@ public class Ball : MonoBehaviour
     {
         if (skinsInfo.ballSkin)
         {
-            GetComponent<SpriteRenderer>().sprite = skinsInfo.ballSkin;
+            ballInstance = Instantiate(skinsInfo.ballSkin.gameObject, transform);
         }
         if (skinsInfo.trailSkin)
         {
-            trail = skinsInfo.trailSkin;
+            trailInstance = Instantiate(skinsInfo.trailSkin.gameObject, transform);
         }
     }
 

@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: c5e3bf8e281e5814e989833071980a61
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7142201892452617377
+    second: Luciernaga_0
+  - first:
+      213: 1606458449403478981
+    second: Luciernaga_1
+  - first:
+      213: -686833701795863016
+    second: Luciernaga_2
+  - first:
+      213: 1791024911226219344
+    second: Luciernaga_3
+  - first:
+      213: 8950598844279942631
+    second: Luciernaga_4
+  - first:
+      213: 7677522170097691827
+    second: Luciernaga_5
+  - first:
+      213: -4309295833318382562
+    second: Luciernaga_6
+  - first:
+      213: 8987699451578870461
+    second: Luciernaga_7
+  - first:
+      213: -437366250231483687
+    second: Luciernaga_8
+  - first:
+      213: -1008432994402464150
+    second: Luciernaga_9
+  - first:
+      213: -6713499902127567989
+    second: Luciernaga_10
+  - first:
+      213: -6266128519408734006
+    second: Luciernaga_11
+  - first:
+      213: -3077092665815751316
+    second: Luciernaga_12
+  - first:
+      213: -5548668897872976181
+    second: Luciernaga_13
+  - first:
+      213: -2084656781539938133
+    second: Luciernaga_14
+  - first:
+      213: -8963543602213491537
+    second: Luciernaga_15
+  - first:
+      213: -1568799119086391563
+    second: Luciernaga_16
+  - first:
+      213: -3742297962823846290
+    second: Luciernaga_17
+  - first:
+      213: -3845207563251454219
+    second: Luciernaga_18
+  - first:
+      213: -8568176042264163882
+    second: Luciernaga_19
+  - first:
+      213: 2602080060770662732
+    second: Luciernaga_20
+  - first:
+      213: 7458144717291117774
+    second: Luciernaga_21
+  - first:
+      213: -4530376039475766860
+    second: Luciernaga_22
+  - first:
+      213: 3379996334523565558
+    second: Luciernaga_23
+  - first:
+      213: 6910777790176938738
+    second: Luciernaga_24
+  - first:
+      213: -3921151775808065256
+    second: Luciernaga_25
+  - first:
+      213: 8177957509330658629
+    second: Luciernaga_26
+  - first:
+      213: -4849986564711806463
+    second: Luciernaga_0
+  - first:
+      213: 2564158728508564587
+    second: Luciernaga_1
+  - first:
+      213: -5934321355755458331
+    second: Luciernaga_2
+  - first:
+      213: 7665953606623576411
+    second: Luciernaga_3
+  - first:
+      213: -3483469432779671138
+    second: Luciernaga_4
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 512
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Luciernaga_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 160
+        height: 160
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a8fec6ae261bcb0800000000000000
+      internalID: -4849986564711806463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luciernaga_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 352
+        width: 160
+        height: 160
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64687037c8b59320800000000000000
+      internalID: 2564158728508564587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luciernaga_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 352
+        width: 160
+        height: 160
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e07e271b2e05ada0800000000000000
+      internalID: -5934321355755458331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luciernaga_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 160
+        height: 160
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b514c637030f26a60800000000000000
+      internalID: 7665953606623576411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luciernaga_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 160
+        height: 160
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e997c31d10b38afc0800000000000000
+      internalID: -3483469432779671138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 3e8cb127cca023649b631cd587a7dc1a, type: 3}
+      name: Emision
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

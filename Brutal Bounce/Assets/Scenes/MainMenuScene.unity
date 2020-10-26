@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2201,7 +2201,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 774049653}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1282832443}
+        m_MethodName: ToShopScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &774049653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3013,11 +3024,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransicionOpen
       objectReference: {fileID: 0}
-    - target: {fileID: 2273989700319812744, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2273989700319812745, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3123,11 +3129,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2273989701637567538, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2273989701637567541, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3136,11 +3137,6 @@ PrefabInstance:
     - target: {fileID: 2273989701637567541, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2273989701878920162, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
-        type: 3}
-      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2273989701878920165, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
@@ -3313,7 +3309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trans: {fileID: 1937026702}
-  scene: GameScene
+  GameScene: GameScene
+  ShopScene: ShopScene
   time: 3
 --- !u!1 &1336635681
 GameObject:
@@ -4084,7 +4081,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1282832443}
-        m_MethodName: entry
+        m_MethodName: ToGameScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

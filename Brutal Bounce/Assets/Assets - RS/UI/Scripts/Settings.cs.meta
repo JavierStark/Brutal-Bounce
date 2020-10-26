@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a3f5743be9b3c4444bfdd11fdbbec319
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - anim: {instanceID: 0}
+  - button: {instanceID: 0}
+  - soundSprite: {fileID: 21300000, guid: 341c317533f98bf47bec41b1057b0f94, type: 3}
+  - soundMuteSprite: {fileID: 21300000, guid: 59fe4764e9b7bf448ba16487a1a839f1, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
 {
     [SerializeField] SkinsInfo skinsInfo;
 
+
+    Animator animator;
+    SpriteRenderer spriteRenderer;
     Rigidbody2D rigidbody;
 
     ScoreManager scoreManager;
@@ -17,6 +20,8 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         scoreManager = FindObjectOfType<ScoreManager>();
     }
 
@@ -31,6 +36,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         GetInput();
+        SetAnim();
     }
     private void FixedUpdate()
     {
@@ -43,10 +49,31 @@ public class Player : MonoBehaviour
         horizontalInput = SimpleInput.GetAxisRaw("Horizontal");
     }
 
+    void SetAnim()
+    {
+        if (horizontalInput != 0)
+        {
+            animator.SetBool("Move", true);
+            if (horizontalInput > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+            else
+            {
+                spriteRenderer.flipX = true;
+            }
+        }
+        else
+        {
+            animator.SetBool("Move", false);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
+            animator.SetTrigger("Collision");
             scoreManager.AddScore();
         }
     }

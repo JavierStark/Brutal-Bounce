@@ -6,5 +6,4 @@ using UnityEngine;
 public class ItemList : ScriptableObject
 {
     [SerializeField] public List<GameObject> items = new List<GameObject>();
-    [SerializeField] public List<bool> bought = new List<bool>();
 }

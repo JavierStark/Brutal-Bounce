@@ -7,27 +7,17 @@ public class Transition : MonoBehaviour
 {
     public GameObject trans;
 
-    public string GameScene;
-    public string ShopScene;
+    public string scene;
     public float time;
 
-    public void ToGameScene()
+    public void entry()
     {
-        Invoke("OpenGameScene", time);
-        trans.SetActive(true);
-    }
-    public void ToShopScene()
-    {
-        Invoke("OpenShowScene", time);
+        Invoke("OpenScene", time);
         trans.SetActive(true);
     }
 
-    public void OpenGameScene()
+    public void OpenScene()
     {
-        SceneManager.LoadScene(GameScene);
-    }
-    public void OpenShowScene()
-    {
-        SceneManager.LoadScene(ShopScene);
+        SceneManager.LoadScene(scene);
     }
 }

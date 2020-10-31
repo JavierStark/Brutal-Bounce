@@ -50,14 +50,14 @@ TagManager:
   - name: Vecino
     uniqueID: 2968432807
     locked: 0
-  - name: Window
-    uniqueID: 407059887
-    locked: 0
   - name: Acera
     uniqueID: 1150306619
     locked: 0
   - name: Edificio
     uniqueID: 2313747767
+    locked: 0
+  - name: Window
+    uniqueID: 407059887
     locked: 0
   - name: SecundaryTrail
     uniqueID: 3922701981

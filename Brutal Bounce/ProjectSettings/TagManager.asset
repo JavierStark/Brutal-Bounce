@@ -44,11 +44,20 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: BackCanvas
-    uniqueID: 2313747767
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Vecino
+    uniqueID: 2968432807
+    locked: 0
+  - name: Window
+    uniqueID: 407059887
+    locked: 0
+  - name: Acera
+    uniqueID: 1150306619
+    locked: 0
+  - name: Edificio
+    uniqueID: 2313747767
     locked: 0
   - name: SecundaryTrail
     uniqueID: 3922701981
@@ -58,4 +67,7 @@ TagManager:
     locked: 0
   - name: Ball
     uniqueID: 203791715
+    locked: 0
+  - name: Player
+    uniqueID: 1733792653
     locked: 0

@@ -7,6 +7,7 @@ public class Settings : MonoBehaviour
 {
     private bool activ;
     public Animator anim;
+    public UserPreferences preferences;
 
     public Image button;
 
@@ -18,24 +19,33 @@ public class Settings : MonoBehaviour
     private void Awake() 
     {
         Time.timeScale = 1;
+        m_sound = preferences.mute;
+
+        if(m_sound)
+        {
+            button.sprite = soundMuteSprite;
+        }else
+        {
+            button.sprite = soundSprite;        
+        }
     }
 
     public void Activate()
     {
-        activ = !activ;
-
+        activ = !activ;           
         anim.SetBool("Activ", activ);
     }
     public void Sound()
     {
         m_sound = !m_sound;
-
+        preferences.mute = m_sound;
+        
         if(m_sound)
         {
-            button.sprite = soundSprite;
+            button.sprite = soundMuteSprite;
         }else
         {
-            button.sprite = soundMuteSprite;        
+            button.sprite = soundSprite;        
         }
     }
 }

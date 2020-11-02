@@ -1055,6 +1055,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.2641506
       objectReference: {fileID: 0}
+    - target: {fileID: 2273989700319812758, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8f7f31c81ee56df4f8f28722348880a8, type: 2}
     - target: {fileID: 2273989701637567541, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
         type: 3}
       propertyPath: m_AnchorMax.x

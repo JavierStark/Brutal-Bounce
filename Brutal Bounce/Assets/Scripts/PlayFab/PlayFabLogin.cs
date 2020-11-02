@@ -1,13 +1,11 @@
 ﻿using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine;
-using TMPro;
 
 public class PlayFabLogin : MonoBehaviour
 {
     [SerializeField] Animator OpenCloseAnim;
 
-    string username;
 
     public void Start()
     {

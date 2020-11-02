@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayFabLogin : MonoBehaviour
 {
-    [SerializeField] Animator OpenCloseAnim;    
+    [SerializeField] Animator OpenCloseAnim;
 
     public void Start()
-    {    
+    {
         if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId))
         {
             PlayFabSettings.staticSettings.TitleId = "44BCB";

@@ -1,32 +1,37 @@
 ﻿using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine;
+using TMPro;
 
 public class PlayFabLogin : MonoBehaviour
 {
+    [SerializeField] Animator OpenCloseAnim;
+
+    string username;
+
     public void Start()
     {
+
         if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId))
         {
-            /*
-            Please change the titleId below to your own titleId from PlayFab Game Manager.
-            If you have already set the value in the Editor Extensions, this can be skipped.
-            */
-            PlayFabSettings.staticSettings.TitleId = "42";
+            PlayFabSettings.staticSettings.TitleId = "44BCB";
         }
-        var request = new LoginWithCustomIDRequest { CustomId = "GettingStartedGuide", CreateAccount = true };
-        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
+
+        var requestAndroid = new LoginWithAndroidDeviceIDRequest { AndroidDeviceId = ReturnAndroidID(), CreateAccount = true };
+        PlayFabClientAPI.LoginWithAndroidDeviceID(requestAndroid, OnLoginSuccess, OnLoginFailure);
     }
 
     private void OnLoginSuccess(LoginResult result)
     {
-        Debug.Log("Congratulations, you made your first successful API call!");
+        OpenCloseAnim.SetTrigger("Abrir");
     }
 
     private void OnLoginFailure(PlayFabError error)
     {
-        Debug.LogWarning("Something went wrong with your first API call.  :(");
-        Debug.LogError("Here's some debug information:");
-        Debug.LogError(error.GenerateErrorReport());
+        Application.Quit();
+    }
+    private static string ReturnAndroidID()
+    {
+        return SystemInfo.deviceUniqueIdentifier;
     }
 }

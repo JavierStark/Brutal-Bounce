@@ -2,6 +2,8 @@
 using PlayFab.ClientModels;
 using UnityEngine;
 
+
+
 public class PlayFabLogin : MonoBehaviour
 {
     [SerializeField] Animator OpenCloseAnim;

@@ -59,6 +59,9 @@ TagManager:
   - name: Window
     uniqueID: 407059887
     locked: 0
+  - name: Decoracion
+    uniqueID: 1955545487
+    locked: 0
   - name: SecundaryTrail
     uniqueID: 3922701981
     locked: 0

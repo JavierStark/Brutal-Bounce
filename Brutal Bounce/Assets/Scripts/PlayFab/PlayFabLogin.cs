@@ -1,15 +1,23 @@
 ﻿using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 
 
 public class PlayFabLogin : MonoBehaviour
 {
-    [SerializeField] Animator OpenCloseAnim;
+    [SerializeField] Animator openCloseAnim;
+    [SerializeField] GameObject setDisplayNamePanel;
+    [SerializeField] TMP_Text displayNameText;
+    TMP_InputField displayNameInputField;
 
+    #region Login
     public void Start()
     {
+        setDisplayNamePanel.SetActive(false);
+        displayNameInputField = setDisplayNamePanel.GetComponentInChildren<TMP_InputField>();
         if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId))
         {
             PlayFabSettings.staticSettings.TitleId = "44BCB";
@@ -21,7 +29,15 @@ public class PlayFabLogin : MonoBehaviour
 
     private void OnLoginSuccess(LoginResult result)
     {
-        OpenCloseAnim.SetTrigger("Abrir");
+        openCloseAnim.SetTrigger("Abrir");
+        if (PlayerPrefs.GetInt("USERNAME_SETTED") != 1)
+        {
+            setDisplayNamePanel.SetActive(true);
+        }
+        else
+        {
+            UpdateNameInScene();
+        }
     }
 
     private void OnLoginFailure(PlayFabError error)
@@ -32,4 +48,42 @@ public class PlayFabLogin : MonoBehaviour
     {
         return SystemInfo.deviceUniqueIdentifier;
     }
+    #endregion Login
+    #region Name
+    public void SetDisplayName()
+    {
+        string name = displayNameInputField.text;
+
+        var request = new UpdateUserTitleDisplayNameRequest { DisplayName = name };
+        PlayFabClientAPI.UpdateUserTitleDisplayName(request, SetNameSuccess, SetNameError);
+    }
+
+    private void SetNameSuccess(UpdateUserTitleDisplayNameResult result)
+    {
+        PlayerPrefs.SetInt("USERNAME_SETTED", 1);
+        displayNameText.text = result.DisplayName;
+        setDisplayNamePanel.SetActive(false);
+    }
+
+    private void SetNameError(PlayFabError error)
+    {
+
+    }
+
+    private void UpdateNameInScene()
+    {
+        var request = new GetAccountInfoRequest { };
+        PlayFabClientAPI.GetAccountInfo(request, UpdateNameInSceneSuccess, UpdateNameInSceneError);
+    }
+    private void UpdateNameInSceneSuccess(GetAccountInfoResult result)
+    {
+        displayNameText.text = result.AccountInfo.TitleInfo.DisplayName;
+    }
+
+    private void UpdateNameInSceneError(PlayFabError error)
+    {
+
+    }
+
+    #endregion Name
 }

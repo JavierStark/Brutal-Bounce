@@ -29,9 +29,10 @@ public class PlayFabLogin : MonoBehaviour
 
     private void OnLoginSuccess(LoginResult result)
     {
-        openCloseAnim.SetTrigger("Abrir");
+
         if (PlayerPrefs.GetInt("USERNAME_SETTED") != 1)
         {
+            openCloseAnim.SetTrigger("Abrir");
             setDisplayNamePanel.SetActive(true);
         }
         else
@@ -50,6 +51,7 @@ public class PlayFabLogin : MonoBehaviour
     }
     #endregion Login
     #region Name
+
     public void SetDisplayName()
     {
         string name = displayNameInputField.text;
@@ -78,6 +80,7 @@ public class PlayFabLogin : MonoBehaviour
     private void UpdateNameInSceneSuccess(GetAccountInfoResult result)
     {
         displayNameText.text = result.AccountInfo.TitleInfo.DisplayName;
+        openCloseAnim.SetTrigger("Abrir");
     }
 
     private void UpdateNameInSceneError(PlayFabError error)
@@ -86,4 +89,10 @@ public class PlayFabLogin : MonoBehaviour
     }
 
     #endregion Name
+
+    [ContextMenu("ResetPlayerPrefs")]
+    public void ResetPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

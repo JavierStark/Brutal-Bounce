@@ -57,7 +57,7 @@ public class PlayFabLogin : MonoBehaviour
         string name = displayNameInputField.text;
 
         var request = new UpdateUserTitleDisplayNameRequest { DisplayName = name };
-        PlayFabClientAPI.UpdateUserTitleDisplayName(request, SetNameSuccess, SetNameError);
+        PlayFabClientAPI.UpdateUserTitleDisplayName(request, SetNameSuccess, error => { });
     }
 
     private void SetNameSuccess(UpdateUserTitleDisplayNameResult result)
@@ -67,25 +67,15 @@ public class PlayFabLogin : MonoBehaviour
         setDisplayNamePanel.SetActive(false);
     }
 
-    private void SetNameError(PlayFabError error)
-    {
-
-    }
-
     private void UpdateNameInScene()
     {
         var request = new GetAccountInfoRequest { };
-        PlayFabClientAPI.GetAccountInfo(request, UpdateNameInSceneSuccess, UpdateNameInSceneError);
+        PlayFabClientAPI.GetAccountInfo(request, UpdateNameInSceneSuccess, error => { });
     }
     private void UpdateNameInSceneSuccess(GetAccountInfoResult result)
     {
         displayNameText.text = result.AccountInfo.TitleInfo.DisplayName;
         openCloseAnim.SetTrigger("Abrir");
-    }
-
-    private void UpdateNameInSceneError(PlayFabError error)
-    {
-
     }
 
     #endregion Name

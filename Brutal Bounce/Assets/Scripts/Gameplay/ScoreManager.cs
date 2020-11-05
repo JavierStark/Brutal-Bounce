@@ -8,10 +8,12 @@ public class ScoreManager : MonoBehaviour
     static int score;
 
     TMP_Text scoreText;
+    ScorePoster scorePoster;
 
     private void Awake()
     {
         scoreText = GetComponent<TMP_Text>();
+        scorePoster = GetComponent<ScorePoster>();
         score = 0;
     }
 
@@ -30,5 +32,10 @@ public class ScoreManager : MonoBehaviour
     private void UpdateScoreText()
     {
         scoreText.text = score.ToString();
+    }
+
+    public void SubmitScoreToServer()
+    {
+        scorePoster.PostScoreToServer(score);
     }
 }

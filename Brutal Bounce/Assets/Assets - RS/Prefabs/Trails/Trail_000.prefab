@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3584365844808505003}
   - component: {fileID: 3584365844808505002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ TrailRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 440327531
-  m_SortingLayer: 1
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Time: 0.8
   m_Parameters:
@@ -146,7 +146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3584365845043121983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_000
   m_TagString: Untagged
   m_Icon: {fileID: 0}

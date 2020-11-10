@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1993,7 +1993,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.00012207031, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &517754049
 MonoBehaviour:
@@ -5068,7 +5068,7 @@ RectTransform:
   - {fileID: 610954546}
   - {fileID: 1505139184}
   m_Father: {fileID: 1613780264}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6175,8 +6175,8 @@ RectTransform:
   - {fileID: 1282832441}
   - {fileID: 459568073}
   - {fileID: 609597101}
-  - {fileID: 2039721418}
   - {fileID: 1258024318}
+  - {fileID: 2039721418}
   - {fileID: 1899809673}
   - {fileID: 799322204}
   - {fileID: 44367921}
@@ -6689,6 +6689,7 @@ GameObject:
   - component: {fileID: 1740961380}
   - component: {fileID: 1740961382}
   - component: {fileID: 1740961381}
+  - component: {fileID: 1740961383}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -6713,8 +6714,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 408.5758}
-  m_Pivot: {x: 0, y: 1}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1740961381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6754,6 +6755,20 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+--- !u!114 &1740961383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740961379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
 --- !u!1 &1750517025
 GameObject:
   m_ObjectHideFlags: 0
@@ -7734,6 +7749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelRank: {fileID: 1899809676}
   activP: 0
+  leaderboardManager: {fileID: 1740961381}
 --- !u!1 &1937026702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6200361452429371441, guid: 218c6f95725515e4abe174fa6cc5e32d,
@@ -8131,7 +8147,7 @@ RectTransform:
   m_Children:
   - {fileID: 2129786600}
   m_Father: {fileID: 1613780264}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}

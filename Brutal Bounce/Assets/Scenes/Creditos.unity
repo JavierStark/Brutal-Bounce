@@ -445,8 +445,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Credits:\n\n\nProgramming:\n\nJavier\n\n\n2D Artist:\n\nJos\xE9 Recinos\n\n\nCharacter
-    Artist:\n\nJoaquin Garcia\n\n\nSound Designer:\n\n(Discordia)\nJos\xE9 Recinos\n"
+  m_text: "Credits:\n\n\nProgramming:\nJavier Torralbo\n\n2D Artist:\nJos\xE9 Recinos\n\nCharacter
+    Artist:\nJoaquin Garcia\n\nUI Designer:\nJos\xE9 Recinos\n\nSound Designer:\nDiscordia\nJos\xE9
+    Recinos"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de36a9155d702974aa6f6f4ecef631a6, type: 2}
   m_sharedMaterial: {fileID: -7856240461995915842, guid: de36a9155d702974aa6f6f4ecef631a6,

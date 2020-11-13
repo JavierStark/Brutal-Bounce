@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class EventHandler : MonoBehaviour
 {
-    [SerializeField] List<GameObject> events = new List<GameObject>();
-    GameObject currentEvent;
-
     void Start()
     {
-        currentEvent = Instantiate(events[Random.Range(0, events.Count)], transform);
+        transform.GetChild(Random.Range(0, transform.childCount)).gameObject.SetActive(true);
     }
 }

@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class NeighborhoodEvent : Event
 {
-    [SerializeField] List<Transform> windowsPos = new List<Transform>();
+    [SerializeField] List<Transform> neighbourHolder = new List<Transform>();
 
 
     protected override IEnumerator EventInstancingRoutine()
     {
         yield return new WaitForSeconds(GetTimeToWait());
+        Neighbor neighbor = InstanceEventElement(GetNeigbourPos()).GetComponent<Neighbor>();
+        neighbor.SetToHandlerEvent(this);
+        yield return new WaitUntil(() => roundFinished == true);
     }
 
-    private Vector2 GetWindowPos()
+    private Transform GetNeigbourPos()
     {
-        return windowsPos[Random.Range(0, windowsPos.Count)].position;
+        return neighbourHolder[Random.Range(0, neighbourHolder.Count)];
     }
 }

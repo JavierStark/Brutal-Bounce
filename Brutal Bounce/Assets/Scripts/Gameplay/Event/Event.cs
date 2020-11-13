@@ -9,11 +9,13 @@ abstract public class Event : MonoBehaviour
     [SerializeField] float maxTimeBtw;
     [SerializeField] float minTimeBtw;
 
+    protected bool roundFinished = false;
+
     abstract protected IEnumerator EventInstancingRoutine();
 
-    protected void InstanceEventElement(Vector2 position)
+    protected GameObject InstanceEventElement(Transform whereToInstantiate)
     {
-        Instantiate(GetGameObject(), position, Quaternion.identity);
+        return Instantiate(GetGameObject(), whereToInstantiate.position, Quaternion.identity, whereToInstantiate);
     }
 
     protected float GetTimeToWait()
@@ -24,6 +26,12 @@ abstract public class Event : MonoBehaviour
     protected GameObject GetGameObject()
     {
         return objectsToIntantiate[Random.Range(0, objectsToIntantiate.Count)];
+    }
+
+    public void RoundEnded()
+    {
+        roundFinished = true;
+        roundFinished = false;
     }
 
 }

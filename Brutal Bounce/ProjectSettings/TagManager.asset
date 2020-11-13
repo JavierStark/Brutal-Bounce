@@ -47,6 +47,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: DecoracionFondo
+    uniqueID: 1126687153
+    locked: 0
+  - name: Interior
+    uniqueID: 3748459593
+    locked: 0
   - name: Vecino
     uniqueID: 2968432807
     locked: 0

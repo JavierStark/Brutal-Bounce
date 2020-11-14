@@ -7,7 +7,6 @@ public class Multiple_Trail : MonoBehaviour
     private float timeSpawn;
     public float startTimeSpawn = 0.1f;
     public float destroyTime = 5f;
-    public bool notDestroy;
     public GameObject[] trail;
     
     void Update()

@@ -45,7 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeSpawn: 0.1
   destroyTime: 1
-  notDestroy: 0
   trail:
   - {fileID: 464015497411099660, guid: c2b6fb5f41981ac489ce9a8d634dcfd7, type: 3}
 --- !u!1 &7097543293483823861

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 464015497411099662}
   - component: {fileID: 464015497411099663}
   - component: {fileID: 464015497411099657}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Luciernaga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -896259537
-  m_SortingLayer: 2
+  m_SortingLayerID: 440327531
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -7142201892452617377, guid: c5e3bf8e281e5814e989833071980a61,
     type: 3}
@@ -113,7 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3432336572380517467}
   - component: {fileID: 8054883760548948504}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}

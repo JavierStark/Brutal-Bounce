@@ -27,7 +27,12 @@ PrefabInstance:
     - target: {fileID: 4007947679857796911, guid: 2bd6be9b327ce764e8031f6b738f8024,
         type: 3}
       propertyPath: m_Name
-      value: Trail6
+      value: Dead
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007947679857796911, guid: 2bd6be9b327ce764e8031f6b738f8024,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9049998622873669625, guid: 2bd6be9b327ce764e8031f6b738f8024,
         type: 3}

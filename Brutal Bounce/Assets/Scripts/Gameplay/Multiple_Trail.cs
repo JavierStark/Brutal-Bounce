@@ -7,7 +7,7 @@ public class Multiple_Trail : MonoBehaviour
     private float timeSpawn;
     public float startTimeSpawn = 0.1f;
     public float destroyTime = 5f;
-
+    public bool notDestroy;
     public GameObject[] trail;
     
     void Update()
@@ -15,8 +15,10 @@ public class Multiple_Trail : MonoBehaviour
         if(timeSpawn <= 0)
         {
             int rand = Random.Range(0, trail.Length);
-            GameObject instance = (GameObject)Instantiate(trail[rand], transform.position, Quaternion.identity);
-            Destroy(instance, destroyTime);
+                GameObject instance = (GameObject)Instantiate(trail[rand], transform.position, Quaternion.identity);
+                Destroy(instance, destroyTime);
+
+
             timeSpawn = startTimeSpawn;
         }else{
             timeSpawn -= Time.deltaTime;

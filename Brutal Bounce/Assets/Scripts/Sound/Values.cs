@@ -11,13 +11,16 @@ public class Values : MonoBehaviour
 
     void Start()
     {
-        music.value = preferences.musicVolume;
         fX.value = preferences.fXVolume;
+        music.value = preferences.musicVolume;
     }
 
-    public void Value()
+    public void ValueFx()
+    {
+        preferences.fXVolume = fX.value;
+    }
+        public void ValueMusic()
     {
         preferences.musicVolume = music.value;
-        preferences.fXVolume = fX.value;
     }
 }

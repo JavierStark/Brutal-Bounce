@@ -13,6 +13,7 @@ public class ScorePoster : MonoBehaviour
             {
                 Statistics = new List<StatisticUpdate> {
                     new StatisticUpdate { StatisticName = "Score", Value = scoreToPost },
+                    new StatisticUpdate { StatisticName = "Coin", Value = scoreToPost }
                 }
             },
             result => { Debug.Log("User statistics updated"); },

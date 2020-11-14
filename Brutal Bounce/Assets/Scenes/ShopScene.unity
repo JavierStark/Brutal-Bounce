@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -278,6 +278,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69309073}
   m_CullTransparentMesh: 0
+--- !u!1 &157001553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 157001555}
+  - component: {fileID: 157001554}
+  m_Layer: 0
+  m_Name: ShopManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &157001554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157001553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc569bacda33b044a9950d241afa560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinGetter: {fileID: 346406487}
+--- !u!4 &157001555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157001553}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 506.78152, y: 271.36438, z: -115.7749}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &206913090
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +473,7 @@ GameObject:
   - component: {fileID: 290351751}
   - component: {fileID: 290351753}
   - component: {fileID: 290351752}
+  - component: {fileID: 290351754}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -453,7 +498,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 2558.314}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &290351752
 MonoBehaviour:
@@ -473,6 +518,7 @@ MonoBehaviour:
     type: 3}
   skinsPreview: {fileID: 1184017061}
   info: {fileID: 11400000, guid: 7233ec9a197015e4abfe77bf87712e92, type: 2}
+  shopManager: {fileID: 157001554}
 --- !u!114 &290351753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +543,20 @@ MonoBehaviour:
   m_Spacing: {x: 15, y: 20}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &290351754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290351750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
 --- !u!1 &346406483
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +568,7 @@ GameObject:
   - component: {fileID: 346406484}
   - component: {fileID: 346406486}
   - component: {fileID: 346406485}
+  - component: {fileID: 346406487}
   m_Layer: 5
   m_Name: Total
   m_TagString: Untagged
@@ -631,6 +692,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346406483}
   m_CullTransparentMesh: 0
+--- !u!114 &346406487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346406483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8c3c9936019dd4baaee234ba308794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &424062328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,7 +1262,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 0
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 50
   m_Viewport: {fileID: 2024974139}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}

@@ -10,6 +10,7 @@ public class BuyButtomHandler : MonoBehaviour
     [SerializeField] GameObject buttomPrefab;
     [SerializeField] Preview skinsPreview;
     [SerializeField] SkinsInfo info;
+    [SerializeField] ShopManager shopManager;
 
     public event Action<int> OnSkinSelected;
 
@@ -33,9 +34,20 @@ public class BuyButtomHandler : MonoBehaviour
         }
     }
 
-    public void Buy(int index)
+    public bool Buy(int index)
     {
-        itemList.bought[index] = true;
+        if (itemList.bought[index] != true)
+        {
+            itemList.bought[index] = true;
+            int price = itemList.items[index].GetComponent<ItemInstance>().price;
+
+            if (shopManager.GetCurrentCoins() >= price)
+            {
+                shopManager.SpendCoins(price);
+                return true;
+            }
+        }
+        return false;
     }
 
     public void SelectSkin(int index)

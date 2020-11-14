@@ -11,6 +11,7 @@ public class PlayFabLogin : MonoBehaviour
     [SerializeField] Animator openCloseAnim;
     [SerializeField] GameObject setDisplayNamePanel;
     [SerializeField] TMP_Text displayNameText;
+    [SerializeField] CoinGetter coinGetter;
     TMP_InputField displayNameInputField;
 
     #region Login
@@ -38,6 +39,7 @@ public class PlayFabLogin : MonoBehaviour
         else
         {
             UpdateNameInScene();
+            coinGetter.SetCoinsToText();
         }
     }
 

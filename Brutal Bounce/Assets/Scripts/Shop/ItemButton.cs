@@ -42,9 +42,11 @@ public class ItemButton : MonoBehaviour
     {
         if (!bought)
         {
-            bought = true;
-            handler.Buy(index);
-            notBoughtPanel.SetActive(false);
+            if (handler.Buy(index))
+            {
+                bought = true;
+                notBoughtPanel.SetActive(false);
+            }
         }
         else
         {

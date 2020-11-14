@@ -64,6 +64,7 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.CompareTag("GameOverCollider"))
         {
             scoreManager.SubmitScoreToServer();
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else if (collision.gameObject.CompareTag("Coin"))

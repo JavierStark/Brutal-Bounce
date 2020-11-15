@@ -15,5 +15,5 @@ MonoBehaviour:
   ballSkin: {fileID: 5203890309359697631, guid: 8cb61d7e3ee73ad45b71cb63970d407a,
     type: 3}
   playerSkin: {fileID: 0}
-  trailSkin: {fileID: 5760598685680597832, guid: 2c8a2caf96871d94ea2681818744f56d,
+  trailSkin: {fileID: 5760598685680597832, guid: 1b0d7bd9ccc2d9243bb60dd8c47ccac5,
     type: 3}

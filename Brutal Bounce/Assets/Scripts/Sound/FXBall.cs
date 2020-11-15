@@ -12,9 +12,13 @@ public class FXBall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) 
     {   
-        particle.Play();
         int rand = Random.Range(0, effects.Length);
         audio.clip = (effects[rand]);   
         audio.Play();
+
+        if(other.gameObject.tag == "Wall")
+        {
+            particle.Play();
+        }
     }
 }

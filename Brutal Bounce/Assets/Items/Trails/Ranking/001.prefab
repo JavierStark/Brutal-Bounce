@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7604980371649671913
+--- !u!1001 &7939919321966775349
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,23 +11,28 @@ PrefabInstance:
         type: 3}
       propertyPath: gameObject
       value: 
-      objectReference: {fileID: 7927045912937268075, guid: 4170d23c823ff124f90f415f8e3dfe53,
-        type: 3}
-    - target: {fileID: 2432369814883661693, guid: 2bd6be9b327ce764e8031f6b738f8024,
-        type: 3}
-      propertyPath: shopImage
-      value: 
-      objectReference: {fileID: 21300000, guid: 9a8632341bacfb1488dfb92a48837fd6,
+      objectReference: {fileID: 6826447727925375556, guid: 4ccd96104a3ecc842b4419b9571cf04d,
         type: 3}
     - target: {fileID: 2432369814883661693, guid: 2bd6be9b327ce764e8031f6b738f8024,
         type: 3}
       propertyPath: price
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2432369814883661693, guid: 2bd6be9b327ce764e8031f6b738f8024,
+        type: 3}
+      propertyPath: shopImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 9261061f0fbe84e458c6414f619aa20b,
+        type: 3}
     - target: {fileID: 4007947679857796911, guid: 2bd6be9b327ce764e8031f6b738f8024,
         type: 3}
       propertyPath: m_Name
-      value: Special
+      value: 001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007947679857796911, guid: 2bd6be9b327ce764e8031f6b738f8024,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9049998622873669625, guid: 2bd6be9b327ce764e8031f6b738f8024,
         type: 3}

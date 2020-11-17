@@ -11,23 +11,23 @@ PrefabInstance:
         type: 3}
       propertyPath: gameObject
       value: 
-      objectReference: {fileID: 742303602618359179, guid: cb42feb960300ad438b0a6c3a86d3245,
+      objectReference: {fileID: 7927045912937268075, guid: 6c99ccccd85da5449847ef20f36edc09,
         type: 3}
     - target: {fileID: 2432369814883661693, guid: 2bd6be9b327ce764e8031f6b738f8024,
         type: 3}
       propertyPath: shopImage
       value: 
-      objectReference: {fileID: 21300000, guid: a11209b4e009a9d47b5c97299147d7b6,
+      objectReference: {fileID: 21300000, guid: 4158e3f3c4756d640bf4e0ca84535f43,
         type: 3}
     - target: {fileID: 2432369814883661693, guid: 2bd6be9b327ce764e8031f6b738f8024,
         type: 3}
       propertyPath: price
-      value: 10
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4007947679857796911, guid: 2bd6be9b327ce764e8031f6b738f8024,
         type: 3}
       propertyPath: m_Name
-      value: Default
+      value: 008
       objectReference: {fileID: 0}
     - target: {fileID: 9049998622873669625, guid: 2bd6be9b327ce764e8031f6b738f8024,
         type: 3}

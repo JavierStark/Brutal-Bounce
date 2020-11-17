@@ -12,6 +12,8 @@ public class BuyButtomHandler : MonoBehaviour
     [SerializeField] SkinsInfo info;
     [SerializeField] ShopManager shopManager;
 
+    [SerializeField] GameObject confirmBuyPanel;
+
     public event Action<int> OnSkinSelected;
 
     void Start()
@@ -34,20 +36,33 @@ public class BuyButtomHandler : MonoBehaviour
         }
     }
 
-    public bool Buy(int index)
+    public void Buy(ItemButton itemButton)
     {
+        int index = itemButton.index;
+
         if (itemList.bought[index] != true)
         {
-            itemList.bought[index] = true;
             int price = itemList.items[index].GetComponent<ItemInstance>().price;
+
+            confirmBuyPanel.SetActive(true);
+            var confirmBuyPanelComponent = confirmBuyPanel.GetComponent<ConfirmBuyPanel>();
 
             if (shopManager.GetCurrentCoins() >= price)
             {
-                shopManager.SpendCoins(price);
-                return true;
+                confirmBuyPanelComponent.SetInformation(this, itemButton, 1);
+            }
+            else
+            {
+                confirmBuyPanelComponent.SetInformation(this, itemButton, 2);
             }
         }
-        return false;
+    }
+
+    public void BuyConfirmed(ItemButton itemButton)
+    {
+        itemList.bought[itemButton.index] = true;
+        shopManager.SpendCoins(itemButton.item.Price);
+        itemButton.BuyConfirmed();
     }
 
     public void SelectSkin(int index)

@@ -11,10 +11,10 @@ public class ItemButton : MonoBehaviour
     [SerializeField] TMP_Text priceText;
     [SerializeField] GameObject check;
     private bool bought;
-    private int index;
+    public int index;
     private BuyButtomHandler handler;
 
-    private IItem item;
+    public IItem item;
 
     public void SetButton(Sprite sprite, string text, bool bought, int index, BuyButtomHandler handler, IItem item)
     {
@@ -42,17 +42,19 @@ public class ItemButton : MonoBehaviour
     {
         if (!bought)
         {
-            if (handler.Buy(index))
-            {
-                bought = true;
-                notBoughtPanel.SetActive(false);
-            }
+            handler.Buy(this);
         }
         else
         {
             SelectSkin();
         }
 
+    }
+
+    public void BuyConfirmed()
+    {
+        bought = true;
+        notBoughtPanel.SetActive(false);
     }
 
     private void SelectSkin()

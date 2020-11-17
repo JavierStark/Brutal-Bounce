@@ -22,9 +22,4 @@ public class ShopManager : MonoBehaviour
     {
         coinGetter.SpendCoins(coins);
     }
-
-    public void LoadCoinsToServer()
-    {
-        coinGetter.LoadCoinsToServer();
-    }
 }

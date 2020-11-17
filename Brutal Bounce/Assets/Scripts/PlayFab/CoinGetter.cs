@@ -33,19 +33,18 @@ public class CoinGetter : MonoBehaviour
 
     public void SpendCoins(int coinsToSpend)
     {
+        LoadCoinsToServer(coinsToSpend);
         coins -= coinsToSpend;
-        LoadCoinsToServer();
         UpdateText();
-
     }
 
-    public void LoadCoinsToServer()
+    public void LoadCoinsToServer(int scoreToSpend)
     {
         Debug.Log(coins);
         var request = new UpdatePlayerStatisticsRequest
         {
             Statistics = new List<StatisticUpdate>() {
-                new StatisticUpdate {StatisticName = "Coin", Value = coins }
+                new StatisticUpdate {StatisticName = "Coin", Value = -scoreToSpend }
             }
         };
 

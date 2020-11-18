@@ -16,7 +16,7 @@ public class ItemButton : MonoBehaviour
 
     public IItem item;
 
-    public void SetButton(Sprite sprite, string text, bool bought, int index, BuyButtomHandler handler, IItem item)
+    public void SetButton(Sprite sprite, string text, bool bought, int index, BuyButtomHandler handler, IItem item, bool selected)
     {
         previewImage.sprite = sprite;
         priceText.text = text;
@@ -32,7 +32,14 @@ public class ItemButton : MonoBehaviour
         else
         {
             notBoughtPanel.SetActive(false);
-            CheckSelection();
+            if (selected)
+            {
+                check.SetActive(true);
+            }
+            else
+            {
+                check.SetActive(false);
+            }
         }
 
 

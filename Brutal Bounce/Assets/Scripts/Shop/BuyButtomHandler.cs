@@ -30,7 +30,8 @@ public class BuyButtomHandler : MonoBehaviour
                             itemList.bought[index],
                             index,
                             this,
-                            convertedItem);
+                            convertedItem,
+                            convertedItem == GetInfo());
 
             index++;
         }

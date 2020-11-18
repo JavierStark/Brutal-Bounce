@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94f9f4ed04962e941845ea9d28f44276
+guid: 12f353d66e5ba0547b23b82161d22c95
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +11,8 @@ TrueTypeFontImporter:
   fontName: Brutal_bounce
   fontNames:
   - Brutal_bounce
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 94f9f4ed04962e941845ea9d28f44276, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

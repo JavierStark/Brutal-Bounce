@@ -6,20 +6,19 @@ public class ShopManager : MonoBehaviour
 {
     int coins;
 
-    [SerializeField] CoinGetter coinGetter;
 
     void Start()
     {
-        coinGetter.SetCoinsToText();
+
     }
 
     public int GetCurrentCoins()
     {
-        return coinGetter.GetCoins();
+        return 0;
     }
 
     public void SpendCoins(int coins)
     {
-        coinGetter.SpendCoins(coins);
+
     }
 }

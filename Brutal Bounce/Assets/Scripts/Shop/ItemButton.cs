@@ -3,21 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using PlayFab.ClientModels;
+using System;
 
 public class ItemButton : MonoBehaviour
 {
     [SerializeField] GameObject notBoughtPanel;
     [SerializeField] Image previewImage;
     [SerializeField] TMP_Text priceText;
-    [SerializeField] GameObject check;
+    [SerializeField] GameObject pricePanel;
+
+    CatalogItem item;
+
     private bool bought;
-    public int index;
+    private bool selected;
     private BuyButtomHandler handler;
 
 
-    public void SetButton(Sprite sprite, string text, bool bought, int index, BuyButtomHandler handler, bool selected)
+    public void SetButton(CatalogItem item, bool bought, bool selected, BuyButtomHandler handler)
     {
+        this.item = item;
+        this.bought = bought;
+        this.selected = selected;
+        this.handler = handler;
 
+        previewImage.sprite = GetImageFromWeb(item.ItemImageUrl);
+        uint price;
+        item.VirtualCurrencyPrices.TryGetValue("BC", out price);
+        priceText.text = price.ToString();
+
+        CheckSelection();
+        CheckBought();
+    }
+
+
+    Sprite GetImageFromWeb(string url)
+    {
+        return null;
     }
 
     public void Buy()
@@ -44,5 +66,9 @@ public class ItemButton : MonoBehaviour
     private void CheckSelection()
     {
 
+    }
+    private void CheckBought()
+    {
+        throw new NotImplementedException();
     }
 }

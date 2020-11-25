@@ -18,7 +18,6 @@ public class Inventory : ScriptableObject
     private void InitializeItemsFromServerSuccess(GetUserInventoryResult result)
     {
         ItemsIDs = result.Inventory;
-        DebugItems();
     }
 
     public List<ItemInstance> GetItems()

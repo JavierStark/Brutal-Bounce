@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerSkin : MonoBehaviour, IItem
+public class PlayerSkin : MonoBehaviour
 {
     public Material material;
     public int price;

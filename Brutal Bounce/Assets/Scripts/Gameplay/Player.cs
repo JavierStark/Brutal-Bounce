@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] SkinsInfo skinsInfo;
-
 
     Animator animator;
     SpriteRenderer spriteRenderer;
@@ -27,10 +25,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        if (skinsInfo.playerSkin)
-        {
-            GetComponent<SpriteRenderer>().material = skinsInfo.playerSkin.material;
-        }
+
     }
 
     void Update()

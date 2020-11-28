@@ -8,6 +8,7 @@ public class InventoryHandler : MonoBehaviour
 {
     [SerializeField] Inventory inventory;
 
+
     void Awake()
     {
         InitializeInventory();
@@ -18,9 +19,9 @@ public class InventoryHandler : MonoBehaviour
         inventory.InitializeItemsFromServer();
     }
 
-    public List<string> GetItemsID()
+    public List<string> GetItemsID(ItemUsefulTools.ItemType type)
     {
-        var items = inventory.GetItems();
+        var items = inventory.GetItems(type);
         List<string> itemsID = new List<string>();
         foreach (ItemInstance item in items)
         {
@@ -30,8 +31,13 @@ public class InventoryHandler : MonoBehaviour
         return itemsID;
     }
 
-    public List<ItemInstance> GetItemsInstances()
+    public List<ItemInstance> GetItemsInstances(ItemUsefulTools.ItemType type)
     {
-        return inventory.GetItems();
+        return inventory.GetItems(type);
+    }
+
+    public bool IsReady()
+    {
+        return inventory.ready;
     }
 }

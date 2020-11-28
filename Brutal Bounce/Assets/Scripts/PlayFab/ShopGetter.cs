@@ -6,13 +6,10 @@ using PlayFab.ClientModels;
 
 public class ShopGetter : MonoBehaviour
 {
-    List<CatalogItem> catalogItems = new List<CatalogItem>();
-    InventoryHandler inventoryHandler;
+    List<CatalogItem> catalogTrails = new List<CatalogItem>();
+    List<CatalogItem> catalogBalls = new List<CatalogItem>();
 
-    void Awake()
-    {
-        inventoryHandler = GetComponent<InventoryHandler>();
-    }
+    bool ready = false;
 
     void Start()
     {
@@ -22,22 +19,40 @@ public class ShopGetter : MonoBehaviour
 
     void GetCatalogItemsSuccess(GetCatalogItemsResult result)
     {
-        catalogItems = result.Catalog;
-        DebugItems();
-    }
+        List<CatalogItem> trails = new List<CatalogItem>();
+        List<CatalogItem> balls = new List<CatalogItem>();
 
-    void DebugItems()
-    {
-        foreach (CatalogItem item in catalogItems)
+        foreach (CatalogItem item in result.Catalog)
         {
-            if (inventoryHandler.GetItemsID().Contains(item.ItemId))
+            if (item.ItemClass == ItemUsefulTools.BallString)
             {
-                Debug.Log(item.ItemId + "   YES");
+                balls.Add(item);
             }
-            else
+            else if (item.ItemClass == ItemUsefulTools.TrailString)
             {
-                Debug.Log(item.ItemId + "   NO");
+                trails.Add(item);
             }
         }
+        catalogBalls = balls;
+        catalogTrails = trails;
+
+        Debug.Log("ShopGetterReady");
+
+        ready = true;
+    }
+
+    public List<CatalogItem> GetCatalogItems(ItemUsefulTools.ItemType type)
+    {
+        switch (type)
+        {
+            case ItemUsefulTools.ItemType.Ball: return catalogBalls;
+            case ItemUsefulTools.ItemType.Trail: return catalogTrails;
+            default: return null;
+        }
+    }
+
+    public bool IsReady()
+    {
+        return ready;
     }
 }

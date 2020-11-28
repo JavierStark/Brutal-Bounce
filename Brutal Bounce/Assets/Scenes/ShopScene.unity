@@ -3011,6 +3011,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransicionOpen
       objectReference: {fileID: 0}
+    - target: {fileID: 2273989700319812744, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2273989700319812745, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3139,22 +3144,22 @@ PrefabInstance:
     - target: {fileID: 2273989701637567541, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2273989701637567541, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2273989701878920165, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2273989701878920165, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bc5b5a4bc5373343b6ab29cd0013e2d, type: 3}

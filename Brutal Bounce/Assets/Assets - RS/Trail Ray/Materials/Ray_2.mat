@@ -51,9 +51,9 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     m_Colors:
-    - Color_147F4A70: {r: 4.237095, g: 0.90953344, b: 0, a: 1}
-    - Color_A4633191: {r: 1.4980392, g: 1.4980392, b: 0.26666668, a: 1}
-    - Vector2_FB4A239C: {r: 2, g: 0, b: 0, a: 0}
+    - Color_147F4A70: {r: 2.297397, g: 2.297397, b: 2.297397, a: 1}
+    - Color_A4633191: {r: 1.1351844, g: 1.1351844, b: 1.1351844, a: 1}
+    - Vector2_FB4A239C: {r: 1, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

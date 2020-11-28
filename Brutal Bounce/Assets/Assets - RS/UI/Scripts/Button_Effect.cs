@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+//[RequireComponent(typeof(AudioSource))]
 public class Button_Effect : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
+    
     public float scale = 0.95f;
 
 	public void OnPointerDown(PointerEventData evenData)

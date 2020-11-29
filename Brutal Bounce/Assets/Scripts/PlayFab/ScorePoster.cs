@@ -6,9 +6,6 @@ using PlayFab.ClientModels;
 
 public class ScorePoster : MonoBehaviour
 {
-
-    [SerializeField] CoinGetter coinGetter;
-
     public void PostScoreToServer(int scoreToPost)
     {
         PlayFabClientAPI.UpdatePlayerStatistics(

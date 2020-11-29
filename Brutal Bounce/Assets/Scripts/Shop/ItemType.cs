@@ -1,6 +1,14 @@
-﻿enum ItemType
+﻿
+public static class ItemUsefulTools
 {
-    Ball,
-    Player,
-    Trail
+    public enum ItemType
+    {
+        Ball,
+        Player,
+        Trail
+    }
+
+    public const string TrailString = "Trail";
+    public const string BallString = "Ball";
+
 }

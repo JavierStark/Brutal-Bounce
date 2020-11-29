@@ -4,14 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
-
 public class PlayFabLogin : MonoBehaviour
 {
+
+    string UserName;
+
     [SerializeField] Animator openCloseAnim;
     [SerializeField] GameObject setDisplayNamePanel;
     [SerializeField] TMP_Text displayNameText;
-    [SerializeField] CoinGetter coinGetter;
+
+    [SerializeField] CoinsManager coinsManager;
+
     TMP_InputField displayNameInputField;
 
     #region Login
@@ -30,7 +33,6 @@ public class PlayFabLogin : MonoBehaviour
 
     private void OnLoginSuccess(LoginResult result)
     {
-
         if (PlayerPrefs.GetInt("USERNAME_SETTED") != 1)
         {
             openCloseAnim.SetTrigger("Abrir");
@@ -38,10 +40,10 @@ public class PlayFabLogin : MonoBehaviour
         }
         else
         {
-            UpdateNameInScene();
-            coinGetter.SetCoinsToText();
+            LoginCompleted();
         }
     }
+
 
     private void OnLoginFailure(PlayFabError error)
     {
@@ -67,6 +69,7 @@ public class PlayFabLogin : MonoBehaviour
         PlayerPrefs.SetInt("USERNAME_SETTED", 1);
         displayNameText.text = result.DisplayName;
         setDisplayNamePanel.SetActive(false);
+        LoginCompleted();
     }
 
     private void UpdateNameInScene()
@@ -77,10 +80,16 @@ public class PlayFabLogin : MonoBehaviour
     private void UpdateNameInSceneSuccess(GetAccountInfoResult result)
     {
         displayNameText.text = result.AccountInfo.TitleInfo.DisplayName;
-        openCloseAnim.SetTrigger("Abrir");
     }
 
     #endregion Name
+
+    void LoginCompleted()
+    {
+        UpdateNameInScene();
+        coinsManager.GetCurrencyFromServer();
+        openCloseAnim.SetTrigger("Abrir");
+    }
 
     [ContextMenu("ResetPlayerPrefs")]
     public void ResetPlayerPrefs()

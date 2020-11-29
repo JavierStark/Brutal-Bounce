@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] SkinsInfo skinsInfo;
-
     GameObject ballInstance;
     GameObject trailInstance;
 
@@ -32,14 +30,7 @@ public class Ball : MonoBehaviour
 
     void Start()
     {
-        if (skinsInfo.ballSkin)
-        {
-            ballInstance = Instantiate(skinsInfo.ballSkin.gameObject, transform);
-        }
-        if (skinsInfo.trailSkin)
-        {
-            trailInstance = Instantiate(skinsInfo.trailSkin.gameObject, transform);
-        }
+
     }
 
     private void LateUpdate()

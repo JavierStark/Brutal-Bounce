@@ -14,12 +14,12 @@ public class Transition : MonoBehaviour
     public void ToGameScene()
     {
         Invoke("OpenGameScene", time);
-        trans.SetActive(true);
+        //trans.SetActive(true);
     }
     public void ToShopScene()
     {
         Invoke("OpenShowScene", time);
-        trans.SetActive(true);
+        //trans.SetActive(true);
     }
 
     public void OpenGameScene()

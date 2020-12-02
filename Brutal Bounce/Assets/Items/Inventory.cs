@@ -1,14 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
-
+using System.Linq;
 [CreateAssetMenu]
 public class Inventory : ScriptableObject
 {
     List<ItemInstance> ballInstances = new List<ItemInstance>();
     List<ItemInstance> trailInstances = new List<ItemInstance>();
+
+    List<ItemInstance> fullInventory = new List<ItemInstance>();
 
     public bool ready = false;
 
@@ -30,10 +31,12 @@ public class Inventory : ScriptableObject
             if (item.ItemClass == ItemUsefulTools.BallString)
             {
                 balls.Add(item);
+                fullInventory.Add(item);
             }
             else if (item.ItemClass == ItemUsefulTools.TrailString)
             {
                 trails.Add(item);
+                fullInventory.Add(item);
             }
         }
 
@@ -52,6 +55,13 @@ public class Inventory : ScriptableObject
             case ItemUsefulTools.ItemType.Trail: return trailInstances;
             default: return null;
         }
+    }
+
+    public bool ItemInInventory(ItemPackage item)
+    {
+        string id = item.catalogItemReference.ItemId;
+        var equalIDList = fullInventory.Where(x => x.ItemId == id);
+        return equalIDList == null ? false : true;
     }
 
     [ContextMenu("Debug")]

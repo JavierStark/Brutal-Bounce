@@ -36,6 +36,11 @@ public class InventoryHandler : MonoBehaviour
         return inventory.GetItems(type);
     }
 
+    public bool ItemInInventory(ItemPackage item)
+    {
+        return inventory.ItemInInventory(item);
+    }
+
     public bool IsReady()
     {
         return inventory.ready;

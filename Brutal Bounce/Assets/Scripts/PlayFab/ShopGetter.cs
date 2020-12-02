@@ -36,8 +36,6 @@ public class ShopGetter : MonoBehaviour
         catalogBalls = balls;
         catalogTrails = trails;
 
-        Debug.Log("ShopGetterReady");
-
         ready = true;
     }
 

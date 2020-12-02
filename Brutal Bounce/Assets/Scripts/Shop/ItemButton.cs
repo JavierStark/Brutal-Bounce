@@ -5,41 +5,63 @@ using UnityEngine.UI;
 using TMPro;
 using PlayFab.ClientModels;
 using System;
+using UnityEngine.Networking;
 
 public class ItemButton : MonoBehaviour
 {
     [SerializeField] GameObject notBoughtPanel;
     [SerializeField] Image previewImage;
     [SerializeField] TMP_Text priceText;
-    [SerializeField] GameObject pricePanel;
+    [SerializeField] GameObject check;
 
-    CatalogItem item;
+    ItemPackage item;
 
     private bool bought;
     private bool selected;
     private BuyButtomHandler handler;
 
 
-    public void SetButton(CatalogItem item, bool bought, bool selected, BuyButtomHandler handler)
+    public void SetButton(ItemPackage itemPackage, bool bought,
+    bool selected, BuyButtomHandler handler)
     {
-        this.item = item;
+        this.item = itemPackage;
+        this.bought = itemPackage.bought;
         this.bought = bought;
         this.selected = selected;
         this.handler = handler;
 
-        previewImage.sprite = GetImageFromWeb(item.ItemImageUrl);
+        handler.OnButtonSelectedEvent += CheckSelection;
+
         uint price;
-        item.VirtualCurrencyPrices.TryGetValue("BC", out price);
+        item.catalogItemReference.VirtualCurrencyPrices.TryGetValue("BC", out price);
         priceText.text = price.ToString();
 
         CheckSelection();
         CheckBought();
+        StartCoroutine(DownloadImage(item.catalogItemReference.ItemImageUrl));
     }
 
 
-    Sprite GetImageFromWeb(string url)
+    IEnumerator DownloadImage(string MediaUrl)
     {
-        return null;
+        UnityWebRequest request = UnityWebRequestTexture.GetTexture(MediaUrl);
+        yield return request.SendWebRequest();
+        if (request.isNetworkError || request.isHttpError)
+            Debug.Log(request.error);
+        else
+        {
+            Texture2D tex = ((DownloadHandlerTexture)request.downloadHandler).texture;
+            Sprite sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(tex.width / 2, tex.height / 2));
+            previewImage.sprite = sprite;
+        }
+    }
+
+    public void ClickButton()
+    {
+        if (bought)
+        {
+            handler.SelectSkin(item);
+        }
     }
 
     public void Buy()
@@ -53,22 +75,54 @@ public class ItemButton : MonoBehaviour
 
     }
 
-    private void SelectSkin()
+    private void CheckSelection(string id)
     {
-
+        if (id == item.catalogItemReference.ItemId)
+        {
+            SetSelectedState();
+        }
+        else
+        {
+            SetDeselectedState();
+        }
     }
-
-    private void DeselectSkin(int x)
-    {
-
-    }
-
     private void CheckSelection()
     {
-
+        if (selected)
+        {
+            SetSelectedState();
+        }
+        else
+        {
+            SetDeselectedState();
+        }
     }
     private void CheckBought()
     {
-        throw new NotImplementedException();
+        if (bought)
+        {
+            SetBoughtState();
+        }
+        else
+        {
+            SetNotBoughtState();
+        }
+    }
+
+    private void SetNotBoughtState()
+    {
+        notBoughtPanel.SetActive(true);
+    }
+    private void SetBoughtState()
+    {
+        notBoughtPanel.SetActive(false);
+    }
+    private void SetSelectedState()
+    {
+        check.SetActive(true);
+    }
+    private void SetDeselectedState()
+    {
+        check.SetActive(false);
     }
 }

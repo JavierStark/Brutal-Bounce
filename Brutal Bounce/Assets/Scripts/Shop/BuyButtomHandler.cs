@@ -9,6 +9,9 @@ public class BuyButtomHandler : MonoBehaviour
     [SerializeField] ShopManager shopManager;
     [SerializeField] GameObject itemButtonPrefab;
 
+    public delegate void OnButtonSelected(string id);
+    public OnButtonSelected OnButtonSelectedEvent;
+
     List<ItemPackage> itemPackages;
 
     void Start()
@@ -33,8 +36,35 @@ public class BuyButtomHandler : MonoBehaviour
 
     IEnumerator ConnectWithShopWhenReady()
     {
+        Debug.Log(shopManager);
         yield return new WaitUntil(shopManager.IsShopReady);
         itemPackages = shopManager.GetItemPackages(itemType);
+        SetupItemsInShop();
+    }
+
+    void SetupItemsInShop()
+    {
+        foreach (ItemPackage itemPackage in itemPackages)
+        {
+            var currentButton = Instantiate(itemButtonPrefab, transform);
+            currentButton.GetComponent<ItemButton>().SetButton(itemPackage, CheckIfBought(itemPackage), CheckSelectedButton(itemPackage), this);
+        }
+    }
+
+    public bool CheckSelectedButton(ItemPackage item)
+    {
+        return shopManager.CheckSkinInCurrentSkins(item, itemType);
+    }
+
+    public bool CheckIfBought(ItemPackage item)
+    {
+        return shopManager.CheckIfSkinInInventory(item);
+    }
+
+    public void SelectSkin(ItemPackage item)
+    {
+        OnButtonSelectedEvent(item.catalogItemReference.ItemId);
+
     }
 
     [ContextMenu("Debug")]

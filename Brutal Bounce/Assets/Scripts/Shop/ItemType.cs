@@ -11,4 +11,6 @@ public static class ItemUsefulTools
     public const string TrailString = "Trail";
     public const string BallString = "Ball";
 
+    public const string TrailSkinIdString = "TrailSkinId";
+    public const string BallSkinIdString = "BallSkinId";
 }

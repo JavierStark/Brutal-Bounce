@@ -46,4 +46,5 @@ MonoBehaviour:
   openCloseAnim: {fileID: 0}
   setDisplayNamePanel: {fileID: 0}
   displayNameText: {fileID: 0}
-  coinGetter: {fileID: 0}
+  coinsManager: {fileID: 0}
+  currentSkins: {fileID: 11400000, guid: 2d32d69549a00cc4997fec1f07e9f712, type: 2}

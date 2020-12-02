@@ -3,6 +3,7 @@ using PlayFab.ClientModels;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class PlayFabLogin : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayFabLogin : MonoBehaviour
     [SerializeField] TMP_Text displayNameText;
 
     [SerializeField] CoinsManager coinsManager;
+    [SerializeField] CurrentSkins currentSkins;
 
     TMP_InputField displayNameInputField;
 
@@ -89,7 +91,55 @@ public class PlayFabLogin : MonoBehaviour
         UpdateNameInScene();
         coinsManager.GetCurrencyFromServer();
         openCloseAnim.SetTrigger("Abrir");
+
+        var request = new GetTitleDataRequest();
+        PlayFab.PlayFabClientAPI.GetTitleData(request, GetTitleDataSuccess, error => { });
     }
+
+    void GetTitleDataSuccess(GetTitleDataResult result)
+    {
+        result.Data.TryGetValue("DefaultBallSkinId", out currentSkins.DefaultBall);
+        result.Data.TryGetValue("DefaultTrailSkinId", out currentSkins.DefaultTrail);
+
+        var request = new GetUserDataRequest { Keys = new List<string> { ItemUsefulTools.BallSkinIdString, ItemUsefulTools.TrailSkinIdString } };
+        PlayFabClientAPI.GetUserData(request, GetUserDataSuccess, error => { });
+    }
+
+
+    void GetUserDataSuccess(GetUserDataResult result)
+    {
+        foreach (KeyValuePair<string, UserDataRecord> data in result.Data)
+        {
+            Debug.Log(data.Key + " " + data.Value);
+        }
+        UserDataRecord currentBallData = null;
+        result.Data.TryGetValue(ItemUsefulTools.BallSkinIdString, out currentBallData);
+
+        UserDataRecord currentTrailData = null;
+        result.Data.TryGetValue(ItemUsefulTools.TrailSkinIdString, out currentTrailData);
+
+        if (currentBallData == null || currentBallData.Value == null)
+        {
+            currentSkins.BallSkinId = currentSkins.DefaultBall;
+        }
+        else
+        {
+            currentSkins.BallSkinId = currentBallData.Value;
+        }
+
+        if (currentTrailData == null || currentTrailData.Value == null)
+        {
+            currentSkins.TrailSkinId = currentSkins.DefaultTrail;
+        }
+        else
+        {
+            currentSkins.TrailSkinId = currentBallData.Value;
+        }
+    }
+
+
+
+
 
     [ContextMenu("ResetPlayerPrefs")]
     public void ResetPlayerPrefs()

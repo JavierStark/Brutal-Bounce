@@ -8,6 +8,7 @@ public class ShopManager : MonoBehaviour
 {
     [SerializeField] ShopGetter shopGetter;
     [SerializeField] InventoryHandler inventoryHandler;
+    [SerializeField] CurrentSkins currentSkins;
 
     public List<ItemPackage> GetItemPackages(ItemUsefulTools.ItemType type)
     {
@@ -45,5 +46,30 @@ public class ShopManager : MonoBehaviour
     public bool IsShopReady()
     {
         return (shopGetter.IsReady() && inventoryHandler.IsReady());
+    }
+
+    public bool CheckSkinInCurrentSkins(ItemPackage skin, ItemUsefulTools.ItemType type)
+    {
+        switch (type)
+        {
+            case ItemUsefulTools.ItemType.Ball:
+                if (skin.catalogItemReference.ItemId == currentSkins.BallSkinId)
+                {
+                    return true;
+                }
+                return false;
+            case ItemUsefulTools.ItemType.Trail:
+                if (skin.catalogItemReference.ItemId == currentSkins.BallSkinId)
+                {
+                    return true;
+                }
+                return false;
+            default: return false;
+        }
+    }
+
+    public bool CheckIfSkinInInventory(ItemPackage item)
+    {
+        return inventoryHandler.ItemInInventory(item);
     }
 }

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4055,6 +4055,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 0.95
+--- !u!1 &664583924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5560242526790041542, guid: c0b983b4c26781546a5982fb96842190,
+    type: 3}
+  m_PrefabInstance: {fileID: 1087888038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &678053949
 GameObject:
   m_ObjectHideFlags: 0
@@ -7298,7 +7304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19eaca45b17dce849b88834c0622d447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trans: {fileID: 0}
+  trans: {fileID: 664583924}
   GameScene: GameScene
   ShopScene: ShopScene
   time: 1
@@ -9344,7 +9350,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 74.85
+  m_fontSize: 74.8
   m_fontSizeBase: 74.8
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11860,11 +11866,6 @@ PrefabInstance:
       propertyPath: displayNameText
       value: 
       objectReference: {fileID: 1657349887}
-    - target: {fileID: 2425007963521960226, guid: 3ce1493ca657bb54e887aa145357df7b,
-        type: 3}
-      propertyPath: coinGetter
-      value: 
-      objectReference: {fileID: 1405722169}
     - target: {fileID: 2425007963521960226, guid: 3ce1493ca657bb54e887aa145357df7b,
         type: 3}
       propertyPath: coinsManager

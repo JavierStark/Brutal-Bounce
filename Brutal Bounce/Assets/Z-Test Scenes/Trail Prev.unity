@@ -331,6 +331,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Omnitrix_Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6404605640685791319, guid: cfc7777e99bd72f4a909f7d198a8c693,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404605641525647398, guid: cfc7777e99bd72f4a909f7d198a8c693,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -941,7 +946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1326778950
 Transform:
   m_ObjectHideFlags: 0
@@ -1253,7 +1258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1789355438
 Transform:
   m_ObjectHideFlags: 0

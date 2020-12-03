@@ -24,7 +24,7 @@ public class BuyButtomHandler : MonoBehaviour
     public void Buy(ItemPackage item)
     {
         var request = new PurchaseItemRequest { ItemId = item.catalogItemReference.ItemId, Price = (int)item.price, VirtualCurrency = "BC" };
-        PlayFab.PlayFabClientAPI.PurchaseItem(request, success => { Debug.Log("Success"); }, error => { Debug.Log(error.ErrorMessage); });
+        PlayFab.PlayFabClientAPI.PurchaseItem(request, success => { Debug.Log("Success"); }, error => { });
     }
 
     public void BuyConfirmed(ItemPackage itemButton)

@@ -136,9 +136,9 @@ MonoBehaviour:
   animator: {fileID: 3701279440782417353}
   audio: {fileID: 1748306124244820261}
   effects:
-  - {fileID: 8300000, guid: 5f22ef1b4ce5cc044a6362aad11bfdad, type: 3}
+  - {fileID: 8300000, guid: 693e2c7f1bea4a94c9fb489b2ad94614, type: 3}
   - {fileID: 8300000, guid: 420711d7d618a1e46b77f4a2c52f9de4, type: 3}
-  - {fileID: 8300000, guid: 85311ce6603f3c149a0d858f4f4f68df, type: 3}
+  - {fileID: 8300000, guid: 0c29f147f6e5a5f4bbbc3555adcdc8b2, type: 3}
   - {fileID: 8300000, guid: c4cdc39c1d18db8409ab042f5a865eda, type: 3}
   - {fileID: 8300000, guid: 0c29f147f6e5a5f4bbbc3555adcdc8b2, type: 3}
   - {fileID: 8300000, guid: c18c4beee89b0794a8666100955595eb, type: 3}

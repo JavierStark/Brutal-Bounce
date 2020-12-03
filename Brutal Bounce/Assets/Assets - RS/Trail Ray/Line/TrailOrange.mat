@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Trail
+  m_Name: TrailOrange
   m_Shader: {fileID: -6465566751694194690, guid: 4658902273261284e80debc8e5fb6e3e,
     type: 3}
   m_ShaderKeywords: 

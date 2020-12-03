@@ -20,6 +20,12 @@ public class Settings : MonoBehaviour
     {
         Time.timeScale = 1;
         m_sound = preferences.mute;
+    }
+
+    public void Activate()
+    {
+        activ = !activ;           
+        anim.SetBool("Activ", activ);
 
         if(m_sound)
         {
@@ -28,12 +34,6 @@ public class Settings : MonoBehaviour
         {
             button.sprite = soundSprite;        
         }
-    }
-
-    public void Activate()
-    {
-        activ = !activ;           
-        anim.SetBool("Activ", activ);
     }
     public void Sound()
     {

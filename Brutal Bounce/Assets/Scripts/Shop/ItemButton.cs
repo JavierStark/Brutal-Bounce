@@ -6,6 +6,7 @@ using TMPro;
 using PlayFab.ClientModels;
 using System;
 using UnityEngine.Networking;
+using PlayFab;
 
 public class ItemButton : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class ItemButton : MonoBehaviour
         handler.OnButtonSelectedEvent += CheckSelection;
 
         uint price;
-        item.catalogItemReference.VirtualCurrencyPrices.TryGetValue("BC", out price);
+        price = item.price;
         priceText.text = price.ToString();
 
         CheckSelection();
@@ -60,14 +61,18 @@ public class ItemButton : MonoBehaviour
     {
         if (bought)
         {
+            Debug.Log("Select");
             handler.SelectSkin(item);
+        }
+        else
+        {
+            Buy();
         }
     }
 
     public void Buy()
     {
-
-
+        handler.Buy(item);
     }
 
     public void BuyConfirmed()

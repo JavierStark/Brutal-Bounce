@@ -60,8 +60,8 @@ public class Inventory : ScriptableObject
     public bool ItemInInventory(ItemPackage item)
     {
         string id = item.catalogItemReference.ItemId;
-        var equalIDList = fullInventory.Where(x => x.ItemId == id);
-        return equalIDList == null ? false : true;
+        List<ItemInstance> equalIDList = fullInventory.Where(x => x.ItemId == id).ToList();
+        return equalIDList.Count > 0 ? true : false;
     }
 
     [ContextMenu("Debug")]

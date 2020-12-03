@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PlayFab;
+using PlayFab.ClientModels;
 
 public class BuyButtomHandler : MonoBehaviour
 {
@@ -19,12 +21,13 @@ public class BuyButtomHandler : MonoBehaviour
         StartCoroutine(ConnectWithShopWhenReady());
     }
 
-    public void Buy(ItemButton itemButton)
+    public void Buy(ItemPackage item)
     {
-
+        var request = new PurchaseItemRequest { ItemId = item.catalogItemReference.ItemId, Price = (int)item.price, VirtualCurrency = "BC" };
+        PlayFab.PlayFabClientAPI.PurchaseItem(request, success => { Debug.Log("Success"); }, error => { Debug.Log(error.ErrorMessage); });
     }
 
-    public void BuyConfirmed(ItemButton itemButton)
+    public void BuyConfirmed(ItemPackage itemButton)
     {
     }
 
@@ -36,7 +39,6 @@ public class BuyButtomHandler : MonoBehaviour
 
     IEnumerator ConnectWithShopWhenReady()
     {
-        Debug.Log(shopManager);
         yield return new WaitUntil(shopManager.IsShopReady);
         itemPackages = shopManager.GetItemPackages(itemType);
         SetupItemsInShop();

@@ -5308,7 +5308,7 @@ namespace PlayFab.ClientModels
     public class PurchaseItemRequest : PlayFabRequestCommon
     {
         /// <summary>
-        /// Catalog version for the items to be purchased (defaults to most recent version.
+        /// Catalog version for the items to be purchased (defaults to most recent version).
         /// </summary>
         public string CatalogVersion;
         /// <summary>

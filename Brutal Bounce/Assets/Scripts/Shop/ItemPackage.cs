@@ -9,11 +9,14 @@ public class ItemPackage
     public CatalogItem catalogItemReference;
     public ItemUsefulTools.ItemType type;
     public bool bought;
+    public uint price;
 
     public void PackageSetup(CatalogItem item, ItemUsefulTools.ItemType type, bool bought)
     {
         catalogItemReference = item;
         this.type = type;
         this.bought = bought;
+
+        catalogItemReference.VirtualCurrencyPrices.TryGetValue("BC", out price);
     }
 }

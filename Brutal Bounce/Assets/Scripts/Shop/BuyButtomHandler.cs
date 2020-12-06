@@ -8,11 +8,9 @@ using PlayFab.ClientModels;
 public class BuyButtomHandler : MonoBehaviour
 {
     [SerializeField] ItemUsefulTools.ItemType itemType;
-    [SerializeField] ShopManager shopManager;
+    [SerializeField] public ShopManager shopManager;
     [SerializeField] GameObject itemButtonPrefab;
 
-    public delegate void OnButtonSelected(string id);
-    public OnButtonSelected OnButtonSelectedEvent;
 
     List<ItemPackage> itemPackages;
 
@@ -21,21 +19,6 @@ public class BuyButtomHandler : MonoBehaviour
         StartCoroutine(ConnectWithShopWhenReady());
     }
 
-    public void Buy(ItemPackage item)
-    {
-        var request = new PurchaseItemRequest { ItemId = item.catalogItemReference.ItemId, Price = (int)item.price, VirtualCurrency = "BC" };
-        PlayFab.PlayFabClientAPI.PurchaseItem(request, success => { Debug.Log("Success"); }, error => { });
-    }
-
-    public void BuyConfirmed(ItemPackage itemButton)
-    {
-    }
-
-
-    public void SelectSkin(int index)
-    {
-
-    }
 
     IEnumerator ConnectWithShopWhenReady()
     {
@@ -63,10 +46,9 @@ public class BuyButtomHandler : MonoBehaviour
         return shopManager.CheckIfSkinInInventory(item);
     }
 
-    public void SelectSkin(ItemPackage item)
+    public void SelectSkin(ItemButton itemButton)
     {
-        OnButtonSelectedEvent(item.catalogItemReference.ItemId);
-
+        shopManager.SetCurrentOnFocusItem(itemButton);
     }
 
     [ContextMenu("Debug")]

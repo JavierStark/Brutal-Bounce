@@ -29,12 +29,12 @@ public class CoinsManager : MonoBehaviour
         return currency;
     }
 
-    public bool SpendCoins(int coinsToSpend)
+    public bool SpendCoins(uint coinsToSpend)
     {
 
         if (currency - coinsToSpend >= 0)
         {
-            var request = new SubtractUserVirtualCurrencyRequest { Amount = coinsToSpend, VirtualCurrency = CURRENCYID };
+            var request = new SubtractUserVirtualCurrencyRequest { Amount = (int)coinsToSpend, VirtualCurrency = CURRENCYID };
             PlayFabClientAPI.SubtractUserVirtualCurrency(request, SpendCoinsSuccess, error => { });
             return true;
         }

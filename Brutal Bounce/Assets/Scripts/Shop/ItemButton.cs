@@ -13,9 +13,10 @@ public class ItemButton : MonoBehaviour
     [SerializeField] GameObject notBoughtPanel;
     [SerializeField] Image previewImage;
     [SerializeField] TMP_Text priceText;
-    [SerializeField] GameObject check;
+    [SerializeField] GameObject selectCheck;
+    [SerializeField] GameObject onFocusCheck;
 
-    ItemPackage item;
+    public ItemPackage item;
 
     private bool bought;
     private bool selected;
@@ -31,7 +32,7 @@ public class ItemButton : MonoBehaviour
         this.selected = selected;
         this.handler = handler;
 
-        handler.OnButtonSelectedEvent += CheckSelection;
+        handler.shopManager.OnButtonSelectedEvent += CheckFocus;
 
         uint price;
         price = item.price;
@@ -59,36 +60,18 @@ public class ItemButton : MonoBehaviour
 
     public void ClickButton()
     {
-        if (bought)
+        handler.SelectSkin(this);
+    }
+
+    private void CheckFocus(ItemButton itemButton)
+    {
+        if (itemButton == this)
         {
-            Debug.Log("Select");
-            handler.SelectSkin(item);
+            SetFocusState();
         }
         else
         {
-            Buy();
-        }
-    }
-
-    public void Buy()
-    {
-        handler.Buy(item);
-    }
-
-    public void BuyConfirmed()
-    {
-
-    }
-
-    private void CheckSelection(string id)
-    {
-        if (id == item.catalogItemReference.ItemId)
-        {
-            SetSelectedState();
-        }
-        else
-        {
-            SetDeselectedState();
+            SetNotFocusState();
         }
     }
     private void CheckSelection()
@@ -114,6 +97,15 @@ public class ItemButton : MonoBehaviour
         }
     }
 
+    private void SetFocusState()
+    {
+        onFocusCheck.SetActive(true);
+    }
+    private void SetNotFocusState()
+    {
+        onFocusCheck.SetActive(false);
+    }
+
     private void SetNotBoughtState()
     {
         notBoughtPanel.SetActive(true);
@@ -124,10 +116,10 @@ public class ItemButton : MonoBehaviour
     }
     private void SetSelectedState()
     {
-        check.SetActive(true);
+        selectCheck.SetActive(true);
     }
     private void SetDeselectedState()
     {
-        check.SetActive(false);
+        selectCheck.SetActive(false);
     }
 }

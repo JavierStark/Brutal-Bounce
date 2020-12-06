@@ -3,12 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
+using UnityEngine.SceneManagement;
 
 public class ShopManager : MonoBehaviour
 {
-    [SerializeField] ShopGetter shopGetter;
-    [SerializeField] InventoryHandler inventoryHandler;
+    ShopGetter shopGetter;
+    InventoryHandler inventoryHandler;
+    CoinsManager coinsManager;
     [SerializeField] CurrentSkins currentSkins;
+
+    [SerializeField] ConfirmButton confirmButton;
+
+    ItemButton currentInFocusItem;
+
+    public delegate void OnButtonSelected(ItemButton itemButton);
+    public OnButtonSelected OnButtonSelectedEvent;
+
+    void Start()
+    {
+        shopGetter = GetComponent<ShopGetter>();
+        inventoryHandler = GetComponent<InventoryHandler>();
+        coinsManager = GetComponent<CoinsManager>();
+        coinsManager.GetCurrencyFromServer();
+    }
 
     public List<ItemPackage> GetItemPackages(ItemUsefulTools.ItemType type)
     {
@@ -46,6 +63,72 @@ public class ShopManager : MonoBehaviour
     public bool IsShopReady()
     {
         return (shopGetter.IsReady() && inventoryHandler.IsReady());
+    }
+
+    public void SetCurrentOnFocusItem(ItemButton item)
+    {
+        currentInFocusItem = item;
+        OnButtonSelectedEvent(item);
+        UpdateConfirmButtonState();
+    }
+    private void UpdateConfirmButtonState()
+    {
+        if (currentInFocusItem.item.bought)
+        {
+            confirmButton.SetSelectState();
+        }
+        else
+        {
+            Debug.Log("Price " + currentInFocusItem.item.price + "    Coins " + coinsManager.GetCoins());
+            if (coinsManager.GetCoins() >= currentInFocusItem.item.price)
+            {
+                confirmButton.SetBuyState((int)currentInFocusItem.item.price);
+            }
+            else
+            {
+                confirmButton.SetNotBuyableState((int)currentInFocusItem.item.price);
+            }
+        }
+    }
+
+    public void Buy()
+    {
+        var request = new PurchaseItemRequest { ItemId = currentInFocusItem.item.catalogItemReference.ItemId, Price = (int)currentInFocusItem.item.price, VirtualCurrency = "BC" };
+        PlayFab.PlayFabClientAPI.PurchaseItem(request, BuySuccess, error => { });
+    }
+
+    private void BuySuccess(PurchaseItemResult result)
+    {
+        coinsManager.SpendCoins(currentInFocusItem.item.price);
+        ReloadScene();
+    }
+
+    public void ConfirmButtonClicked()
+    {
+        if (currentInFocusItem.item.bought)
+        {
+            SelectItemInFocus();
+        }
+        else
+        {
+            Buy();
+        }
+    }
+
+    private void SelectItemInFocus()
+    {
+        switch (currentInFocusItem.item.type)
+        {
+            case ItemUsefulTools.ItemType.Ball: currentSkins.BallSkinId = currentInFocusItem.item.catalogItemReference.ItemId; break;
+            case ItemUsefulTools.ItemType.Trail: currentSkins.TrailSkinId = currentInFocusItem.item.catalogItemReference.ItemId; break;
+        }
+        currentSkins.UpdateCurrentSkinsToServer();
+        ReloadScene();
+    }
+
+    private void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public bool CheckSkinInCurrentSkins(ItemPackage skin, ItemUsefulTools.ItemType type)

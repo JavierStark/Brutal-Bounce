@@ -12,4 +12,10 @@ public class CurrentSkins : ScriptableObject
 
     public string DefaultBall;
     public string DefaultTrail;
+
+    public void UpdateCurrentSkinsToServer()
+    {
+        var request = new UpdateUserDataRequest { Data = new Dictionary<string, string> { { ItemUsefulTools.BallSkinIdString, BallSkinId }, { ItemUsefulTools.TrailSkinIdString, TrailSkinId } } };
+        PlayFabClientAPI.UpdateUserData(request, success => { }, error => { });
+    }
 }

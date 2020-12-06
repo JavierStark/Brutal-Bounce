@@ -14,7 +14,7 @@ public class InventoryHandler : MonoBehaviour
         InitializeInventory();
     }
 
-    void InitializeInventory()
+    public void InitializeInventory()
     {
         inventory.InitializeItemsFromServer();
     }

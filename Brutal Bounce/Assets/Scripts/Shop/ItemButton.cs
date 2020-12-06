@@ -15,7 +15,7 @@ public class ItemButton : MonoBehaviour
     [SerializeField] TMP_Text priceText;
     [SerializeField] GameObject check;
 
-    ItemPackage item;
+    public ItemPackage item;
 
     private bool bought;
     private bool selected;
@@ -59,25 +59,7 @@ public class ItemButton : MonoBehaviour
 
     public void ClickButton()
     {
-        if (bought)
-        {
-            Debug.Log("Select");
-            handler.SelectSkin(item);
-        }
-        else
-        {
-            Buy();
-        }
-    }
-
-    public void Buy()
-    {
-        handler.Buy(item);
-    }
-
-    public void BuyConfirmed()
-    {
-
+        handler.SelectSkin(this);
     }
 
     private void CheckSelection(string id)

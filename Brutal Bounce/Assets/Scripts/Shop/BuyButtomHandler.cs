@@ -21,21 +21,6 @@ public class BuyButtomHandler : MonoBehaviour
         StartCoroutine(ConnectWithShopWhenReady());
     }
 
-    public void Buy(ItemPackage item)
-    {
-        var request = new PurchaseItemRequest { ItemId = item.catalogItemReference.ItemId, Price = (int)item.price, VirtualCurrency = "BC" };
-        PlayFab.PlayFabClientAPI.PurchaseItem(request, success => { Debug.Log("Success"); }, error => { });
-    }
-
-    public void BuyConfirmed(ItemPackage itemButton)
-    {
-    }
-
-
-    public void SelectSkin(int index)
-    {
-
-    }
 
     IEnumerator ConnectWithShopWhenReady()
     {
@@ -63,10 +48,10 @@ public class BuyButtomHandler : MonoBehaviour
         return shopManager.CheckIfSkinInInventory(item);
     }
 
-    public void SelectSkin(ItemPackage item)
+    public void SelectSkin(ItemButton itemButton)
     {
-        OnButtonSelectedEvent(item.catalogItemReference.ItemId);
-
+        shopManager.SetCurrentOnFocusItem(itemButton);
+        OnButtonSelectedEvent(itemButton.item.catalogItemReference.ItemId);
     }
 
     [ContextMenu("Debug")]

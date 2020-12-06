@@ -16,6 +16,9 @@ public class ShopManager : MonoBehaviour
 
     ItemButton currentInFocusItem;
 
+    public delegate void OnButtonSelected(ItemButton itemButton);
+    public OnButtonSelected OnButtonSelectedEvent;
+
     void Start()
     {
         shopGetter = GetComponent<ShopGetter>();
@@ -65,6 +68,7 @@ public class ShopManager : MonoBehaviour
     public void SetCurrentOnFocusItem(ItemButton item)
     {
         currentInFocusItem = item;
+        OnButtonSelectedEvent(item);
         UpdateConfirmButtonState();
     }
     private void UpdateConfirmButtonState()

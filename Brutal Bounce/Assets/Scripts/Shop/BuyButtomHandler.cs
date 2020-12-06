@@ -8,11 +8,9 @@ using PlayFab.ClientModels;
 public class BuyButtomHandler : MonoBehaviour
 {
     [SerializeField] ItemUsefulTools.ItemType itemType;
-    [SerializeField] ShopManager shopManager;
+    [SerializeField] public ShopManager shopManager;
     [SerializeField] GameObject itemButtonPrefab;
 
-    public delegate void OnButtonSelected(string id);
-    public OnButtonSelected OnButtonSelectedEvent;
 
     List<ItemPackage> itemPackages;
 
@@ -51,7 +49,6 @@ public class BuyButtomHandler : MonoBehaviour
     public void SelectSkin(ItemButton itemButton)
     {
         shopManager.SetCurrentOnFocusItem(itemButton);
-        OnButtonSelectedEvent(itemButton.item.catalogItemReference.ItemId);
     }
 
     [ContextMenu("Debug")]

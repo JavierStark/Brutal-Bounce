@@ -13,7 +13,8 @@ public class ItemButton : MonoBehaviour
     [SerializeField] GameObject notBoughtPanel;
     [SerializeField] Image previewImage;
     [SerializeField] TMP_Text priceText;
-    [SerializeField] GameObject check;
+    [SerializeField] GameObject selectCheck;
+    [SerializeField] GameObject onFocusCheck;
 
     public ItemPackage item;
 
@@ -31,7 +32,7 @@ public class ItemButton : MonoBehaviour
         this.selected = selected;
         this.handler = handler;
 
-        handler.OnButtonSelectedEvent += CheckSelection;
+        handler.shopManager.OnButtonSelectedEvent += CheckFocus;
 
         uint price;
         price = item.price;
@@ -62,15 +63,15 @@ public class ItemButton : MonoBehaviour
         handler.SelectSkin(this);
     }
 
-    private void CheckSelection(string id)
+    private void CheckFocus(ItemButton itemButton)
     {
-        if (id == item.catalogItemReference.ItemId)
+        if (itemButton == this)
         {
-            SetSelectedState();
+            SetFocusState();
         }
         else
         {
-            SetDeselectedState();
+            SetNotFocusState();
         }
     }
     private void CheckSelection()
@@ -96,6 +97,15 @@ public class ItemButton : MonoBehaviour
         }
     }
 
+    private void SetFocusState()
+    {
+        onFocusCheck.SetActive(true);
+    }
+    private void SetNotFocusState()
+    {
+        onFocusCheck.SetActive(false);
+    }
+
     private void SetNotBoughtState()
     {
         notBoughtPanel.SetActive(true);
@@ -106,10 +116,10 @@ public class ItemButton : MonoBehaviour
     }
     private void SetSelectedState()
     {
-        check.SetActive(true);
+        selectCheck.SetActive(true);
     }
     private void SetDeselectedState()
     {
-        check.SetActive(false);
+        selectCheck.SetActive(false);
     }
 }

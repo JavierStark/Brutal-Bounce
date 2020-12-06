@@ -12,6 +12,11 @@ public class ConfirmButton : MonoBehaviour
     [SerializeField] TMP_Text priceText;
     [SerializeField] ShopManager shopManager;
 
+    void Start()
+    {
+        this.gameObject.SetActive(false);
+    }
+
     public void OnClick()
     {
         shopManager.ConfirmButtonClicked();
@@ -19,6 +24,7 @@ public class ConfirmButton : MonoBehaviour
 
     public void SetSelectState()
     {
+        gameObject.SetActive(true);
         buttonText.text = "Select";
         buttonImage.color = Color.green;
         button.interactable = true;
@@ -27,6 +33,7 @@ public class ConfirmButton : MonoBehaviour
     }
     public void SetBuyState(int price)
     {
+        gameObject.SetActive(true);
         buttonText.text = "Buy";
         buttonImage.color = Color.green;
         button.interactable = true;
@@ -35,6 +42,7 @@ public class ConfirmButton : MonoBehaviour
     }
     public void SetNotBuyableState(int price)
     {
+        gameObject.SetActive(true);
         buttonText.text = "Buy";
         buttonImage.color = Color.red;
         button.interactable = false;
@@ -44,6 +52,7 @@ public class ConfirmButton : MonoBehaviour
 
     public void SetPrice(uint price)
     {
+        gameObject.SetActive(true);
         priceText.text = price.ToString();
     }
 

@@ -22,23 +22,29 @@ public class Settings : MonoBehaviour
         m_sound = preferences.mute;
     }
 
+    void FixedUpdate()
+    {      
+        if(activ)
+        {         
+            preferences.mute = m_sound;
+
+            if(m_sound)
+            {
+                button.sprite = soundMuteSprite;
+            }else
+            {
+                button.sprite = soundSprite;        
+            }
+        }
+    }
     public void Activate()
     {
         activ = !activ;           
         anim.SetBool("Activ", activ);
-
-        if(m_sound)
-        {
-            button.sprite = soundMuteSprite;
-        }else
-        {
-            button.sprite = soundSprite;        
-        }
     }
     public void Sound()
     {
         m_sound = !m_sound;
-        preferences.mute = m_sound;
         
         if(m_sound)
         {

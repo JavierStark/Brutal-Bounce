@@ -38,6 +38,7 @@ public class ItemButton : MonoBehaviour
         price = item.price;
         priceText.text = price.ToString();
 
+        SetNotFocusState();
         CheckSelection();
         CheckBought();
         StartCoroutine(DownloadImage(item.catalogItemReference.ItemImageUrl));

@@ -558,7 +558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8492456602512615327}
   m_Layer: 12
-  m_Name: GhostBusters_Trail
+  m_Name: TC00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -64,6 +64,15 @@ public class PlayFabLogin : MonoBehaviour
 
         var request = new UpdateUserTitleDisplayNameRequest { DisplayName = name };
         PlayFabClientAPI.UpdateUserTitleDisplayName(request, SetNameSuccess, error => { });
+
+    }
+
+    private void BuyStarterItems()
+    {
+        var ballRequest = new PurchaseItemRequest { ItemId = "BC000", Price = 0, VirtualCurrency = "BC" };
+        var trailRequest = new PurchaseItemRequest { ItemId = "TC000", Price = 0, VirtualCurrency = "BC" };
+        PlayFabClientAPI.PurchaseItem(ballRequest, success => { }, error => { });
+        PlayFabClientAPI.PurchaseItem(trailRequest, success => { }, error => { });
     }
 
     private void SetNameSuccess(UpdateUserTitleDisplayNameResult result)
@@ -71,6 +80,7 @@ public class PlayFabLogin : MonoBehaviour
         PlayerPrefs.SetInt("USERNAME_SETTED", 1);
         displayNameText.text = result.DisplayName;
         setDisplayNamePanel.SetActive(false);
+        BuyStarterItems();
         LoginCompleted();
     }
 
@@ -108,10 +118,6 @@ public class PlayFabLogin : MonoBehaviour
 
     void GetUserDataSuccess(GetUserDataResult result)
     {
-        foreach (KeyValuePair<string, UserDataRecord> data in result.Data)
-        {
-            Debug.Log(data.Key + " " + data.Value);
-        }
         UserDataRecord currentBallData = null;
         result.Data.TryGetValue(ItemUsefulTools.BallSkinIdString, out currentBallData);
 

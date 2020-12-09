@@ -130,6 +130,7 @@ public class PlayFabLogin : MonoBehaviour
         }
         else
         {
+            Debug.Log(currentBallData.Value);
             currentSkins.BallSkinId = currentBallData.Value;
         }
 
@@ -139,7 +140,8 @@ public class PlayFabLogin : MonoBehaviour
         }
         else
         {
-            currentSkins.TrailSkinId = currentBallData.Value;
+            Debug.Log(currentTrailData.Value);
+            currentSkins.TrailSkinId = currentTrailData.Value;
         }
     }
 

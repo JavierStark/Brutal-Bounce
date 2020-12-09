@@ -2172,7 +2172,7 @@ GameObject:
   - component: {fileID: 819256144}
   - component: {fileID: 819256143}
   m_Layer: 0
-  m_Name: New BU
+  m_Name: Building1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2714,75 +2714,6 @@ Transform:
   m_Father: {fileID: 1182208896}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &950705909
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 239541311}
-    m_Modifications:
-    - target: {fileID: 8428852846196522000, guid: fb657238b68b7b04181f5d588cd876c8,
-        type: 3}
-      propertyPath: m_Name
-      value: BA000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428852846196522001, guid: fb657238b68b7b04181f5d588cd876c8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428852846196522001, guid: fb657238b68b7b04181f5d588cd876c8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428852846196522001, guid: fb657238b68b7b04181f5d588cd876c8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428852846196522001, guid: fb657238b68b7b04181f5d588cd876c8,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428852846196522001, guid: fb657238b68b7b04181f5d588cd876c8,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428852846196522001, guid: fb657238b68b7b04181f5d588cd876c8,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428852846196522001, guid: fb657238b68b7b04181f5d588cd876c8,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428852846196522001, guid: fb657238b68b7b04181f5d588cd876c8,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428852846196522001, guid: fb657238b68b7b04181f5d588cd876c8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428852846196522001, guid: fb657238b68b7b04181f5d588cd876c8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428852846196522001, guid: fb657238b68b7b04181f5d588cd876c8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fb657238b68b7b04181f5d588cd876c8, type: 3}
 --- !u!1 &1016096054
 GameObject:
   m_ObjectHideFlags: 0
@@ -4064,7 +3995,7 @@ GameObject:
   - component: {fileID: 1326675690}
   - component: {fileID: 1326675689}
   m_Layer: 0
-  m_Name: New BU (1)
+  m_Name: Building2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6312,15 +6243,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6899511986173186310, guid: dbdd62f9ab32ad4498ed54373f70fc4b,
+        type: 3}
+      propertyPath: currentSkins
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d32d69549a00cc4997fec1f07e9f712,
+        type: 2}
     - target: {fileID: 6899511986173186311, guid: dbdd62f9ab32ad4498ed54373f70fc4b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.87
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6899511986173186311, guid: dbdd62f9ab32ad4498ed54373f70fc4b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.71
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6899511986173186311, guid: dbdd62f9ab32ad4498ed54373f70fc4b,
         type: 3}
@@ -6372,7 +6309,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1648264980, guid: dbdd62f9ab32ad4498ed54373f70fc4b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dbdd62f9ab32ad4498ed54373f70fc4b, type: 3}
 --- !u!1001 &7418751004390946327
 PrefabInstance:

@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour
     GameObject ballInstance;
     GameObject trailInstance;
 
-    CurrentSkins currentSkins;
+    [SerializeField] CurrentSkins currentSkins;
 
     Rigidbody2D rigidbody;
     [SerializeField] float velocity = 15;
@@ -26,8 +26,8 @@ public class Ball : MonoBehaviour
     }
     void Start()
     {
-        var ball = Resources.Load<GameObject>("Balls/" + currentSkins.BallSkinId);
-        var trail = Resources.Load<GameObject>("Trails/" + currentSkins.TrailSkinId);
+        var ball = Resources.Load("Balls/" + currentSkins.BallSkinId) as GameObject;
+        var trail = Resources.Load("Trails/" + currentSkins.TrailSkinId) as GameObject;
         Instantiate(ball, transform);
         Instantiate(trail, transform);
     }

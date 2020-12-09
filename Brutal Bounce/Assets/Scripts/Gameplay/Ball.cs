@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour
     GameObject ballInstance;
     GameObject trailInstance;
 
+    CurrentSkins currentSkins;
 
     Rigidbody2D rigidbody;
     [SerializeField] float velocity = 15;
@@ -23,14 +24,16 @@ public class Ball : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         scoreManager = FindObjectOfType<ScoreManager>();
     }
+    void Start()
+    {
+        var ball = Resources.Load<GameObject>("Balls/" + currentSkins.BallSkinId);
+        var trail = Resources.Load<GameObject>("Trails/" + currentSkins.TrailSkinId);
+        Instantiate(ball, transform);
+        Instantiate(trail, transform);
+    }
     void Update()
     {
         Time.timeScale = timeScale;
-    }
-
-    void Start()
-    {
-
     }
 
     private void LateUpdate()

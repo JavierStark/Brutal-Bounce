@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3176978453926437023}
   m_Layer: 0
-  m_Name: Trail_Epic
+  m_Name: TU003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

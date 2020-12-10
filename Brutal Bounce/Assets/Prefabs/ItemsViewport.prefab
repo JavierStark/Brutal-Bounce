@@ -207,7 +207,6 @@ GameObject:
   - component: {fileID: 8921843381587324647}
   - component: {fileID: 8921843381587324646}
   - component: {fileID: 8921843381587324641}
-  - component: {fileID: 7337023892146730993}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -246,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6f883650b1939449c061b38bf3520d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 2
+  itemType: 0
   shopManager: {fileID: 0}
   itemButtonPrefab: {fileID: 249507448363292801, guid: 45806f541a28d5c449ac2308aec2ce1e,
     type: 3}
@@ -277,28 +276,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 20
-    m_Right: 20
+    m_Left: 0
+    m_Right: 0
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 236.8, y: 277.3}
-  m_Spacing: {x: 40, y: 20}
-  m_Constraint: 1
+  m_CellSize: {x: 236.8, y: 277}
+  m_Spacing: {x: 23, y: 20}
+  m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &7337023892146730993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8921843381587324643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
-  m_VerticalFit: 0

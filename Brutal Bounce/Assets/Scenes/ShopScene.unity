@@ -2923,6 +2923,11 @@ PrefabInstance:
       propertyPath: shopManager
       value: 
       objectReference: {fileID: 924790775}
+    - target: {fileID: 8921843381587324647, guid: e1323e339e9c0164c9e0bfe251d5b122,
+        type: 3}
+      propertyPath: itemType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1323e339e9c0164c9e0bfe251d5b122, type: 3}
 --- !u!224 &1703100294 stripped

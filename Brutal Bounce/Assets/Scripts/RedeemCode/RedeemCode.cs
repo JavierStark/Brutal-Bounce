@@ -10,6 +10,8 @@ public class RedeemCode : MonoBehaviour
     [SerializeField] TMP_InputField inputField;
     [SerializeField] GameObject errorText;
 
+    private bool nextReward = false;
+
     void Start()
     {
         errorText.SetActive(false);
@@ -24,13 +26,25 @@ public class RedeemCode : MonoBehaviour
 
     private void RedeemCouponSuccess(RedeemCouponResult result)
     {
-        foreach (ItemInstance item in result.GrantedItems)
-        {
+        ShowRewardsCoroutine(result.GrantedItems);
+    }
 
+    private IEnumerator ShowRewardsCoroutine(List<ItemInstance> items)
+    {
+        foreach (ItemInstance item in items)
+        {
+            //Show Reward
+            yield return new WaitUntil(() => nextReward == true);
+            nextReward = false;
         }
     }
     private void RedeemCouponError(PlayFabError error)
     {
         errorText.SetActive(true);
+    }
+
+    public void RewardPanelClicked()
+    {
+        nextReward = true;
     }
 }

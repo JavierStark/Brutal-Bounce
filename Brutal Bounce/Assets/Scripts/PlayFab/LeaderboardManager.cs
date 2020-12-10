@@ -28,8 +28,11 @@ public class LeaderboardManager : MonoBehaviour
         var leaderboard = result.Leaderboard;
         foreach (PlayerLeaderboardEntry entry in leaderboard)
         {
-            var currentLeaderboardEntity = Instantiate(leaderboardEntity, transform);
-            currentLeaderboardEntity.GetComponent<LeaderboardEntity>().SetInformation(entry.Position + 1, entry.DisplayName, entry.StatValue);
+            if (entry.StatValue > 0)
+            {
+                var currentLeaderboardEntity = Instantiate(leaderboardEntity, transform);
+                currentLeaderboardEntity.GetComponent<LeaderboardEntity>().SetInformation(entry.Position + 1, entry.DisplayName, entry.StatValue);
+            }
         }
         opened = true;
     }

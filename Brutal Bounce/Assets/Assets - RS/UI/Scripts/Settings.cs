@@ -44,14 +44,6 @@ public class Settings : MonoBehaviour
     }
     public void Sound()
     {
-        m_sound = !m_sound;
-        
-        if(m_sound)
-        {
-            button.sprite = soundMuteSprite;
-        }else
-        {
-            button.sprite = soundSprite;        
-        }
+        m_sound = !m_sound;      
     }
 }

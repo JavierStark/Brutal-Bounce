@@ -64,6 +64,9 @@ TagManager:
   - name: Edificio
     uniqueID: 2313747767
     locked: 0
+  - name: Neigbor
+    uniqueID: 204451101
+    locked: 0
   - name: Window
     uniqueID: 407059887
     locked: 0

@@ -100,6 +100,7 @@ public class PlayFabLogin : MonoBehaviour
     {
         UpdateNameInScene();
         coinsManager.GetCurrencyFromServer();
+        openCloseAnim.SetTrigger("Abrir");
 
         var request = new GetTitleDataRequest();
         PlayFab.PlayFabClientAPI.GetTitleData(request, GetTitleDataSuccess, error => { });
@@ -110,8 +111,8 @@ public class PlayFabLogin : MonoBehaviour
         result.Data.TryGetValue("DefaultBallSkinId", out currentSkins.DefaultBall);
         result.Data.TryGetValue("DefaultTrailSkinId", out currentSkins.DefaultTrail);
 
-        var dataRequest = new GetUserDataRequest { Keys = new List<string> { ItemUsefulTools.BallSkinIdString, ItemUsefulTools.TrailSkinIdString } };
-        PlayFabClientAPI.GetUserData(dataRequest, GetUserDataSuccess, error => { });
+        var request = new GetUserDataRequest { Keys = new List<string> { ItemUsefulTools.BallSkinIdString, ItemUsefulTools.TrailSkinIdString } };
+        PlayFabClientAPI.GetUserData(request, GetUserDataSuccess, error => { });
     }
 
 
@@ -142,8 +143,6 @@ public class PlayFabLogin : MonoBehaviour
             Debug.Log(currentTrailData.Value);
             currentSkins.TrailSkinId = currentTrailData.Value;
         }
-
-        StartCoroutine(LoadManager.Instance.ExitLoading());
     }
 
 

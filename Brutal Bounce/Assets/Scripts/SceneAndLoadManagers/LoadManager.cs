@@ -6,22 +6,28 @@ public class LoadManager : Singleton<LoadManager>
 {
     private SceneHandler sceneHandler;
 
+    private GameObject loadScreen;
+    private bool loading = true;
+
+
     void Start()
     {
         sceneHandler = GetComponent<SceneHandler>();
+        loadScreen = transform.GetChild(0).gameObject;
+        loadScreen.SetActive(false);
+        StartCoroutine(EnterLoading());
     }
 
-    private bool loading = true;
 
     public IEnumerator EnterLoading()
     {
-        //Close Panel
+        loadScreen.SetActive(true);
         loading = true;
         yield break;
     }
     public IEnumerator ExitLoading()
     {
-        //Open Panel
+        loadScreen.SetActive(false);
         loading = false;
         yield break;
     }
@@ -31,13 +37,21 @@ public class LoadManager : Singleton<LoadManager>
         return loading;
     }
 
-    public IEnumerator ChangeSceneWithLoading(string sceneName)
+    public void ChangeSceneWithLoading(string scene)
+    {
+        StartCoroutine(ChangeSceneWithLoadingCoroutine(scene));
+    }
+
+    private IEnumerator ChangeSceneWithLoadingCoroutine(string sceneName)
     {
         yield return StartCoroutine(EnterLoading());
 
         //yield return new WaitForSeconds(segundos de la anim);
         sceneHandler.ChangeScene(sceneName);
-
-        yield return StartCoroutine(ExitLoading());
+        if (sceneName == "GameScene")
+        {
+            Debug.Log("Ingame");
+            yield return StartCoroutine(ExitLoading());
+        }
     }
 }

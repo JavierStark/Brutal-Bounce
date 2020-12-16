@@ -26,6 +26,7 @@ public class Ball : MonoBehaviour
     }
     void Start()
     {
+        StartCoroutine(LoadManager.Instance.ExitLoading());
         var ball = Resources.Load("Balls/" + currentSkins.BallSkinId) as GameObject;
         var trail = Resources.Load("Trails/" + currentSkins.TrailSkinId) as GameObject;
         Instantiate(ball, transform);
@@ -59,7 +60,7 @@ public class Ball : MonoBehaviour
         {
             scoreManager.SubmitScoreToServer();
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            LoadManager.Instance.ChangeSceneWithLoading("GameScene");
         }
         else if (collision.gameObject.CompareTag("Coin"))
         {

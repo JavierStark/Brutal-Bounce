@@ -100,7 +100,6 @@ public class PlayFabLogin : MonoBehaviour
     {
         UpdateNameInScene();
         coinsManager.GetCurrencyFromServer();
-        openCloseAnim.SetTrigger("Abrir");
 
         var request = new GetTitleDataRequest();
         PlayFab.PlayFabClientAPI.GetTitleData(request, GetTitleDataSuccess, error => { });
@@ -143,6 +142,8 @@ public class PlayFabLogin : MonoBehaviour
             Debug.Log(currentTrailData.Value);
             currentSkins.TrailSkinId = currentTrailData.Value;
         }
+
+        StartCoroutine(LoadManager.Instance.ExitLoading());
     }
 
 

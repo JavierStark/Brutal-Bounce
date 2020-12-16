@@ -110,8 +110,8 @@ public class PlayFabLogin : MonoBehaviour
         result.Data.TryGetValue("DefaultBallSkinId", out currentSkins.DefaultBall);
         result.Data.TryGetValue("DefaultTrailSkinId", out currentSkins.DefaultTrail);
 
-        var request = new GetUserDataRequest { Keys = new List<string> { ItemUsefulTools.BallSkinIdString, ItemUsefulTools.TrailSkinIdString } };
-        PlayFabClientAPI.GetUserData(request, GetUserDataSuccess, error => { });
+        var dataRequest = new GetUserDataRequest { Keys = new List<string> { ItemUsefulTools.BallSkinIdString, ItemUsefulTools.TrailSkinIdString } };
+        PlayFabClientAPI.GetUserData(dataRequest, GetUserDataSuccess, error => { });
     }
 
 

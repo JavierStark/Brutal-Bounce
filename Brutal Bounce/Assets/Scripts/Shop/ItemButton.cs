@@ -26,7 +26,6 @@ public class ItemButton : MonoBehaviour
     public void SetButton(ItemPackage itemPackage, bool bought,
     bool selected, BuyButtomHandler handler)
     {
-        previewImage.sprite = null;
         this.item = itemPackage;
         this.bought = itemPackage.bought;
         this.bought = bought;
@@ -123,10 +122,5 @@ public class ItemButton : MonoBehaviour
     private void SetDeselectedState()
     {
         selectCheck.SetActive(false);
-    }
-
-    public bool IsImageReady()
-    {
-        return previewImage.sprite == null ? false : true;
     }
 }

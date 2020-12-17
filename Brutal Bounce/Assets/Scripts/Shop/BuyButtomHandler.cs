@@ -13,7 +13,6 @@ public class BuyButtomHandler : MonoBehaviour
 
 
     List<ItemPackage> itemPackages;
-    List<ItemButton> buttons = new List<ItemButton>();
 
     void Start()
     {
@@ -34,16 +33,7 @@ public class BuyButtomHandler : MonoBehaviour
         {
             var currentButton = Instantiate(itemButtonPrefab, transform);
             currentButton.GetComponent<ItemButton>().SetButton(itemPackage, CheckIfBought(itemPackage), CheckSelectedButton(itemPackage), this);
-            buttons.Add(currentButton.GetComponent<ItemButton>());
         }
-        StartCoroutine(CloseLoadWhenReady());
-    }
-
-    IEnumerator CloseLoadWhenReady()
-    {
-        Debug.Log("PreReady");
-        yield return new WaitUntil(CheckIfButtonsReady);
-        StartCoroutine(LoadManager.Instance.ExitLoading());
     }
 
     public bool CheckSelectedButton(ItemPackage item)
@@ -68,20 +58,5 @@ public class BuyButtomHandler : MonoBehaviour
         {
             Debug.Log(item.catalogItemReference.DisplayName + " => " + item.catalogItemReference.ItemId + " => " + item.bought);
         }
-    }
-
-    private bool CheckIfButtonsReady()
-    {
-        bool ready = true;
-        foreach (ItemButton b in buttons)
-        {
-            if (!b.IsImageReady())
-            {
-                ready = false;
-            }
-        }
-        Debug.Log(ready);
-
-        return ready;
     }
 }

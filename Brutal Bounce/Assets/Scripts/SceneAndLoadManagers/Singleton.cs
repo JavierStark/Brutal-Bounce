@@ -4,6 +4,7 @@
 public class Singleton<T> : MonoBehaviour where T : Component
 {
     private static T m_Instance; // Making sure that instance is accessible only by the getter.
+    public static bool m_isQuitting;
 
     public static T Instance
     {
@@ -29,16 +30,17 @@ public class Singleton<T> : MonoBehaviour where T : Component
     // Virtual Awake() that can be overridden in a derived class.
     protected virtual void Awake()
     {
+        Debug.Log("hola");
         if (m_Instance == null)
         {
             // If null, this instance is now the Singleton instance of the assigned type.
             m_Instance = this as T;
+
             // Making sure that my Singleton instance will persist in memory across every scene.
             DontDestroyOnLoad(this.gameObject);
         }
         else
         {
-            Debug.Log("Destroy");
             // Destroy current instance because it must be a duplicate.
             Destroy(gameObject);
         }

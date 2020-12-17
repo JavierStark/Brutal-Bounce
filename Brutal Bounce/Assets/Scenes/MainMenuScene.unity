@@ -4708,7 +4708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f144264e52d95154f9deecf1540e9da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyDisplay: {fileID: 1405722170}
 --- !u!4 &600955212
 Transform:
   m_ObjectHideFlags: 0
@@ -10504,7 +10503,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1405722167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 6c8c3c9936019dd4baaee234ba308794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1405722170

@@ -69,7 +69,7 @@ TrailRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 440327531
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Time: 0.8
   m_Parameters:
@@ -147,9 +147,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3584365845043121983}
   m_Layer: 12
-  m_Name: Default_Trail
+  m_Name: TC000
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 8c39cb5e29bacaf4ea3f5e62d2f0e3a6, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

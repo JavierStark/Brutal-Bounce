@@ -58,9 +58,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9115856932991255513}
   m_Layer: 12
-  m_Name: "Alima\xF1as_Trail"
+  m_Name: TC004
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 9261061f0fbe84e458c6414f619aa20b, type: 3}
+  m_Icon: {fileID: 2800000, guid: b9ac194d3fa57b24491b9f69cb7452c7, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

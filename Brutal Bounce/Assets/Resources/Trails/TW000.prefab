@@ -88,15 +88,6 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5985236
-        value: 0.56718165
-        inSlope: 2.7564597
-        outSlope: 2.7564597
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.5807553
-      - serializedVersion: 3
         time: 1
         value: 0
         inSlope: 0
@@ -155,7 +146,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3996822003955606455}
-  - component: {fileID: 3996822003955606454}
   m_Layer: 0
   m_Name: TW000
   m_TagString: Untagged
@@ -178,15 +168,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3996822003955606454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3996822003955606441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b111b40ec3f87b048b8c690e8d084941, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2026069626045740731}
   m_Layer: 0
-  m_Name: FlameFire
+  m_Name: TU003
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 2506ffb5498f22a43bff964c28493479, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -100,7 +100,7 @@ TrailRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 440327531
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Time: 0.5
   m_Parameters:

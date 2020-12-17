@@ -57,9 +57,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7097543293483823858}
   m_Layer: 12
-  m_Name: Tomate_Trail
+  m_Name: TC003
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 50d66ab92c98a9546b3736e1fe160e13, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

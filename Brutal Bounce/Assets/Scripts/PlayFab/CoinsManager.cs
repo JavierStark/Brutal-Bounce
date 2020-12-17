@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
+using TMPro;
 
 public class CoinsManager : MonoBehaviour
 {
     const string CURRENCYID = "BC";
+    [SerializeField] TMP_Text currencyDisplay = null;
 
     int currency = 0;
 
@@ -21,7 +23,10 @@ public class CoinsManager : MonoBehaviour
         int currencyValueGetted;
         result.VirtualCurrency.TryGetValue(CURRENCYID, out currencyValueGetted);
         currency = currencyValueGetted;
-        Debug.Log(currency);
+        if (currencyDisplay)
+        {
+            currencyDisplay.text = currency.ToString();
+        }
     }
 
     public int GetCoins()

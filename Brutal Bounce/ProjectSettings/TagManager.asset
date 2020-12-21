@@ -91,3 +91,6 @@ TagManager:
   - name: Prop
     uniqueID: 2481882635
     locked: 0
+  - name: GameOver
+    uniqueID: 2469954873
+    locked: 0

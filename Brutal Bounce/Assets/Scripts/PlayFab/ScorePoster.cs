@@ -12,12 +12,21 @@ public class ScorePoster : MonoBehaviour
             new UpdatePlayerStatisticsRequest
             {
                 Statistics = new List<StatisticUpdate> {
-                    new StatisticUpdate { StatisticName = "Score", Value = scoreToPost },
-                    new StatisticUpdate { StatisticName = "Coin", Value = scoreToPost }
+                    new StatisticUpdate { StatisticName = "Score", Value = scoreToPost }
                 }
             },
             result => { Debug.Log("User statistics updated"); },
             error => { Debug.LogError(error.GenerateErrorReport()); });
+
+        PlayFabClientAPI.AddUserVirtualCurrency(
+            new AddUserVirtualCurrencyRequest
+            {
+                Amount = scoreToPost,
+                VirtualCurrency = "BC"
+            },
+            result => { Debug.Log("User currency updated"); },
+            error => { Debug.LogError(error.GenerateErrorReport()); }
+        );
     }
 
 }

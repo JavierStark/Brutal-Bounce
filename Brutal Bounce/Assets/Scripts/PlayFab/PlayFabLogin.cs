@@ -10,7 +10,6 @@ public class PlayFabLogin : MonoBehaviour
 
     string UserName;
 
-    [SerializeField] Animator openCloseAnim;
     [SerializeField] GameObject setDisplayNamePanel;
     [SerializeField] TMP_Text displayNameText;
 
@@ -37,7 +36,6 @@ public class PlayFabLogin : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("USERNAME_SETTED") != 1)
         {
-            openCloseAnim.SetTrigger("Abrir");
             setDisplayNamePanel.SetActive(true);
         }
         else

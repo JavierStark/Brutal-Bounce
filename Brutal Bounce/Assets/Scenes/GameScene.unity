@@ -1992,7 +1992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -56.40921}
+  m_AnchoredPosition: {x: 350, y: -56.409218}
   m_SizeDelta: {x: 700, y: 80}
   m_Pivot: {x: 0.5, y: 1.0000001}
 --- !u!114 &601159713
@@ -5870,6 +5870,7 @@ GameObject:
   - component: {fileID: 1846143507}
   - component: {fileID: 1846143506}
   - component: {fileID: 1846143505}
+  - component: {fileID: 1846143509}
   m_Layer: 5
   m_Name: 'Game Over '
   m_TagString: Untagged
@@ -5934,7 +5935,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 1161895425
+  m_SortingLayerID: -1825012423
   m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1846143508
@@ -5958,6 +5959,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1846143509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846143504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799e995ac455ccc41bf6257f93f55654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreToShow: {fileID: 0}
+  maxScoreToShow: {fileID: 0}
 --- !u!1 &1876224699
 GameObject:
   m_ObjectHideFlags: 0
@@ -6820,6 +6836,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 436157159}
     m_Modifications:
+    - target: {fileID: 7418751003376854412, guid: c30ba33f680a2ab4e9ac16b0cf165c44,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 88.99988
+      objectReference: {fileID: 0}
     - target: {fileID: 7418751003772550247, guid: c30ba33f680a2ab4e9ac16b0cf165c44,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6929,6 +6950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AntiBugColliders
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418751004266251547, guid: c30ba33f680a2ab4e9ac16b0cf165c44,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -89.99988
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30ba33f680a2ab4e9ac16b0cf165c44, type: 3}

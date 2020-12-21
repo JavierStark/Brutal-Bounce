@@ -38,4 +38,9 @@ public class ScoreManager : MonoBehaviour
     {
         scorePoster.PostScoreToServer(score);
     }
+
+    public int GetScore()
+    {
+        return score;
+    }
 }

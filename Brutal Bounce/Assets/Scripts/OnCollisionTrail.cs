@@ -9,7 +9,7 @@ public class OnCollisionTrail : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
-        if(other.gameObject.tag == "Ground")
+        if(other.gameObject.tag == "Ground" || other.gameObject.tag == "UpWall")
         {
             GameObject instance = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
             Destroy(instance, destroyTime);

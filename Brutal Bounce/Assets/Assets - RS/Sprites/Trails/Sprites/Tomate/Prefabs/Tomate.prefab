@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6722945560070202617}
   - component: {fileID: 6722945560070202616}
-  - component: {fileID: 6722945560070202618}
   - component: {fileID: 6722945560070202619}
   - component: {fileID: 6722945560070202612}
+  - component: {fileID: 2248064700254392770}
   m_Layer: 12
   m_Name: Tomate
   m_TagString: Untagged
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 440327531
-  m_SortingLayer: 9
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 692881dad5153674d8dd10b9553fdd77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -84,22 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &6722945560070202618
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6722945560070202623}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.37
 --- !u!50 &6722945560070202619
 Rigidbody2D:
   serializedVersion: 4
@@ -135,3 +119,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4133848379801487047, guid: 341535f84907cce498368861edb46164, type: 3}
   destroyTime: 2
+--- !u!58 &2248064700254392770
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6722945560070202623}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.34

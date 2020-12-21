@@ -6,6 +6,6 @@ public class Neighbor : EventEntity
 {
     void OnDestroy()
     {
-        handlerEvent.RoundEnded();
+        //        handlerEvent.RoundEnded();
     }
 }

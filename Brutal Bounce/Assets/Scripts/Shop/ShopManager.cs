@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
-using UnityEngine.SceneManagement;
 
 public class ShopManager : MonoBehaviour
 {
@@ -128,7 +127,7 @@ public class ShopManager : MonoBehaviour
 
     private void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        LoadManager.Instance.ChangeSceneWithLoading("ShopScene");
     }
 
     public bool CheckSkinInCurrentSkins(ItemPackage skin, ItemUsefulTools.ItemType type)

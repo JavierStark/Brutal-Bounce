@@ -48,10 +48,5 @@ public class LoadManager : Singleton<LoadManager>
 
         //yield return new WaitForSeconds(segundos de la anim);
         sceneHandler.ChangeScene(sceneName);
-        if (sceneName == "GameScene")
-        {
-            Debug.Log("Ingame");
-            yield return StartCoroutine(ExitLoading());
-        }
     }
 }

@@ -76,6 +76,9 @@ TagManager:
   - name: SecundaryTrail
     uniqueID: 3922701981
     locked: 0
+  - name: UI
+    uniqueID: 1161895425
+    locked: 0
   - name: Trail
     uniqueID: 440327531
     locked: 0
@@ -87,7 +90,4 @@ TagManager:
     locked: 0
   - name: Prop
     uniqueID: 2481882635
-    locked: 0
-  - name: UI
-    uniqueID: 1161895425
     locked: 0

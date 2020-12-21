@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-
+        StartCoroutine(LoadManager.Instance.ExitLoading());
     }
 
     void Update()

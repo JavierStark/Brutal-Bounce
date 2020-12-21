@@ -13,7 +13,6 @@ public class Ball : MonoBehaviour
     Rigidbody2D rigidbody;
     [SerializeField] float velocity = 15;
     [SerializeField] float timeScale = 1;
-    int noPlayerBounce = 0;
 
     ScoreManager scoreManager;
 
@@ -26,7 +25,6 @@ public class Ball : MonoBehaviour
     }
     void Start()
     {
-        StartCoroutine(LoadManager.Instance.ExitLoading());
         var ball = Resources.Load("Balls/" + currentSkins.BallSkinId) as GameObject;
         var trail = Resources.Load("Trails/" + currentSkins.TrailSkinId) as GameObject;
         Instantiate(ball, transform);
@@ -47,10 +45,15 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("UpWall"))
         {
-            noPlayerBounce = 0;
             float randomX = Random.Range(-500f, 500f);
             rigidbody.AddForce(-collision.contacts[0].normal +
                     new Vector2(randomX, 0));
+        }
+        else if (collision.gameObject.CompareTag("SideWall"))
+        {
+            float randomY = Random.Range(-500f, 500f);
+            rigidbody.AddForce(-collision.contacts[0].normal +
+                    new Vector2(0, randomY));
         }
     }
 

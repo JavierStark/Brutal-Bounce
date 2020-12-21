@@ -409,6 +409,18 @@ Canvas:
   m_SortingLayerID: 1161895425
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &58997392 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3791938343618627788, guid: b07b7b6da343e7f4da20bb8ed243ac9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3791938342735297992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &59728358
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,6 +2229,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263475911}
   m_CullTransparentMesh: 0
+--- !u!1 &274955017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3791938343626098537, guid: b07b7b6da343e7f4da20bb8ed243ac9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3791938342735297992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &274955019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274955017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ad6b1d9ec7b104d8b4abfa6780b4e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textC: {fileID: 58997392}
+  consejos:
+  - "No dejes caer el  balon y adue\xF1ate de la primera posisi\xF3n de la tabla."
+  - Mantente conectado a internet.
+  - Mantente conectado a internet.
 --- !u!1 &301048979
 GameObject:
   m_ObjectHideFlags: 0
@@ -4551,7 +4586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f144264e52d95154f9deecf1540e9da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyDisplay: {fileID: 0}
+  currencyDisplay: {fileID: 1405722170}
 --- !u!4 &600955212
 Transform:
   m_ObjectHideFlags: 0
@@ -14804,6 +14839,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791938343618627788, guid: b07b7b6da343e7f4da20bb8ed243ac9f,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791938343618627788, guid: b07b7b6da343e7f4da20bb8ed243ac9f,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b07b7b6da343e7f4da20bb8ed243ac9f, type: 3}

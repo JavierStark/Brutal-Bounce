@@ -9,10 +9,14 @@ public class NeighborhoodEvent : Event
 
     protected override IEnumerator EventInstancingRoutine()
     {
-        yield return new WaitForSeconds(GetTimeToWait());
-        Neighbor neighbor = InstanceEventElement(GetNeigbourPos()).GetComponent<Neighbor>();
-        neighbor.SetToHandlerEvent(this);
-        yield return new WaitUntil(() => roundFinished == true);
+        while (!eventFinished)
+        {
+            roundFinished = false;
+            yield return new WaitForSeconds(GetTimeToWait());
+            Neighbor neighbor = InstanceEventElement(GetNeigbourPos()).GetComponent<Neighbor>();
+            neighbor.SetToHandlerEvent(this);
+            yield return new WaitUntil(() => roundFinished == true);
+        }
     }
 
     private Transform GetNeigbourPos()

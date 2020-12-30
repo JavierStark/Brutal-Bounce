@@ -6,19 +6,28 @@ public class Window : MonoBehaviour
 {
     Transform neighbourHolder;
     Animator windowAnimator;
+    SpriteRenderer windowSpriteRenderer;
 
     void Awake()
     {
         neighbourHolder = transform.GetChild(0).GetComponentInChildren<Transform>();
         windowAnimator = GetComponent<Animator>();
+        windowSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
-    void OpenWindow()
+    void Start()
     {
+        CloseWindow();
+    }
+
+    public void OpenWindow()
+    {
+        windowSpriteRenderer.sortingLayerName = "WindowOpen";
         windowAnimator.Play("OpenWindow");
     }
-    void CloseWindow()
+    public void CloseWindow()
     {
+        windowSpriteRenderer.sortingLayerName = "WindowClose";
         windowAnimator.Play("CloseWindow");
     }
 }

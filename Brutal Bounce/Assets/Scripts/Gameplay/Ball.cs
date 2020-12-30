@@ -15,6 +15,7 @@ public class Ball : MonoBehaviour
     [SerializeField] float timeScale = 1;
 
     ScoreManager scoreManager;
+    [SerializeField] Event currentEvent;
 
 
 
@@ -62,7 +63,7 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.CompareTag("GameOverCollider"))
         {
             scoreManager.SubmitScoreToServer();
-
+            currentEvent.EventEnded();
             LoadManager.Instance.ChangeSceneWithLoading("GameScene");
         }
         else if (collision.gameObject.CompareTag("Coin"))

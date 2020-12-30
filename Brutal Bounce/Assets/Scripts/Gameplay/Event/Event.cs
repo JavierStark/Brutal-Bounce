@@ -10,6 +10,12 @@ abstract public class Event : MonoBehaviour
     [SerializeField] float minTimeBtw;
 
     protected bool roundFinished = false;
+    protected bool eventFinished = false;
+
+    void Start()
+    {
+        StartCoroutine(EventInstancingRoutine());
+    }
 
     abstract protected IEnumerator EventInstancingRoutine();
 
@@ -31,7 +37,10 @@ abstract public class Event : MonoBehaviour
     public void RoundEnded()
     {
         roundFinished = true;
-        roundFinished = false;
     }
 
+    public void EventEnded()
+    {
+        eventFinished = true;
+    }
 }

@@ -27,7 +27,7 @@ TagManager:
   - Prop
   - Trail
   - Ground
-  - 
+  - EventEntity
   - 
   - 
   - 
@@ -61,23 +61,26 @@ TagManager:
   - name: Acera
     uniqueID: 1150306619
     locked: 0
-  - name: Edificio
+  - name: Building
     uniqueID: 2313747767
+    locked: 0
+  - name: WindowOpen
+    uniqueID: 3922628093
     locked: 0
   - name: Neigbor
     uniqueID: 204451101
     locked: 0
-  - name: Window
+  - name: WindowClose
     uniqueID: 407059887
     locked: 0
   - name: Decoracion
     uniqueID: 1955545487
     locked: 0
-  - name: SecundaryTrail
-    uniqueID: 3922701981
-    locked: 0
   - name: UI
     uniqueID: 1161895425
+    locked: 0
+  - name: SecundaryTrail
+    uniqueID: 3922701981
     locked: 0
   - name: Trail
     uniqueID: 440327531

@@ -4,8 +4,21 @@ using UnityEngine;
 
 public class EventHandler : MonoBehaviour
 {
+
+    GameObject currentEvent;
+
     void Start()
     {
-        transform.GetChild(Random.Range(0, transform.childCount)).gameObject.SetActive(true);
+
+    }
+    public void GameStarted()
+    {
+        Debug.Log("Event");
+        currentEvent = transform.GetChild(Random.Range(0, transform.childCount)).gameObject;
+        currentEvent.SetActive(true);
+    }
+    public void GameEnded()
+    {
+        currentEvent.GetComponent<Event>().EventEnded();
     }
 }

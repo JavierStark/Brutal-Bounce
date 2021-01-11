@@ -15,9 +15,7 @@ public class Ball : MonoBehaviour
     [SerializeField] float timeScale = 1;
 
     ScoreManager scoreManager;
-    [SerializeField] Event currentEvent;
-
-
+    [SerializeField] GameOverPanel gameOverPanel;
 
     private void Awake()
     {
@@ -26,6 +24,7 @@ public class Ball : MonoBehaviour
     }
     void Start()
     {
+        rigidbody.gravityScale = 0;
         var ball = Resources.Load("Balls/" + currentSkins.BallSkinId) as GameObject;
         var trail = Resources.Load("Trails/" + currentSkins.TrailSkinId) as GameObject;
         Instantiate(ball, transform);
@@ -63,8 +62,8 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.CompareTag("GameOverCollider"))
         {
             scoreManager.SubmitScoreToServer();
-            currentEvent.EventEnded();
-            LoadManager.Instance.ChangeSceneWithLoading("GameScene");
+            gameOverPanel.GameOverSetup();
+            Destroy(this.gameObject);
         }
         else if (collision.gameObject.CompareTag("Coin"))
         {
@@ -76,5 +75,10 @@ public class Ball : MonoBehaviour
     {
         scoreManager.AddScore(coin.GetValue());
         Destroy(coin.gameObject);
+    }
+
+    public void GameStarted()
+    {
+        rigidbody.gravityScale = 1;
     }
 }

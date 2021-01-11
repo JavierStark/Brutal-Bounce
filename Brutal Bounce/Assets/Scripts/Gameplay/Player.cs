@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     ScoreManager scoreManager;
 
     float horizontalInput;
+    bool gameActive = false;
     [SerializeField] float velocity = 1;
 
     private void Awake()
@@ -30,8 +31,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        GetInput();
-        SetAnim();
+        if (gameActive)
+        {
+            GetInput();
+            SetAnim();
+        }
     }
     private void FixedUpdate()
     {
@@ -71,5 +75,15 @@ public class Player : MonoBehaviour
             animator.SetTrigger("Collision");
             scoreManager.AddScore();
         }
+    }
+
+    public void GameStarted()
+    {
+        gameActive = true;
+    }
+    public void GameEnded()
+    {
+        gameActive = false;
+        rigidbody.velocity = new Vector2(0, 0);
     }
 }

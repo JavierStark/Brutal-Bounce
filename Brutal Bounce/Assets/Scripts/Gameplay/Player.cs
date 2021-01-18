@@ -39,8 +39,11 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Vector2 rbVel = new Vector2(horizontalInput, 0) * velocity;
-        rigidbody.velocity = rbVel;
+        if (gameActive)
+        {
+            Vector2 rbVel = new Vector2(horizontalInput, 0) * velocity;
+            rigidbody.velocity = rbVel;
+        }
     }
 
     void GetInput()
@@ -85,5 +88,6 @@ public class Player : MonoBehaviour
     {
         gameActive = false;
         rigidbody.velocity = new Vector2(0, 0);
+        animator.SetTrigger("GameOver");
     }
 }

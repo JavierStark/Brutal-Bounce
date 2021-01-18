@@ -9,10 +9,17 @@ public class Neighbor : EventEntity
 
     int currentLife = 2;
 
+    Collider2D collider;
+
     void Awake()
     {
         window = transform.parent.GetComponentInParent<Window>();
         animator = GetComponent<Animator>();
+    }
+    void Start()
+    {
+        collider = GetComponent<Collider2D>();
+        collider.isTrigger = true;
     }
     void OnDestroy()
     {
@@ -22,6 +29,7 @@ public class Neighbor : EventEntity
 
     public void OpenWindow()
     {
+        collider.isTrigger = false;
         window.OpenWindow();
     }
 

@@ -16,6 +16,7 @@ public class Countdown : MonoBehaviour
     void Start()
     {
         countdownDisplay = GetComponentInChildren<TMP_Text>();
+        ball.rigidbody.gravityScale = 0;
         StartCoroutine(InitialCountdown());
     }
 

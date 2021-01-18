@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour
 
     [SerializeField] CurrentSkins currentSkins;
 
-    Rigidbody2D rigidbody;
+    public Rigidbody2D rigidbody;
     [SerializeField] float velocity = 15;
     [SerializeField] float timeScale = 1;
 
@@ -24,7 +24,6 @@ public class Ball : MonoBehaviour
     }
     void Start()
     {
-        rigidbody.gravityScale = 0;
         var ball = Resources.Load("Balls/" + currentSkins.BallSkinId) as GameObject;
         var trail = Resources.Load("Trails/" + currentSkins.TrailSkinId) as GameObject;
         Instantiate(ball, transform);

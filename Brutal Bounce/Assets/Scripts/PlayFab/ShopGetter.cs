@@ -9,6 +9,8 @@ public class ShopGetter : MonoBehaviour
     List<CatalogItem> catalogTrails = new List<CatalogItem>();
     List<CatalogItem> catalogBalls = new List<CatalogItem>();
 
+    List<CatalogItem> completeCatalog = new List<CatalogItem>();
+
     bool ready = false;
 
     void Start()
@@ -24,6 +26,7 @@ public class ShopGetter : MonoBehaviour
 
         foreach (CatalogItem item in result.Catalog)
         {
+            completeCatalog.Add(item);
             if (item.ItemClass == ItemUsefulTools.BallString)
             {
                 balls.Add(item);
@@ -47,6 +50,18 @@ public class ShopGetter : MonoBehaviour
             case ItemUsefulTools.ItemType.Trail: return catalogTrails;
             default: return null;
         }
+    }
+
+    public CatalogItem GetCatalogItemFromID(string id)
+    {
+        foreach (CatalogItem item in completeCatalog)
+        {
+            if (item.ItemId == id)
+            {
+                return item;
+            }
+        }
+        return null;
     }
 
     public bool IsReady()

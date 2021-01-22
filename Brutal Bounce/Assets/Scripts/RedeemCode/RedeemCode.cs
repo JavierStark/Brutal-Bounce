@@ -51,7 +51,7 @@ public class RedeemCode : MonoBehaviour
             backgroundImage.SetActive(true);
             CatalogItem catalogItem = shopGetter.GetCatalogItemFromID(item.ItemId);
 
-            StartCoroutine((catalogItem.ItemImageUrl));
+            StartCoroutine(DownloadImage(catalogItem.ItemImageUrl));
             yield return new WaitWhile(() => currentItemToShow == null);
 
             itemImageToShow.sprite = currentItemToShow;

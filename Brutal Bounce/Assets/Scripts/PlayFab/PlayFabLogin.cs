@@ -142,6 +142,7 @@ public class PlayFabLogin : MonoBehaviour
         StartCoroutine(LoadManager.Instance.ExitLoading());
     }
 
+    [ContextMenu("ResetPlayerPrefs")]
     public void ResetPlayerPrefs()
     {
         PlayerPrefs.DeleteAll();

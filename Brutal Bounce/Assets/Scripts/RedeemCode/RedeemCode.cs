@@ -13,7 +13,7 @@ public class RedeemCode : MonoBehaviour
     [SerializeField] TMP_InputField inputField;
 
     [SerializeField] GameObject errorText;
-    [SerializeField] GameObject backgroundImage;
+    [SerializeField] GameObject rewardPanel;
 
     [SerializeField] ShopGetter shopGetter;
     [SerializeField] Image itemImageToShow;
@@ -25,7 +25,7 @@ public class RedeemCode : MonoBehaviour
     void Start()
     {
         errorText.SetActive(false);
-        backgroundImage.SetActive(false);
+        rewardPanel.SetActive(false);
     }
 
     public void SubmitCode()
@@ -48,7 +48,7 @@ public class RedeemCode : MonoBehaviour
         Debug.Log("Code redeemed " + items.Count);
         foreach (ItemInstance item in items)
         {
-            backgroundImage.SetActive(true);
+            rewardPanel.SetActive(true);
             CatalogItem catalogItem = shopGetter.GetCatalogItemFromID(item.ItemId);
 
             StartCoroutine(DownloadImage(catalogItem.ItemImageUrl));
@@ -60,7 +60,7 @@ public class RedeemCode : MonoBehaviour
             nextReward = false;
             currentItemToShow = null;
         }
-        backgroundImage.SetActive(false);
+        rewardPanel.SetActive(false);
         LoadManager.Instance.ChangeSceneWithLoading("MainMenuScene");
     }
 

@@ -61,7 +61,7 @@ public class RedeemCode : MonoBehaviour
             currentItemToShow = null;
         }
         rewardPanel.SetActive(false);
-        LoadManager.Instance.ChangeSceneWithLoading("MainMenuScene");
+        LoadManager.Instance.ChangeSceneWithLoading("ShopScene");
     }
 
     IEnumerator DownloadImage(string MediaUrl)

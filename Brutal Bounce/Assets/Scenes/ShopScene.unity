@@ -4518,6 +4518,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 541214323, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 408055642694656734, guid: 30f4ac9fd8c73734b8513fe7eac9aa16,
         type: 3}
       propertyPath: m_Name

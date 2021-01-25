@@ -40,7 +40,7 @@ public class CoinsManager : MonoBehaviour
         if (currency - coinsToSpend >= 0)
         {
             var request = new SubtractUserVirtualCurrencyRequest { Amount = (int)coinsToSpend, VirtualCurrency = CURRENCYID };
-            PlayFabClientAPI.SubtractUserVirtualCurrency(request, SpendCoinsSuccess, error => { });
+            PlayFabClientAPI.SubtractUserVirtualCurrency(request, SpendCoinsSuccess, error => { Debug.Log(error.ErrorMessage); });
             return true;
         }
         else

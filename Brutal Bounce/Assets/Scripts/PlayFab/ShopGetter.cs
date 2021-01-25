@@ -16,7 +16,7 @@ public class ShopGetter : MonoBehaviour
     void Start()
     {
         var request = new GetCatalogItemsRequest { };
-        PlayFabClientAPI.GetCatalogItems(request, GetCatalogItemsSuccess, error => { });
+        PlayFabClientAPI.GetCatalogItems(request, GetCatalogItemsSuccess, error => { Debug.Log(error.ErrorMessage); });
     }
 
     void GetCatalogItemsSuccess(GetCatalogItemsResult result)

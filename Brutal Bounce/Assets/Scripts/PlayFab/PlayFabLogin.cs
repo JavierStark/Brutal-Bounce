@@ -47,7 +47,7 @@ public class PlayFabLogin : MonoBehaviour
 
     private void OnLoginFailure(PlayFabError error)
     {
-        Application.Quit();
+        Debug.Log(error.ErrorMessage);
     }
     private static string ReturnAndroidID()
     {
@@ -61,7 +61,7 @@ public class PlayFabLogin : MonoBehaviour
         string name = displayNameInputField.text;
 
         var request = new UpdateUserTitleDisplayNameRequest { DisplayName = name };
-        PlayFabClientAPI.UpdateUserTitleDisplayName(request, SetNameSuccess, error => { });
+        PlayFabClientAPI.UpdateUserTitleDisplayName(request, SetNameSuccess, error => { Debug.Log(error.ErrorMessage); });
 
     }
 
@@ -69,8 +69,8 @@ public class PlayFabLogin : MonoBehaviour
     {
         var ballRequest = new PurchaseItemRequest { ItemId = "BC000", Price = 0, VirtualCurrency = "BC" };
         var trailRequest = new PurchaseItemRequest { ItemId = "TC000", Price = 0, VirtualCurrency = "BC" };
-        PlayFabClientAPI.PurchaseItem(ballRequest, success => { }, error => { });
-        PlayFabClientAPI.PurchaseItem(trailRequest, success => { }, error => { });
+        PlayFabClientAPI.PurchaseItem(ballRequest, success => { }, error => { Debug.Log(error.ErrorMessage); });
+        PlayFabClientAPI.PurchaseItem(trailRequest, success => { }, error => { Debug.Log(error.ErrorMessage); });
     }
 
     private void SetNameSuccess(UpdateUserTitleDisplayNameResult result)
@@ -85,7 +85,7 @@ public class PlayFabLogin : MonoBehaviour
     private void UpdateNameInScene()
     {
         var request = new GetAccountInfoRequest { };
-        PlayFabClientAPI.GetAccountInfo(request, UpdateNameInSceneSuccess, error => { });
+        PlayFabClientAPI.GetAccountInfo(request, UpdateNameInSceneSuccess, error => { Debug.Log(error.ErrorMessage); });
     }
     private void UpdateNameInSceneSuccess(GetAccountInfoResult result)
     {
@@ -100,7 +100,7 @@ public class PlayFabLogin : MonoBehaviour
         coinsManager.GetCurrencyFromServer();
 
         var request = new GetTitleDataRequest();
-        PlayFab.PlayFabClientAPI.GetTitleData(request, GetTitleDataSuccess, error => { });
+        PlayFab.PlayFabClientAPI.GetTitleData(request, GetTitleDataSuccess, error => { Debug.Log(error.ErrorMessage); });
     }
 
     void GetTitleDataSuccess(GetTitleDataResult result)
@@ -109,7 +109,7 @@ public class PlayFabLogin : MonoBehaviour
         result.Data.TryGetValue("DefaultTrailSkinId", out currentSkins.DefaultTrail);
 
         var dataRequest = new GetUserDataRequest { Keys = new List<string> { ItemUsefulTools.BallSkinIdString, ItemUsefulTools.TrailSkinIdString } };
-        PlayFabClientAPI.GetUserData(dataRequest, GetUserDataSuccess, error => { });
+        PlayFabClientAPI.GetUserData(dataRequest, GetUserDataSuccess, error => { Debug.Log(error.ErrorMessage); });
     }
 
 
@@ -127,7 +127,6 @@ public class PlayFabLogin : MonoBehaviour
         }
         else
         {
-            Debug.Log(currentBallData.Value);
             currentSkins.BallSkinId = currentBallData.Value;
         }
 
@@ -137,18 +136,12 @@ public class PlayFabLogin : MonoBehaviour
         }
         else
         {
-            Debug.Log(currentTrailData.Value);
             currentSkins.TrailSkinId = currentTrailData.Value;
         }
 
         StartCoroutine(LoadManager.Instance.ExitLoading());
     }
 
-
-
-
-
-    [ContextMenu("ResetPlayerPrefs")]
     public void ResetPlayerPrefs()
     {
         PlayerPrefs.DeleteAll();

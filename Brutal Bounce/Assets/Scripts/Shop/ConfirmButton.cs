@@ -19,6 +19,7 @@ public class ConfirmButton : MonoBehaviour
 
     public void OnClick()
     {
+        this.gameObject.SetActive(false);
         shopManager.ConfirmButtonClicked();
     }
 

@@ -98,7 +98,6 @@ public class ShopManager : MonoBehaviour
 
     private void BuySuccess(PurchaseItemResult result)
     {
-        coinsManager.SpendCoins(currentInFocusItem.item.price);
         ReloadScene();
     }
 

@@ -5,45 +5,80 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    private bool activ;
-    public Animator anim;
-    public UserPreferences preferences;
 
-    public Image button;
+    const string MUSICPPKEY = "MusicVolume";
+    const string FXPPKEY = "FXVolume";
+    const string MUTEPPKEY = "IsMuted";
 
-    public Sprite soundSprite, soundMuteSprite;
+    private Animator anim;
+
+    [SerializeField] Image muteButtonCurrentImage;
+    [SerializeField] Slider musicVolumeSlider;
+    [SerializeField] Slider fxVolumeSlider;
 
 
-    private bool m_sound = true; 
+    [SerializeField] Sprite soundSprite, soundMuteSprite;
+    private int muteSound = 0;
 
-    private void Awake() 
+    void Awake()
     {
-        Time.timeScale = 1;
-        m_sound = preferences.mute;
+        anim = GetComponent<Animator>();
     }
 
-    void FixedUpdate()
-    {      
-        if(activ)
-        {         
-            preferences.mute = m_sound;
+    public void AudioSettingsReset()
+    {
+        PlayerPrefs.SetInt(MUTEPPKEY, 0);
+        PlayerPrefs.SetFloat(MUSICPPKEY, 0.5f);
+        PlayerPrefs.SetFloat(FXPPKEY, 0.5f);
+    }
 
-            if(m_sound)
-            {
-                button.sprite = soundMuteSprite;
-            }else
-            {
-                button.sprite = soundSprite;        
-            }
+    private void UpdateUI()
+    {
+        muteSound = PlayerPrefs.GetInt(MUTEPPKEY);
+        SetMuteSprite(muteSound);
+
+        musicVolumeSlider.value = PlayerPrefs.GetFloat(MUSICPPKEY);
+        fxVolumeSlider.value = PlayerPrefs.GetFloat(FXPPKEY);
+    }
+
+    public void OnValueChange(string settingChanged)
+    {
+        switch (settingChanged)
+        {
+            case "Mute": PlayerPrefs.SetInt(MUTEPPKEY, muteSound); break;
+            case "Fx": PlayerPrefs.SetFloat(FXPPKEY, fxVolumeSlider.value); break;
+            case "Music": PlayerPrefs.SetFloat(MUSICPPKEY, musicVolumeSlider.value); break;
+            default: break;
         }
     }
-    public void Activate()
+
+    public void MuteButtonClicked()
     {
-        activ = !activ;           
-        anim.SetBool("Activ", activ);
+        muteSound = (muteSound == 0 ? 1 : 0);
+        OnValueChange("Mute");
+        SetMuteSprite(muteSound);
     }
-    public void Sound()
+
+    public void SetMuteSprite(int muteInt)
     {
-        m_sound = !m_sound;      
+        if (muteInt == 1)
+        {
+            muteButtonCurrentImage.sprite = soundMuteSprite;
+        }
+        else
+        {
+            muteButtonCurrentImage.sprite = soundSprite;
+        }
+    }
+
+    public void Open()
+    {
+        UpdateUI();
+        anim.SetBool("Activ", true);
+    }
+
+    public void Close()
+    {
+        anim.SetBool("Activ", false);
     }
 }

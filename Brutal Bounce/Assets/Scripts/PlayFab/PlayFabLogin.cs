@@ -14,6 +14,7 @@ public class PlayFabLogin : MonoBehaviour
     [SerializeField] TMP_Text displayNameText;
 
     [SerializeField] CoinsManager coinsManager;
+    [SerializeField] Settings settings;
     [SerializeField] CurrentSkins currentSkins;
 
     TMP_InputField displayNameInputField;
@@ -34,7 +35,7 @@ public class PlayFabLogin : MonoBehaviour
 
     private void OnLoginSuccess(LoginResult result)
     {
-        if (PlayerPrefs.GetInt("USERNAME_SETTED") != 1)
+        if (result.NewlyCreated)
         {
             setDisplayNamePanel.SetActive(true);
         }
@@ -98,6 +99,7 @@ public class PlayFabLogin : MonoBehaviour
     {
         UpdateNameInScene();
         coinsManager.GetCurrencyFromServer();
+
 
         var request = new GetTitleDataRequest();
         PlayFab.PlayFabClientAPI.GetTitleData(request, GetTitleDataSuccess, error => { Debug.Log(error.ErrorMessage); });

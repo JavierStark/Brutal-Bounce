@@ -4639,7 +4639,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1258024322}
-        m_MethodName: Activate
+        m_MethodName: Open
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5970,15 +5970,15 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1876823022}
-        m_MethodName: ValueFx
-        m_Mode: 1
+      - m_Target: {fileID: 1258024322}
+        m_MethodName: OnValueChange
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Fx
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &738265296
@@ -6175,80 +6175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f0b018e1a25024e842b3ef152c6488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &795130306
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 795130307}
-  - component: {fileID: 795130309}
-  - component: {fileID: 795130308}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &795130307
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 795130306}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1920714471}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 77.91913, y: -272.6564}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &795130308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 795130306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 33731a33d82b5414989294a964f9b8ea, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &795130309
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 795130306}
-  m_CullTransparentMesh: 0
 --- !u!1 &795450883
 GameObject:
   m_ObjectHideFlags: 0
@@ -7564,7 +7490,7 @@ GameObject:
   - component: {fileID: 901104201}
   - component: {fileID: 901104202}
   m_Layer: 5
-  m_Name: News, Share (1)
+  m_Name: Rank, Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8020,15 +7946,15 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1876823022}
-        m_MethodName: ValueMusic
-        m_Mode: 1
+      - m_Target: {fileID: 1258024322}
+        m_MethodName: OnValueChange
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Music
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1014842917
@@ -9167,9 +9093,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f5743be9b3c4444bfdd11fdbbec319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1258024323}
-  preferences: {fileID: 11400000, guid: ae7d634105af86a49bbac97b4488b63e, type: 2}
-  button: {fileID: 1984916542}
+  muteButtonCurrentImage: {fileID: 1984916542}
+  musicVolumeSlider: {fileID: 1013608684}
+  fxVolumeSlider: {fileID: 717085476}
   soundSprite: {fileID: 21300000, guid: 341c317533f98bf47bec41b1057b0f94, type: 3}
   soundMuteSprite: {fileID: 21300000, guid: 59fe4764e9b7bf448ba16487a1a839f1, type: 3}
 --- !u!95 &1258024323
@@ -9951,7 +9877,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1258024322}
-          m_MethodName: Activate
+          m_MethodName: Close
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -11953,7 +11879,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 74.85
+  m_fontSize: 70.5
   m_fontSizeBase: 74.8
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13222,7 +13148,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1876823020}
   - component: {fileID: 1876823021}
-  - component: {fileID: 1876823022}
   m_Layer: 5
   m_Name: Sound
   m_TagString: Untagged
@@ -13277,21 +13202,6 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
---- !u!114 &1876823022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876823019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c41381ca005aac4bb8d141d9316bb87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  preferences: {fileID: 11400000, guid: ae7d634105af86a49bbac97b4488b63e, type: 2}
-  music: {fileID: 1013608684}
-  fX: {fileID: 717085476}
 --- !u!1 &1886399695
 GameObject:
   m_ObjectHideFlags: 0
@@ -13591,12 +13501,6 @@ MonoBehaviour:
   panelRank: {fileID: 1899809676}
   activP: 0
   leaderboardManager: {fileID: 1740961381}
---- !u!224 &1920714471 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3791938343575696252, guid: b07b7b6da343e7f4da20bb8ed243ac9f,
-    type: 3}
-  m_PrefabInstance: {fileID: 3791938342735297992}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1984916539
 GameObject:
   m_ObjectHideFlags: 0
@@ -13680,7 +13584,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1258024322}
-        m_MethodName: Sound
+        m_MethodName: MuteButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

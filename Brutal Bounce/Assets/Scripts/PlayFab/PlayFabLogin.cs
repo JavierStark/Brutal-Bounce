@@ -38,6 +38,7 @@ public class PlayFabLogin : MonoBehaviour
         if (result.NewlyCreated)
         {
             setDisplayNamePanel.SetActive(true);
+            BuyStarterItems();
         }
         else
         {

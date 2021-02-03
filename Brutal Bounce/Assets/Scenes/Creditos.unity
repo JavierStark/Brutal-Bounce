@@ -587,6 +587,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7555558711398743322, guid: 897aa13e847f60243a64800f554da3c8,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555558711398743322, guid: 897aa13e847f60243a64800f554da3c8,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -602,6 +607,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7555558711398743322, guid: 897aa13e847f60243a64800f554da3c8,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555558711398743322, guid: 897aa13e847f60243a64800f554da3c8,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -614,16 +624,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7555558711398743322, guid: 897aa13e847f60243a64800f554da3c8,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7555558711398743322, guid: 897aa13e847f60243a64800f554da3c8,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7555558711398743322, guid: 897aa13e847f60243a64800f554da3c8,
         type: 3}
@@ -704,7 +704,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Credits:\n\nProgramming:\nJavier Torralbo\n\n2D Artist:\r\nJos\xE9 Recinos\n\nCharacter
-    Artist:\nJoaquin Garc\xEDa\n\nUI Designer:\r\nJos\xE9 Recinos\r\n\nSound Designer:\r\nDiscordia\r\nJos\xE9
+    Artist:\nJoaquin Garc\xEDa\n\nUI Designer:\r\nJos\xE9 Recinos\r\n\nSound Designer:\r\nJos\xE9
     Recinos\n\nFont Designer:\r\nJos\xE9 Recinos\n\n\xA1Thanks for Playing!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de36a9155d702974aa6f6f4ecef631a6, type: 2}
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.15
+  m_fontSize: 42.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

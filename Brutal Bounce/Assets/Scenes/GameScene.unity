@@ -9856,6 +9856,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 436157159}
     m_Modifications:
+    - target: {fileID: 7418751003376854412, guid: c30ba33f680a2ab4e9ac16b0cf165c44,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7418751003772550247, guid: c30ba33f680a2ab4e9ac16b0cf165c44,
         type: 3}
       propertyPath: m_Pivot.x
@@ -9965,6 +9970,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AntiBugColliders
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418751004266251547, guid: c30ba33f680a2ab4e9ac16b0cf165c44,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30ba33f680a2ab4e9ac16b0cf165c44, type: 3}

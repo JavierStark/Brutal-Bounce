@@ -9,7 +9,8 @@ public class Neighbor : EventEntity
 
     int currentLife = 2;
 
-    Collider2D collider;
+    CapsuleCollider2D bodyCollider;
+
 
     void Awake()
     {
@@ -18,8 +19,8 @@ public class Neighbor : EventEntity
     }
     void Start()
     {
-        collider = GetComponent<Collider2D>();
-        collider.isTrigger = true;
+        bodyCollider = GetComponent<CapsuleCollider2D>();
+        bodyCollider.isTrigger = true;
     }
     void OnDestroy()
     {
@@ -29,7 +30,7 @@ public class Neighbor : EventEntity
 
     public void OpenWindow()
     {
-        collider.isTrigger = false;
+        bodyCollider.isTrigger = false;
         window.OpenWindow();
     }
 
@@ -42,4 +43,14 @@ public class Neighbor : EventEntity
         }
         animator.SetTrigger("Collision");
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Ball"))
+        {
+            animator.SetTrigger("Attack");
+        }
+    }
+
+
 }

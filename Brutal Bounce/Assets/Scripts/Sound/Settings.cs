@@ -50,6 +50,11 @@ public class Settings : MonoBehaviour
             case "Music": PlayerPrefs.SetFloat(MUSICPPKEY, musicVolumeSlider.value); break;
             default: break;
         }
+
+        foreach (AudioSourceConnector connector in FindObjectsOfType<AudioSourceConnector>())
+        {
+            connector.AudioSet();
+        }
     }
 
     public void MuteButtonClicked()

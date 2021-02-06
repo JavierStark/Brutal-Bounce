@@ -139,7 +139,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4a268f9fc9eb0ae408da646755508c35, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 51915a19007b13a4c8969a2c8891f0e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -306,10 +306,10 @@ RectTransform:
   m_Father: {fileID: 3791938343462401685}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1100.5438, y: 112.04761}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3791938343618627789
 CanvasRenderer:
@@ -338,7 +338,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "No dejes caer el  bal\xF3n y adu\xE9\xF1ate de la primera posici\xF3n
+    de la tabla."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92f3279dcc412b04d9b2a00236d7d5e7, type: 2}
   m_sharedMaterial: {fileID: -7856240461995915842, guid: 92f3279dcc412b04d9b2a00236d7d5e7,
@@ -366,7 +367,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -402,7 +403,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 10.392122, y: 7.0888853, z: 11.876667, w: 8.506662}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -461,8 +462,11 @@ MonoBehaviour:
   consejos:
   - "No dejes caer el  bal\xF3n y adu\xE9\xF1ate de la primera posici\xF3n de la
     tabla."
-  - Mantente conectado a internet.
-  - "Golpea a los vecinos con el dedo, protege tu bal\xF3n."
+  - Permanece conectado a internet.
+  - "\xA1Golpea a esos vecinos!"
+  - Los primeros 3 puestos obtendran recompensas.
+  - "Reta a tus amigos, \xBFQuien sera el mejor?"
+  - Los items no ofrecen una ventaja a nivel competitivo.
 --- !u!1 &3791938343994866190
 GameObject:
   m_ObjectHideFlags: 0

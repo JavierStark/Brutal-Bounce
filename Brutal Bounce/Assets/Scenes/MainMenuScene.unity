@@ -16827,31 +16827,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 478384259}
-    - target: {fileID: 274955019, guid: b07b7b6da343e7f4da20bb8ed243ac9f, type: 3}
-      propertyPath: consejos.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 274955019, guid: b07b7b6da343e7f4da20bb8ed243ac9f, type: 3}
-      propertyPath: consejos.Array.data[1]
-      value: Permanece conectado a internet.
-      objectReference: {fileID: 0}
-    - target: {fileID: 274955019, guid: b07b7b6da343e7f4da20bb8ed243ac9f, type: 3}
-      propertyPath: consejos.Array.data[3]
-      value: Los primeros 3 puestos obtendran recompensas.
-      objectReference: {fileID: 0}
-    - target: {fileID: 274955019, guid: b07b7b6da343e7f4da20bb8ed243ac9f, type: 3}
-      propertyPath: consejos.Array.data[4]
-      value: "Reta a tus amigos, \xBFQuien sera el mejor?"
-      objectReference: {fileID: 0}
     - target: {fileID: 3791938343575696251, guid: b07b7b6da343e7f4da20bb8ed243ac9f,
         type: 3}
       propertyPath: m_Name
       value: LoadManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3791938343575696251, guid: b07b7b6da343e7f4da20bb8ed243ac9f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3791938343575696252, guid: b07b7b6da343e7f4da20bb8ed243ac9f,
         type: 3}

@@ -4511,15 +4511,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 486591659, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
       propertyPath: m_Color.b
-      value: 0.5283019
+      value: 0.047169805
       objectReference: {fileID: 0}
     - target: {fileID: 486591659, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.019802418
       objectReference: {fileID: 0}
     - target: {fileID: 486591659, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
       propertyPath: m_Color.r
-      value: 0.33174023
+      value: 0.037033733
       objectReference: {fileID: 0}
     - target: {fileID: 541214322, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4755,7 +4755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.02352941, g: 0.74758273, b: 1, a: 1}
+  m_Color: {r: 0.17021184, g: 0.43191355, b: 0.8018868, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

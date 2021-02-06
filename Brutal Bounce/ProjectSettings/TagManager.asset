@@ -82,6 +82,9 @@ TagManager:
   - name: SecundaryTrail
     uniqueID: 3922701981
     locked: 0
+  - name: Dust
+    uniqueID: 152103505
+    locked: 0
   - name: Trail
     uniqueID: 440327531
     locked: 0

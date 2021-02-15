@@ -412,7 +412,6 @@ GameObject:
   - component: {fileID: 493458177}
   - component: {fileID: 493458176}
   - component: {fileID: 493458180}
-  - component: {fileID: 493458181}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -517,18 +516,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1836513468}
---- !u!114 &493458181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493458175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 961b4944377011747b05440444cc401c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &957693650
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,6 +603,7 @@ GameObject:
   - component: {fileID: 1049516887}
   - component: {fileID: 1049516889}
   - component: {fileID: 1049516890}
+  - component: {fileID: 1049516891}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -709,7 +697,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 493458181}
+        - m_Target: {fileID: 1049516891}
           m_MethodName: ChangeScene
           m_Mode: 5
           m_Arguments:
@@ -720,6 +708,18 @@ MonoBehaviour:
             m_StringArgument: MainMenuScene
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1049516891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049516885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4f0b018e1a25024e842b3ef152c6488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1118221303
 GameObject:
   m_ObjectHideFlags: 0

@@ -4659,6 +4659,11 @@ PrefabInstance:
       propertyPath: shopGetter
       value: 
       objectReference: {fileID: 924790773}
+    - target: {fileID: 3884362515006910859, guid: 30f4ac9fd8c73734b8513fe7eac9aa16,
+        type: 3}
+      propertyPath: inventoryHandler
+      value: 
+      objectReference: {fileID: 924790774}
     m_RemovedComponents:
     - {fileID: 970684324, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}

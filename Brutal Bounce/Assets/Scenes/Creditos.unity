@@ -920,8 +920,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Credits:\n\nProgramming:\nJavier Torralbo\n\n2D Artist:\r\nJos\xE9 Recinos\n\nCharacter
-    Artist:\nJoaquin Garc\xEDa\n\nUI Designer:\r\nJos\xE9 Recinos\r\n\nSound Designer:\r\nJos\xE9
-    Recinos\n\nFont Designer:\r\nJos\xE9 Recinos\n\n\xA1Thanks for Playing!"
+    Artist:\nJoaquin Garc\xEDa\n\nUI Designer:\r\nJos\xE9 Recinos\r\n\nSound Designer:\r\nHelder
+    Santos \"XtuK\"\nJos\xE9 Recinos\n\nFont Designer:\r\nJos\xE9 Recinos\n\n\xA1Thanks
+    for Playing!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de36a9155d702974aa6f6f4ecef631a6, type: 2}
   m_sharedMaterial: {fileID: -7856240461995915842, guid: de36a9155d702974aa6f6f4ecef631a6,
@@ -949,7 +950,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.9
+  m_fontSize: 37.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

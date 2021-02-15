@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 249507448363292803}
   - component: {fileID: 7637385443404826561}
   - component: {fileID: 2907597864044418161}
+  - component: {fileID: 8689218638763467163}
   m_Layer: 5
   m_Name: Item
   m_TagString: Untagged
@@ -301,6 +302,19 @@ MonoBehaviour:
   priceText: {fileID: 249507448613408059}
   selectCheck: {fileID: 564464282583342744}
   onFocusCheck: {fileID: 7792388837493408295}
+--- !u!114 &8689218638763467163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249507448363292801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d527b7bdfbaa4ae438209fd6932c86bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: 0.95
 --- !u!1 &249507448504362009
 GameObject:
   m_ObjectHideFlags: 0

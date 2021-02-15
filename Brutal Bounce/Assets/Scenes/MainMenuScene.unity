@@ -7284,6 +7284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 717085475}
   - component: {fileID: 717085476}
+  - component: {fileID: 717085477}
   m_Layer: 5
   m_Name: FX
   m_TagString: Untagged
@@ -7375,6 +7376,19 @@ MonoBehaviour:
           m_StringArgument: Fx
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &717085477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717085474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d527b7bdfbaa4ae438209fd6932c86bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: 0.95
 --- !u!1 &738265296
 GameObject:
   m_ObjectHideFlags: 0
@@ -9546,6 +9560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1013608683}
   - component: {fileID: 1013608684}
+  - component: {fileID: 1013608685}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -9637,6 +9652,19 @@ MonoBehaviour:
           m_StringArgument: Music
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1013608685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013608682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d527b7bdfbaa4ae438209fd6932c86bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: 0.95
 --- !u!1 &1014842917
 GameObject:
   m_ObjectHideFlags: 0

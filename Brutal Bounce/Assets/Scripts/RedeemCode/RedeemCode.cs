@@ -16,6 +16,7 @@ public class RedeemCode : MonoBehaviour
     [SerializeField] GameObject rewardPanel;
 
     [SerializeField] ShopGetter shopGetter;
+    [SerializeField] InventoryHandler inventoryHandler;
     [SerializeField] Image itemImageToShow;
 
     Sprite currentItemToShow = null;
@@ -48,17 +49,24 @@ public class RedeemCode : MonoBehaviour
         Debug.Log("Code redeemed " + items.Count);
         foreach (ItemInstance item in items)
         {
-            rewardPanel.SetActive(true);
-            CatalogItem catalogItem = shopGetter.GetCatalogItemFromID(item.ItemId);
+            ItemPackage itemPackage = new ItemPackage();
+            ItemUsefulTools.ItemType itemType = ItemUsefulTools.GetItemType(item.ItemClass);
+            itemPackage.PackageSetup(shopGetter.GetCatalogItemFromID(item.ItemId), itemType, false);
 
-            StartCoroutine(DownloadImage(catalogItem.ItemImageUrl));
-            yield return new WaitWhile(() => currentItemToShow == null);
+            if (!inventoryHandler.ItemInInventory(itemPackage))
+            {
+                rewardPanel.SetActive(true);
+                CatalogItem catalogItem = shopGetter.GetCatalogItemFromID(item.ItemId);
 
-            itemImageToShow.sprite = currentItemToShow;
+                StartCoroutine(DownloadImage(catalogItem.ItemImageUrl));
+                yield return new WaitWhile(() => currentItemToShow == null);
 
-            yield return new WaitUntil(() => nextReward == true);
-            nextReward = false;
-            currentItemToShow = null;
+                itemImageToShow.sprite = currentItemToShow;
+
+                yield return new WaitUntil(() => nextReward == true);
+                nextReward = false;
+                currentItemToShow = null;
+            }
         }
         rewardPanel.SetActive(false);
         LoadManager.Instance.ChangeSceneWithLoading("ShopScene");

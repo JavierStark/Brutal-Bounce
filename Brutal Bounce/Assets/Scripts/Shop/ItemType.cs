@@ -8,6 +8,26 @@ public static class ItemUsefulTools
         Trail
     }
 
+    public static ItemType GetItemType(string typeString)
+    {
+        switch (typeString)
+        {
+            case "Ball":
+                {
+                    return ItemType.Ball;
+                }
+            case "Trail":
+                {
+                    return ItemType.Trail;
+                }
+            case "Player":
+                {
+                    return ItemType.Player;
+                }
+            default: return 0;
+        }
+    }
+
     public const string TrailString = "Trail";
     public const string BallString = "Ball";
 

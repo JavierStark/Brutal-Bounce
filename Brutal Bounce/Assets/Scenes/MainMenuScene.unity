@@ -14808,6 +14808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leaderboardEntity: {fileID: 4007664977381963854, guid: c2e430fb34ad73d4ba19d731d2ff64e9,
     type: 3}
+  nameText: {fileID: 1657349887}
 --- !u!114 &1740961382
 MonoBehaviour:
   m_ObjectHideFlags: 0

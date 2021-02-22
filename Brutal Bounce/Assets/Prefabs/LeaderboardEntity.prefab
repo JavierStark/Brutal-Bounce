@@ -254,6 +254,9 @@ MonoBehaviour:
   position: {fileID: 4007664977577718479}
   name: {fileID: 4007664978212627603}
   score: {fileID: 4007664977053491192}
+  currentPlayerColor:
+    serializedVersion: 2
+    rgba: 4280822015
 --- !u!114 &7696398657539717175
 MonoBehaviour:
   m_ObjectHideFlags: 0

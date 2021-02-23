@@ -3945,8 +3945,9 @@ GameObject:
   - component: {fileID: 438996818}
   - component: {fileID: 438996821}
   - component: {fileID: 438996819}
+  - component: {fileID: 438996820}
   m_Layer: 0
-  m_Name: Sound
+  m_Name: MusicHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3960,11 +3961,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438996816}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4860}
+  m_LocalPosition: {x: 0, y: 0, z: -4860.0005}
   m_LocalScale: {x: 54, y: 54, z: 54}
   m_Children: []
-  m_Father: {fileID: 1613780264}
-  m_RootOrder: 5
+  m_Father: {fileID: 868332098}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &438996818
 AudioSource:
@@ -4075,6 +4076,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioType: 1
+--- !u!114 &438996820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438996816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ba732e89f875f4e868c50cd5fda3eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuClip: {fileID: 8300000, guid: ade9b23b3741fc7478512667bd02628a, type: 3}
+  gameClip: {fileID: 8300000, guid: 7b3f3763149476f4492dbc576eb8db09, type: 3}
+  shopClip: {fileID: 8300000, guid: a063bba4543616b4ab3176501388004c, type: 3}
+  creditsClip: {fileID: 8300000, guid: fb4994083789ace4c903ea46ecb1aba1, type: 3}
 --- !u!170 &438996821
 AudioDistortionFilter:
   m_ObjectHideFlags: 0
@@ -4082,7 +4099,7 @@ AudioDistortionFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438996816}
-  m_Enabled: 1
+  m_Enabled: 0
   m_DistortionLevel: 0.2
 --- !u!1 &446718564
 GameObject:
@@ -8905,6 +8922,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3791938342735297992}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &868332098 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3791938343575696252, guid: b07b7b6da343e7f4da20bb8ed243ac9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3791938342735297992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &870412921
 GameObject:
   m_ObjectHideFlags: 0
@@ -13010,7 +13033,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Creditos
+          m_StringArgument: CreditsScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1505538495
@@ -13495,9 +13518,9 @@ GameObject:
   - component: {fileID: 1613780263}
   - component: {fileID: 1613780262}
   - component: {fileID: 1613780261}
-  - component: {fileID: 1613780265}
   - component: {fileID: 1613780266}
   - component: {fileID: 1613780267}
+  - component: {fileID: 1613780265}
   m_Layer: 5
   m_Name: Main Canvas
   m_TagString: Untagged
@@ -13581,7 +13604,6 @@ RectTransform:
   - {fileID: 805366989}
   - {fileID: 680129684}
   - {fileID: 2066558565}
-  - {fileID: 438996817}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13599,7 +13621,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1613780260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 961b4944377011747b05440444cc401c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ab5f33bdd2c76947836b5e5b2151812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1613780266

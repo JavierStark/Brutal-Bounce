@@ -80,7 +80,6 @@ public class BuyButtomHandler : MonoBehaviour
                 ready = false;
             }
         }
-        Debug.Log(ready);
 
         return ready;
     }

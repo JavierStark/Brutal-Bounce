@@ -5,6 +5,7 @@ using UnityEngine;
 public class LoadManager : Singleton<LoadManager>
 {
     private SceneHandler sceneHandler;
+    private MusicHandler musicHandler;
 
     private GameObject loadScreen;
     private bool loading = true;
@@ -13,6 +14,7 @@ public class LoadManager : Singleton<LoadManager>
     void Start()
     {
         sceneHandler = GetComponent<SceneHandler>();
+        musicHandler = GetComponentInChildren<MusicHandler>();
         loadScreen = transform.GetChild(0).gameObject;
         loadScreen.SetActive(false);
         StartCoroutine(EnterLoading());
@@ -48,5 +50,6 @@ public class LoadManager : Singleton<LoadManager>
 
         //yield return new WaitForSeconds(segundos de la anim);
         sceneHandler.ChangeScene(sceneName);
+        musicHandler.SetClip(sceneName);
     }
 }

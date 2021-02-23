@@ -7,6 +7,10 @@ public class SceneHandler : MonoBehaviour
 {
     public void ChangeScene(string name)
     {
+        if (name == "CreditsScene")
+        {
+            FindObjectOfType<MusicHandler>().SetClip(name);
+        }
         SceneManager.LoadScene(name);
     }
     public void ChangeScene(int index)

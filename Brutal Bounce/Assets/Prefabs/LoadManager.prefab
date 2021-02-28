@@ -464,9 +464,10 @@ MonoBehaviour:
     tabla."
   - Permanece conectado a internet.
   - "\xA1Golpea a esos vecinos!"
-  - Los primeros 3 puestos obtendran recompensas.
-  - "Reta a tus amigos, \xBFQuien sera el mejor?"
-  - Los items no ofrecen una ventaja a nivel competitivo.
+  - "Los primeros 3 puestos obtendr\xE1n recompensas los fines de temporada."
+  - "Reta a tus amigos, \xBFQui\xE9n ser\xE1 el mejor?"
+  - "Los \xEDtems no ofrecen una ventaja a nivel competitivo."
+  - "Para previsualizar un \xEDtem tienes que comprarlo."
 --- !u!1 &3791938343994866190
 GameObject:
   m_ObjectHideFlags: 0

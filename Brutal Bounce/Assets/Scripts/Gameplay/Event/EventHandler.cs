@@ -13,7 +13,6 @@ public class EventHandler : MonoBehaviour
     }
     public void GameStarted()
     {
-        Debug.Log("Event");
         currentEvent = transform.GetChild(Random.Range(0, transform.childCount)).gameObject;
         currentEvent.SetActive(true);
     }

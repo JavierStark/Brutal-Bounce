@@ -18,7 +18,6 @@ public class MusicHandler : MonoBehaviour
 
     public void SetClip(string clipName)
     {
-        Debug.Log(clipName);
         switch (clipName)
         {
             case "MainMenuScene": audioSource.clip = menuClip; break;

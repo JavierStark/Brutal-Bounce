@@ -35,6 +35,9 @@ public class PlayFabLogin : MonoBehaviour
 
     private void OnLoginSuccess(LoginResult result)
     {
+        var request = new GetTitleDataRequest();
+        PlayFab.PlayFabClientAPI.GetTitleData(request, GetVersionSuccess, error => { Debug.Log(error.ErrorMessage); });
+
         if (result.NewlyCreated)
         {
             setDisplayNamePanel.SetActive(true);
@@ -46,10 +49,22 @@ public class PlayFabLogin : MonoBehaviour
         }
     }
 
+    private void GetVersionSuccess(GetTitleDataResult result)
+    {
+        string version;
+        result.Data.TryGetValue("AppVersion", out version);
+
+        if (version != Application.version)
+        {
+            Application.Quit();
+            Debug.Log("Quit");
+        }
+    }
+
 
     private void OnLoginFailure(PlayFabError error)
     {
-        Debug.Log(error.ErrorMessage);
+        Application.Quit();
     }
     private static string ReturnAndroidID()
     {
@@ -103,10 +118,10 @@ public class PlayFabLogin : MonoBehaviour
 
 
         var request = new GetTitleDataRequest();
-        PlayFab.PlayFabClientAPI.GetTitleData(request, GetTitleDataSuccess, error => { Debug.Log(error.ErrorMessage); });
+        PlayFab.PlayFabClientAPI.GetTitleData(request, GetDefaultObjectDataSuccess, error => { Debug.Log(error.ErrorMessage); });
     }
 
-    void GetTitleDataSuccess(GetTitleDataResult result)
+    void GetDefaultObjectDataSuccess(GetTitleDataResult result)
     {
         result.Data.TryGetValue("DefaultBallSkinId", out currentSkins.DefaultBall);
         result.Data.TryGetValue("DefaultTrailSkinId", out currentSkins.DefaultTrail);

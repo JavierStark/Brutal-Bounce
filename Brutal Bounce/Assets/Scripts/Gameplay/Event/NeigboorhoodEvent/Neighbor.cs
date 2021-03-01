@@ -10,12 +10,15 @@ public class Neighbor : EventEntity
     int currentLife = 2;
 
     CapsuleCollider2D bodyCollider;
+    Rigidbody2D rigidbody;
 
 
     void Awake()
     {
         window = transform.parent.GetComponentInParent<Window>();
         animator = GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody.isKinematic = true;
     }
     void Start()
     {
@@ -37,11 +40,18 @@ public class Neighbor : EventEntity
     void OnCollisionEnter2D(Collision2D collision)
     {
         currentLife--;
+
         if (currentLife <= 0)
         {
-            Destroy(this.gameObject);
+            Debug.Log("hit");
+            bodyCollider.enabled = false;
+            animator.SetTrigger("Dead");
+            Destroy(this.gameObject, 6);
         }
-        animator.SetTrigger("Collision");
+        else
+        {
+            animator.SetTrigger("Collision");
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -52,5 +62,10 @@ public class Neighbor : EventEntity
         }
     }
 
-
+    public void Falling()
+    {
+        rigidbody.isKinematic = false;
+        GetComponent<SpriteRenderer>().sortingLayerName = "Decoracion";
+        rigidbody.gravityScale = 1;
+    }
 }

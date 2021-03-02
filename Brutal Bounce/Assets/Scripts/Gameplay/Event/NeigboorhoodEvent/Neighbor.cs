@@ -12,13 +12,19 @@ public class Neighbor : EventEntity
     CapsuleCollider2D bodyCollider;
     Rigidbody2D rigidbody;
 
+    Transform ballHolder;
+
+    GameOverPanel gameOverPanel;
+
 
     void Awake()
     {
+        gameOverPanel = FindObjectOfType<GameOverPanel>();
         window = transform.parent.GetComponentInParent<Window>();
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
         rigidbody.isKinematic = true;
+        ballHolder = transform.GetChild(0).GetChild(0);
     }
     void Start()
     {
@@ -58,8 +64,16 @@ public class Neighbor : EventEntity
     {
         if (other.CompareTag("Ball"))
         {
-            animator.SetTrigger("Attack");
+            other.GetComponent<Ball>().BallCatched();
+            other.gameObject.transform.parent = ballHolder;
+            other.gameObject.transform.position = ballHolder.transform.position;
+            animator.SetTrigger("Catch");
         }
+    }
+
+    public void BallCatched()
+    {
+        gameOverPanel.GameOverSetup();
     }
 
     public void Falling()

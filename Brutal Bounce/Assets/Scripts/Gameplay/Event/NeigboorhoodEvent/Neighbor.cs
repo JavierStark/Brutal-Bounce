@@ -10,20 +10,29 @@ public class Neighbor : EventEntity
     int currentLife = 2;
 
     CapsuleCollider2D bodyCollider;
+    BoxCollider2D boxCollider;
     Rigidbody2D rigidbody;
+
+    Transform ballHolder;
+
+    GameOverPanel gameOverPanel;
 
 
     void Awake()
     {
+        gameOverPanel = FindObjectOfType<GameOverPanel>();
         window = transform.parent.GetComponentInParent<Window>();
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
         rigidbody.isKinematic = true;
+        ballHolder = transform.GetChild(0).GetChild(0);
+        bodyCollider = GetComponent<CapsuleCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
     void Start()
     {
-        bodyCollider = GetComponent<CapsuleCollider2D>();
-        bodyCollider.isTrigger = true;
+        bodyCollider.enabled = false;
+        boxCollider.enabled = false;
     }
     void OnDestroy()
     {
@@ -33,8 +42,9 @@ public class Neighbor : EventEntity
 
     public void OpenWindow()
     {
-        bodyCollider.isTrigger = false;
         window.OpenWindow();
+        bodyCollider.enabled = true;
+        boxCollider.enabled = true;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -58,8 +68,16 @@ public class Neighbor : EventEntity
     {
         if (other.CompareTag("Ball"))
         {
-            animator.SetTrigger("Attack");
+            other.GetComponent<Ball>().BallCatched();
+            other.gameObject.transform.parent = ballHolder;
+            other.gameObject.transform.position = ballHolder.transform.position;
+            animator.SetTrigger("Catch");
         }
+    }
+
+    public void BallCatched()
+    {
+        gameOverPanel.GameOverSetup();
     }
 
     public void Falling()

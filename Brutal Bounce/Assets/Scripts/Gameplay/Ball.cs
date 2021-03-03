@@ -11,8 +11,10 @@ public class Ball : MonoBehaviour
     [SerializeField] CurrentSkins currentSkins;
 
     public Rigidbody2D rigidbody;
+    CircleCollider2D collider;
     [SerializeField] float velocity = 15;
     [SerializeField] float timeScale = 1;
+    bool deactivated = false;
 
     ScoreManager scoreManager;
     [SerializeField] GameOverPanel gameOverPanel;
@@ -21,6 +23,7 @@ public class Ball : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         scoreManager = FindObjectOfType<ScoreManager>();
+        collider = GetComponent<CircleCollider2D>();
     }
     void Start()
     {
@@ -36,23 +39,29 @@ public class Ball : MonoBehaviour
 
     private void LateUpdate()
     {
-        rigidbody.velocity = velocity * rigidbody.velocity.normalized;
+        if (!deactivated)
+        {
+            rigidbody.velocity = velocity * rigidbody.velocity.normalized;
+        }
     }
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("UpWall"))
+        if (!deactivated)
         {
-            float randomX = Random.Range(-500f, 500f);
-            rigidbody.AddForce(-collision.contacts[0].normal +
-                    new Vector2(randomX, 0));
-        }
-        else if (collision.gameObject.CompareTag("SideWall"))
-        {
-            float randomY = Random.Range(-500f, 500f);
-            rigidbody.AddForce(-collision.contacts[0].normal +
-                    new Vector2(0, randomY));
+            if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("UpWall"))
+            {
+                float randomX = Random.Range(-500f, 500f);
+                rigidbody.AddForce(-collision.contacts[0].normal +
+                        new Vector2(randomX, 0));
+            }
+            else if (collision.gameObject.CompareTag("SideWall"))
+            {
+                float randomY = Random.Range(-500f, 500f);
+                rigidbody.AddForce(-collision.contacts[0].normal +
+                        new Vector2(0, randomY));
+            }
         }
     }
 
@@ -68,6 +77,13 @@ public class Ball : MonoBehaviour
         {
             InteractionWithCoin(collision.gameObject.GetComponent<Coin>());
         }
+    }
+
+    public void BallCatched()
+    {
+        deactivated = true;
+        collider.enabled = false;
+        rigidbody.bodyType = RigidbodyType2D.Static;
     }
 
     private void InteractionWithCoin(Coin coin)

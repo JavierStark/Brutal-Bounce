@@ -256,7 +256,7 @@ MonoBehaviour:
   score: {fileID: 4007664977053491192}
   currentPlayerColor:
     serializedVersion: 2
-    rgba: 4280822015
+    rgba: 4278190080
 --- !u!114 &7696398657539717175
 MonoBehaviour:
   m_ObjectHideFlags: 0

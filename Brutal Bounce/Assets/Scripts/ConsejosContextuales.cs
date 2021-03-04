@@ -9,8 +9,8 @@ public class ConsejosContextuales : MonoBehaviour
     [TextArea(1, 5)]
     public string[] consejos;
 
-    private void Awake() {
-
+    public void NewTip()
+    {
         int rand = Random.Range(0, consejos.Length);
         textC.text = consejos[rand].ToString();
     }

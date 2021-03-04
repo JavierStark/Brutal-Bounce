@@ -12,9 +12,11 @@ public class PlayFabLogin : MonoBehaviour
 
     [SerializeField] GameObject setDisplayNamePanel;
     [SerializeField] GameObject updateRequiredPanel;
+    [SerializeField] GameObject presentationPanel;
     [SerializeField] TMP_Text displayNameText;
 
     [SerializeField] CoinsManager coinsManager;
+    [SerializeField] Settings settings;
     [SerializeField] CurrentSkins currentSkins;
 
     TMP_InputField displayNameInputField;
@@ -24,6 +26,7 @@ public class PlayFabLogin : MonoBehaviour
     {
         updateRequiredPanel.SetActive(false);
         setDisplayNamePanel.SetActive(false);
+        presentationPanel.SetActive(false);
         displayNameInputField = setDisplayNamePanel.GetComponentInChildren<TMP_InputField>();
         if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId))
         {
@@ -41,6 +44,8 @@ public class PlayFabLogin : MonoBehaviour
 
         if (result.NewlyCreated)
         {
+            settings.AudioSettingsReset();
+            presentationPanel.SetActive(true);
             setDisplayNamePanel.SetActive(true);
             BuyStarterItems();
         }

@@ -8,6 +8,7 @@ public class LoadManager : Singleton<LoadManager>
     private MusicHandler musicHandler;
 
     private GameObject loadScreen;
+    [SerializeField] private ConsejosContextuales tips;
     private bool loading = true;
 
 
@@ -23,6 +24,7 @@ public class LoadManager : Singleton<LoadManager>
 
     public IEnumerator EnterLoading()
     {
+        tips.NewTip();
         loadScreen.SetActive(true);
         loading = true;
         yield break;

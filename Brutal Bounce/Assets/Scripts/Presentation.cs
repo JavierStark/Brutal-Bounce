@@ -16,8 +16,14 @@ public class Presentation : MonoBehaviour
         dialogText = dialogPanel.GetComponentInChildren<TMPro.TMP_Text>();
     }
 
+
     public void NextPart()
     {
         girlAnimator.SetTrigger("Next");
+    }
+
+    public void PresentationFinished()
+    {
+        this.gameObject.SetActive(false);
     }
 }

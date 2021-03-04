@@ -15,6 +15,7 @@ public class PlayFabLogin : MonoBehaviour
     [SerializeField] TMP_Text displayNameText;
 
     [SerializeField] CoinsManager coinsManager;
+    [SerializeField] Settings settings;
     [SerializeField] CurrentSkins currentSkins;
 
     TMP_InputField displayNameInputField;
@@ -41,6 +42,7 @@ public class PlayFabLogin : MonoBehaviour
 
         if (result.NewlyCreated)
         {
+            settings.AudioSettingsReset();
             setDisplayNamePanel.SetActive(true);
             BuyStarterItems();
         }

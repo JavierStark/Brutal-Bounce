@@ -249,7 +249,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{dedicated}: Desktop/KeyBrutalBounce.keystore'
+  AndroidKeystoreName: C:/Users/littl/Documents/Brutal Bounce/Key/KeyBrutalBounce.keystore
   AndroidKeyaliasName: jtgametudio
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0

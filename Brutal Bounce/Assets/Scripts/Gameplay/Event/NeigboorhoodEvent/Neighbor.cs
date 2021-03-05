@@ -82,10 +82,14 @@ public class Neighbor : EventEntity
 
     public void Falling()
     {
-        boxCollider.enabled = false;
-        bodyCollider.enabled = false;
         rigidbody.isKinematic = false;
         GetComponent<SpriteRenderer>().sortingLayerName = "Decoracion";
         rigidbody.gravityScale = 1;
+    }
+
+    public void DeactivateCatching()
+    {
+        boxCollider.enabled = false;
+        bodyCollider.enabled = false;
     }
 }

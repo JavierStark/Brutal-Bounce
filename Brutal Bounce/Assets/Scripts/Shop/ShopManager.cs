@@ -140,7 +140,7 @@ public class ShopManager : MonoBehaviour
                 }
                 return false;
             case ItemUsefulTools.ItemType.Trail:
-                if (skin.catalogItemReference.ItemId == currentSkins.BallSkinId)
+                if (skin.catalogItemReference.ItemId == currentSkins.TrailSkinId)
                 {
                     return true;
                 }

@@ -80,11 +80,13 @@ public class PlayFabLogin : MonoBehaviour
 
     public void SetDisplayName()
     {
-        string name = displayNameInputField.text;
+        if (displayNameInputField.text != "")
+        {
+            string name = displayNameInputField.text;
 
-        var request = new UpdateUserTitleDisplayNameRequest { DisplayName = name };
-        PlayFabClientAPI.UpdateUserTitleDisplayName(request, SetNameSuccess, error => { Debug.Log(error.ErrorMessage); });
-
+            var request = new UpdateUserTitleDisplayNameRequest { DisplayName = name };
+            PlayFabClientAPI.UpdateUserTitleDisplayName(request, SetNameSuccess, error => { Debug.Log(error.ErrorMessage); });
+        }
     }
 
     private void BuyStarterItems()

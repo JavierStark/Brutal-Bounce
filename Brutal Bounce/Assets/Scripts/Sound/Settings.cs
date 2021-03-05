@@ -30,6 +30,7 @@ public class Settings : MonoBehaviour
         PlayerPrefs.SetInt(MUTEPPKEY, 0);
         PlayerPrefs.SetFloat(MUSICPPKEY, 0.5f);
         PlayerPrefs.SetFloat(FXPPKEY, 0.5f);
+        FindObjectOfType<AudioSourceConnector>().AudioSet();
     }
 
     private void UpdateUI()

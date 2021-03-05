@@ -32,6 +32,10 @@ public class Ball : MonoBehaviour
         var trail = Resources.Load("Trails/" + currentSkins.TrailSkinId) as GameObject;
         Instantiate(ball, transform);
         Instantiate(trail, transform);
+        if (SceneManager.GetActiveScene().name == "ShopScene")
+        {
+            GameStarted();
+        }
     }
     void Update()
     {

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -965,8 +965,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Credits:\n\nProgramming:\nJavier Torralbo\n\n2D Artist:\r\nJos\xE9 Recinos\n\nCharacter
-    Artist:\nJoaquin Garc\xEDa\n\nUI Designer:\r\nJos\xE9 Recinos\r\n\nSound Designer:\r\nHelder
-    Santos \"XtuK\"\nJos\xE9 Recinos\n\nFont Designer:\r\nJos\xE9 Recinos\n\n\xA1Thanks
+    Artist:\nJoaquin Garc\xEDa\n\nUI Designer:\r\nJos\xE9 Recinos\r\n\nMusic:\nHelder
+    Santos \"XtuK\"\n\nSound FX:\nJos\xE9 Recinos\n\nFont Designer:\r\nJos\xE9 Recinos\n\n\xA1Thanks
     for Playing!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de36a9155d702974aa6f6f4ecef631a6, type: 2}
@@ -995,7 +995,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.15
+  m_fontSize: 34.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

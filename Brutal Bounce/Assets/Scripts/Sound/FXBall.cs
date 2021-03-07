@@ -19,7 +19,7 @@ public class FXBall : MonoBehaviour
         if (other.gameObject.tag == "Wall")
         {
             var currentParticles = Instantiate(particles, other.GetContact(0).point, Quaternion.identity);
-            Destroy(currentParticles, 1);
+            Destroy(currentParticles, 0.3f);
         }
     }
 }

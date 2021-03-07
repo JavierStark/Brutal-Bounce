@@ -8438,9 +8438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271424756, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
       propertyPath: m_text
-      value: 'Felicidades
-
-'
+      value: 'Has obtenido:'
       objectReference: {fileID: 0}
     - target: {fileID: 1271424756, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
       propertyPath: m_fontSize
@@ -8451,6 +8449,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 92f3279dcc412b04d9b2a00236d7d5e7,
         type: 2}
+    - target: {fileID: 1271424756, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1271424756, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
       propertyPath: m_fontColor.a
       value: 1
@@ -8484,6 +8486,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1271424756, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 1304339622, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
       propertyPath: m_Name
       value: Info
@@ -8491,6 +8497,10 @@ PrefabInstance:
     - target: {fileID: 1304339624, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1304339624, guid: 30f4ac9fd8c73734b8513fe7eac9aa16, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 408055641553114832, guid: 30f4ac9fd8c73734b8513fe7eac9aa16,
         type: 3}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ApplicationQuit : MonoBehaviour
 {
     public Animator animator;
-    public bool activ = false;
+    private bool activ = false;
 
     public void Interac()
     {

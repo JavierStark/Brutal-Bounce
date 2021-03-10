@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3517272701529382792}
-  - component: {fileID: 5414516691297170590}
+  - component: {fileID: 249389764581413125}
   m_Layer: 8
   m_Name: Skin
   m_TagString: Untagged
@@ -62,7 +62,7 @@ Transform:
   m_Father: {fileID: 742303602618359176}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5414516691297170590
+--- !u!212 &249389764581413125
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4bedf263f3e330f4084c5533e8bfb9da, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

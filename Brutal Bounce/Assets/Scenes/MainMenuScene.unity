@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3784,7 +3784,6 @@ GameObject:
   m_Component:
   - component: {fileID: 438996817}
   - component: {fileID: 438996818}
-  - component: {fileID: 438996821}
   - component: {fileID: 438996819}
   - component: {fileID: 438996820}
   m_Layer: 0
@@ -3933,15 +3932,6 @@ MonoBehaviour:
   gameClip: {fileID: 8300000, guid: 7b3f3763149476f4492dbc576eb8db09, type: 3}
   shopClip: {fileID: 8300000, guid: a063bba4543616b4ab3176501388004c, type: 3}
   creditsClip: {fileID: 8300000, guid: fb4994083789ace4c903ea46ecb1aba1, type: 3}
---- !u!170 &438996821
-AudioDistortionFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438996816}
-  m_Enabled: 0
-  m_DistortionLevel: 0.2
 --- !u!1 &446718564
 GameObject:
   m_ObjectHideFlags: 0

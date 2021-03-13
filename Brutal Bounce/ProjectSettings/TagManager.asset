@@ -91,15 +91,18 @@ TagManager:
   - name: Ball
     uniqueID: 203791715
     locked: 0
-  - name: Player
-    uniqueID: 1733792653
-    locked: 0
   - name: Prop
     uniqueID: 2481882635
+    locked: 0
+  - name: Player
+    uniqueID: 1733792653
     locked: 0
   - name: GameOver
     uniqueID: 2469954873
     locked: 0
   - name: Intro
     uniqueID: 520262803
+    locked: 0
+  - name: UI-1
+    uniqueID: 2300295663
     locked: 0

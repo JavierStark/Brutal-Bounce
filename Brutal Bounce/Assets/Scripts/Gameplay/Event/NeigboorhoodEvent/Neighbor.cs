@@ -55,6 +55,8 @@ public class Neighbor : EventEntity
         {
             Debug.Log("hit");
             bodyCollider.enabled = false;
+            boxCollider.enabled = false;
+
             animator.SetTrigger("Dead");
             Destroy(this.gameObject, 6);
         }
@@ -88,6 +90,11 @@ public class Neighbor : EventEntity
     }
 
     public void DeactivateCatching()
+    {
+        boxCollider.enabled = false;
+        bodyCollider.enabled = false;
+    }
+    public void ActivateCatching()
     {
         boxCollider.enabled = false;
         bodyCollider.enabled = false;

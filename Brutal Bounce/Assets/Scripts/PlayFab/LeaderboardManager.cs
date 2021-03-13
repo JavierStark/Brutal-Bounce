@@ -22,11 +22,21 @@ public class LeaderboardManager : MonoBehaviour
     public void ShowLeaderboard()
     {
         if (opened) return;
-        var request = new GetLeaderboardRequest { StatisticName = "Score", MaxResultsCount = 10 };
-        PlayFabClientAPI.GetLeaderboard(request, ShowLeaderboardSuccess, error => { });
+
+        var request = new GetTitleDataRequest();
+        PlayFabClientAPI.GetTitleData(request, GetTitleDataSuccess, error => { });
     }
 
-    private void ShowLeaderboardSuccess(GetLeaderboardResult result)
+    public void GetTitleDataSuccess(GetTitleDataResult result)
+    {
+        string amountInRanking;
+        result.Data.TryGetValue("AmountInRanking", out amountInRanking);
+
+        var request = new GetLeaderboardRequest { StatisticName = "Score", MaxResultsCount = int.Parse(amountInRanking) };
+        PlayFabClientAPI.GetLeaderboard(request, GetLeaderboardSuccess, error => { });
+    }
+
+    private void GetLeaderboardSuccess(GetLeaderboardResult result)
     {
         var leaderboard = result.Leaderboard;
         foreach (PlayerLeaderboardEntry entry in leaderboard)

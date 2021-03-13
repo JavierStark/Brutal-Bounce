@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3fc2ce270477445b21c014389c50c0, type: 3}
   m_Name: CurrentSkins
   m_EditorClassIdentifier: 
-  BallSkinId: BC001
-  TrailSkinId: TU004
+  BallSkinId: BC000
+  TrailSkinId: TC000
   DefaultBall: BC000
   DefaultTrail: TC000

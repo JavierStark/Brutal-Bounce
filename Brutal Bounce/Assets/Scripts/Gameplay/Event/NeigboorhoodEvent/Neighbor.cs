@@ -94,4 +94,9 @@ public class Neighbor : EventEntity
         boxCollider.enabled = false;
         bodyCollider.enabled = false;
     }
+    public void ActivateCatching()
+    {
+        boxCollider.enabled = false;
+        bodyCollider.enabled = false;
+    }
 }

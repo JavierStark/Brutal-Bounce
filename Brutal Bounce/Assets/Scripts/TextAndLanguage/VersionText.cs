@@ -13,7 +13,7 @@ public class VersionText : MonoBehaviour
 
     void Start()
     {
-        versionText.text = Application.version;
+        versionText.text = "v" + Application.version;
     }
 
     // Update is called once per frame

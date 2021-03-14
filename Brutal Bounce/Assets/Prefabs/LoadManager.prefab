@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de92ef1a87b7c4e43b43fad593cd115a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tips: {fileID: 0}
 --- !u!114 &3791938343575696253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,6 +589,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3791938343994866191}
     m_Modifications:
+    - target: {fileID: 307637132556414127, guid: c0b983b4c26781546a5982fb96842190,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 51.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5560242526790041542, guid: c0b983b4c26781546a5982fb96842190,
         type: 3}
       propertyPath: m_Name

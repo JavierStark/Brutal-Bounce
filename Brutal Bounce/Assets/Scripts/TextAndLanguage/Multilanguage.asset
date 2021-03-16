@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: Multilanguage
   m_EditorClassIdentifier: 
   textItems:
-  - translation:
-    - 
-    - 
+  - translation: []
   - translation: []

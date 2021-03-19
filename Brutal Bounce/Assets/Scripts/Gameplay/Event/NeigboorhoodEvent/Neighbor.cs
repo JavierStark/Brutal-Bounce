@@ -43,8 +43,6 @@ public class Neighbor : EventEntity
     public void OpenWindow()
     {
         window.OpenWindow();
-        bodyCollider.enabled = true;
-        boxCollider.enabled = true;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -96,7 +94,7 @@ public class Neighbor : EventEntity
     }
     public void ActivateCatching()
     {
-        boxCollider.enabled = false;
-        bodyCollider.enabled = false;
+        boxCollider.enabled = true;
+        bodyCollider.enabled = true;
     }
 }

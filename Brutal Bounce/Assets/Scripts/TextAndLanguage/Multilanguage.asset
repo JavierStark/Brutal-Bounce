@@ -74,8 +74,8 @@ MonoBehaviour:
     - Alpha
     - Alpha
   - translation:
-    - Felicidades
-    - Congratulations
+    - 'Has obtenido:'
+    - 'You have obtained:'
   - translation:
     - "El c\xF3digo no es v\xE1lido o ya se ha utilizado."
     - The code is invalid or has already been used.
@@ -109,3 +109,16 @@ MonoBehaviour:
       al tanto en nuestro servidor de Discord."
     - "\xA1Ups!\n\nThe game requires an update or is under maintenance.\r\n\r\nStay
       tuned to our Discord server."
+  - translation:
+    - Escriba su nombre.
+    - Type your name below
+  - translation:
+    - "Hola, me alegro que te hayas animado a competir en el desaf\xEDo, ten cuidado
+      con los vecinos ya que ves que no son muy amistosos querr\xE1n pincharte o
+      quitarte el bal\xF3n, te deseo suerte."
+    - Hello, I am glad that you have encouraged to compete in the challenge, be careful
+      with the neighbors since you see that they are not very friendly they will
+      want to prick you or take the ball from you, I wish you luck.
+  - translation:
+    - "Puntuaci\xF3n Max"
+    - Max Score

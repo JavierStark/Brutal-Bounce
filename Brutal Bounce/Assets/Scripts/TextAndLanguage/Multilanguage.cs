@@ -10,7 +10,7 @@ public class Multilanguage : ScriptableObject
     [System.Serializable]
     public class TextItem
     {
-        [TextArea(2, 10)]
+        [TextArea(2, 15)]
         public string[] translation;
     }
 }

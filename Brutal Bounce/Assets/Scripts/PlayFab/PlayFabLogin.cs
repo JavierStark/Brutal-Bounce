@@ -13,6 +13,7 @@ public class PlayFabLogin : MonoBehaviour
     [SerializeField] GameObject setDisplayNamePanel;
     [SerializeField] GameObject updateRequiredPanel;
     [SerializeField] GameObject presentationPanel;
+    [SerializeField] GameObject languageSelectionPanel;
     [SerializeField] TMP_Text displayNameText;
 
     [SerializeField] CoinsManager coinsManager;
@@ -46,6 +47,7 @@ public class PlayFabLogin : MonoBehaviour
         {
             settings.AudioSettingsReset();
             presentationPanel.SetActive(true);
+            languageSelectionPanel.SetActive(true);
             setDisplayNamePanel.SetActive(true);
             BuyStarterItems();
         }

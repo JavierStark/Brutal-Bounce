@@ -12,4 +12,100 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca864a21234cfb45a6cb4c3a9f1e5b6, type: 3}
   m_Name: Multilanguage
   m_EditorClassIdentifier: 
-  textItems: []
+  textItems:
+  - translation:
+    - "\xBFEst\xE1s seguro de que quieres salir del juego?"
+    - Are you sure you want to quit the game?
+  - translation:
+    - Cargando
+    - Loading
+  - translation:
+    - Idioma
+    - Language
+  - translation:
+    - Comprar
+    - Buy
+  - translation:
+    - Equipar
+    - Equip
+  - translation:
+    - "Bal\xF3n"
+    - Ball
+  - translation:
+    - Aspecto
+    - Skin
+  - translation:
+    - Rastro
+    - Trail
+  - translation:
+    - Previa
+    - Preview
+  - translation:
+    - "Cr\xE9ditos"
+    - Credits
+  - translation:
+    - "Posici\xF3n"
+    - Position
+  - translation:
+    - Nombre
+    - Name
+  - translation:
+    - "Puntuaci\xF3n"
+    - Score
+  - translation:
+    - Tabla de posisiones
+    - Highest score
+  - translation:
+    - "Canjear C\xF3digo"
+    - Reedem code
+  - translation:
+    - Nuevo objeto
+    - "New \xEDtem"
+  - translation:
+    - "\xC9pico"
+    - Epic
+  - translation:
+    - "Com\xFAn"
+    - Common
+  - translation:
+    - Unico
+    - Unique
+  - translation:
+    - Alpha
+    - Alpha
+  - translation:
+    - Felicidades
+    - Congratulations
+  - translation:
+    - "El c\xF3digo no es v\xE1lido o ya se ha utilizado."
+    - The code is invalid or has already been used.
+  - translation:
+    - Recibes
+    - You receive
+  - translation:
+    - "No dejes caer el  bal\xF3n y adu\xE9\xF1ate de la primera posici\xF3n de la
+      tabla."
+    - Do not drop the ball and take control of the first position in the ranking.
+  - translation:
+    - Permanece conectado a internet.
+    - Stay connected to the internet.
+  - translation:
+    - "\xA1Golpea a esos vecinos!"
+    - Hit those neighbors!
+  - translation:
+    - "Reta a tus amigos, \xBFQui\xE9n ser\xE1 el mejor?"
+    - Challenge your friends, who will be the best?
+  - translation:
+    - "Los \xEDtems no ofrecen una ventaja a nivel competitivo."
+    - The articles do not offer a competitive advantage.
+  - translation:
+    - "Para previsualizar un \xEDtem tienes que comprarlo."
+    - To preview an item, you must purchase it.
+  - translation:
+    - "Mant\xE9n los ojos en el bal\xF3n."
+    - Keep your eyes on the ball.
+  - translation:
+    - "\xA1Ups!\n\nEl juego requiere de actualizaci\xF3n o se encuentra en mantenimiento.\n\nMantente
+      al tanto en nuestro servidor de Discord."
+    - "\xA1Ups!\n\nThe game requires an update or is under maintenance.\r\n\r\nStay
+      tuned to our Discord server."

@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca864a21234cfb45a6cb4c3a9f1e5b6, type: 3}
   m_Name: Multilanguage
   m_EditorClassIdentifier: 
-  textItems:
-  - translation: []
-  - translation: []
+  textItems: []

@@ -6,12 +6,14 @@ public class ConsejosContextuales : MonoBehaviour
 
     public TMP_Text textC;
 
-    [TextArea(1, 5)]
-    public string[] consejos;
+    [SerializeField] Multilanguage multiLanguage;
+    [SerializeField] int firstTip;
+    [SerializeField] int secondTip;
 
+    
     public void NewTip()
     {
-        int rand = Random.Range(0, consejos.Length);
-        textC.text = consejos[rand].ToString();
+        int rand = Random.Range(firstTip, secondTip);
+        textC.text = multiLanguage.textItems[rand].translation[PlayerPrefs.GetInt("Language")];
     }
 }

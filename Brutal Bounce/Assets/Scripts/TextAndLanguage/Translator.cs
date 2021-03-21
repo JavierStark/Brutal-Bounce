@@ -7,7 +7,12 @@ public class Translator : MonoBehaviour
     [SerializeField] Multilanguage multilanguageScriptableObject;
 
     [SerializeField] int textID;
-    [SerializeField] TMPro.TMP_Text text;
+    TMPro.TMP_Text text;    
+
+    void Awake()
+    {
+        text = GetComponent<TMPro.TMP_Text>();
+    }
 
     void Start()
     {

@@ -10024,7 +10024,7 @@ PrefabInstance:
     - target: {fileID: 3335932803763035839, guid: c478bac0cc422924794a90886b2b3acd,
         type: 3}
       propertyPath: coinsInGame
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c478bac0cc422924794a90886b2b3acd, type: 3}

@@ -7,12 +7,14 @@ public class Window : MonoBehaviour
     Transform neighbourHolder;
     Animator windowAnimator;
     SpriteRenderer windowSpriteRenderer;
+    AudioSource audioSource;
 
     void Awake()
     {
         neighbourHolder = transform.GetChild(0).GetComponentInChildren<Transform>();
         windowAnimator = GetComponent<Animator>();
         windowSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -23,6 +25,7 @@ public class Window : MonoBehaviour
     public void OpenWindow()
     {
         windowSpriteRenderer.sortingLayerName = "WindowOpen";
+        audioSource.Play();
         windowAnimator.Play("OpenWindow");
     }
     public void CloseWindow()

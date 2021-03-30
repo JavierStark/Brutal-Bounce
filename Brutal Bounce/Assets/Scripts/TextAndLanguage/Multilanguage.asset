@@ -114,11 +114,11 @@ MonoBehaviour:
     - Type your name below
   - translation:
     - "Hola, me alegro que te hayas animado a competir en el desaf\xEDo, ten cuidado
-      con los vecinos ya que ves que no son muy amistosos querr\xE1n pincharte o
-      quitarte el bal\xF3n, te deseo suerte."
+      con los vecinos, ya que no son muy amistosos querr\xE1n llevarse la pelota,
+      te deseo suerte."
     - Hello, I am glad that you have encouraged to compete in the challenge, be careful
-      with the neighbors since you see that they are not very friendly they will
-      want to prick you or take the ball from you, I wish you luck.
+      with the neighbors, since they are not very friendly they will want to take
+      the ball away, I wish you luck.
   - translation:
     - "Puntuaci\xF3n Max"
     - Max Score

@@ -9443,7 +9443,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 96.6
+  m_fontSize: 94.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10882,8 +10882,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Hola, me alegro que te hayas animado a competir en el desaf\xEDo, ten
-    cuidado con los vecinos ya que ves que no son muy amistosos querr\xE1n pincharte
-    o quitarte el bal\xF3n, te deseo suerte."
+    cuidado con los vecinos, ya que no son muy amistosos querr\xE1n llevarse la pelota,
+    te deseo suerte."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92f3279dcc412b04d9b2a00236d7d5e7, type: 2}
   m_sharedMaterial: {fileID: -7856240461995915842, guid: 92f3279dcc412b04d9b2a00236d7d5e7,
@@ -11418,7 +11418,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.65
+  m_fontSize: 38.95
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12986,7 +12986,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.65
+  m_fontSize: 38.95
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -17070,7 +17070,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.75
+  m_fontSize: 63.3
   m_fontSizeBase: 74.8
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -18310,7 +18310,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.65
+  m_fontSize: 38.95
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1

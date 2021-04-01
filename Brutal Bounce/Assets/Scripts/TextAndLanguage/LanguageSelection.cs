@@ -7,6 +7,6 @@ public class LanguageSelection : MonoBehaviour
 {
     public void SetLanguage(int n){
         PlayerPrefs.SetInt("Language", n);
-        SceneManager.LoadScene(0);        
+        SceneManager.LoadScene(1);        
     }
 }

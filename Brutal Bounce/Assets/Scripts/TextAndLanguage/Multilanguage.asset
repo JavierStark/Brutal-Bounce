@@ -47,8 +47,8 @@ MonoBehaviour:
     - "Posici\xF3n"
     - Position
   - translation:
-    - Nombre
-    - Name
+    - Nombre...
+    - Name...
   - translation:
     - "Puntuaci\xF3n"
     - Score
@@ -122,3 +122,6 @@ MonoBehaviour:
   - translation:
     - "Puntuaci\xF3n Max"
     - Max Score
+  - translation:
+    - 'Cambios restantes:'
+    - 'Remaining changes:'

@@ -11,7 +11,7 @@ public class NeighborhoodEvent : Event
     {
         while (!eventFinished)
         {
-            roundFinished = false;
+            roundFinished = false;            
             yield return new WaitForSeconds(GetTimeToWait());
             Neighbor neighbor = InstanceEventElement(GetNeigbourPos()).GetComponent<Neighbor>();
             neighbor.SetToHandlerEvent(this);

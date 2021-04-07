@@ -12,6 +12,7 @@ TagManager:
   - Coin
   - Ground
   - Wall
+  - Neighbor
   layers:
   - Default
   - TransparentFX

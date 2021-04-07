@@ -7,6 +7,8 @@ public class Neighbor : EventEntity
     Window window;
     Animator animator;
 
+    [SerializeField] int scoreValue = 10;
+
     int currentLife = 2;
 
     CapsuleCollider2D bodyCollider;
@@ -96,5 +98,9 @@ public class Neighbor : EventEntity
     {
         boxCollider.enabled = true;
         bodyCollider.enabled = true;
+    }
+
+    public int GetValue(){
+        return scoreValue;
     }
 }

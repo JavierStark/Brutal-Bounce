@@ -67,6 +67,10 @@ public class Ball : MonoBehaviour
                 rigidbody.AddForce(-collision.contacts[0].normal +
                         new Vector2(0, randomY));
             }
+            else if (collision.gameObject.CompareTag("Neighbor")){
+                Debug.Log("N");
+                InteractionWithNeighbor(collision.gameObject.GetComponent<Neighbor>());
+            }   
         }
     }
 
@@ -81,7 +85,7 @@ public class Ball : MonoBehaviour
         else if (collision.gameObject.CompareTag("Coin"))
         {
             InteractionWithCoin(collision.gameObject.GetComponent<Coin>());
-        }
+        }       
     }
 
     public void BallCatched()
@@ -95,6 +99,9 @@ public class Ball : MonoBehaviour
     {
         scoreManager.AddScore(coin.GetValue());
         Destroy(coin.gameObject);
+    }
+    private void InteractionWithNeighbor(Neighbor neighbor){
+        scoreManager.AddScore(neighbor.GetValue());
     }
 
     public void GameStarted()

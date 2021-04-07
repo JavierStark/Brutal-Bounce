@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 8971202247893149974}
   m_Layer: 14
   m_Name: NeighborRocker
-  m_TagString: Untagged
+  m_TagString: Neighbor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1045f150caa98934c81f4e7424f87758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 10
 --- !u!95 &4049310678046776848
 Animator:
   serializedVersion: 3

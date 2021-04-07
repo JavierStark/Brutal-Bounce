@@ -8,7 +8,8 @@ public class CoinGenerator : MonoBehaviour
 
     [SerializeField] GameObject coin;
     [SerializeField] int coinsInGame = 1;
-    [SerializeField] float instantiateDelay = 1;
+    [SerializeField] float instantiateDelay = 1;    
+    
 
 
     void Start()
